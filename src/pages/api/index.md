@@ -21,7 +21,7 @@ Changelog
 ---------
 
 
-* [Full changelog file](/changelog.md)
+* [Full changelog file](/api/changelog.html)
 
 
 Warm up
@@ -60,7 +60,7 @@ Surface shader
 --------------
 
 
-* [surface-shader.glsl](/shaders/surface-shader.md)
+* [surface-shader.glsl](/api/shaders/surface-shader.html)
 
 
 Engine provided data
@@ -72,7 +72,7 @@ In Substance 3D Painter, you can access rendering engine parameters (document's 
  engine provided parameters :
 
 
-* [all-engine-params.glsl](/parameters/all-engine-params.md)
+* [all-engine-params.glsl](/api/parameters/all-engine-params.html)
 
 
 Engine settings
@@ -84,7 +84,7 @@ In some cases you may want to use a specific rendering configuration (culling, b
  can be set in the shader. Here is an exhaustive list of all exposed rendering states :
 
 
-* [all-rendering-states-params.glsl](/parameters/all-rendering-states-params.md)
+* [all-rendering-states-params.glsl](/api/parameters/all-rendering-states-params.html)
 
 
 Custom tweaks
@@ -96,7 +96,7 @@ It's usual to have custom tweaks in a shader. To do so in Substance 3D Painter's
  shader tweaks types :
 
 
-* [all-custom-params.glsl](/parameters/all-custom-params.md)
+* [all-custom-params.glsl](/api/parameters/all-custom-params.html)
 
 
 Custom qualifiers
@@ -107,7 +107,7 @@ Beside regular GLSL qualifiers, we added a custom *uniform_specialization* quali
  can be used as drop-in replacement of *uniform* to optimize uber shaders :
 
 
-* [all-custom-qualifiers.glsl](/parameters/all-custom-qualifiers.md)
+* [all-custom-qualifiers.glsl](/api/parameters/all-custom-qualifiers.html)
 
 
 Embedded libraries
@@ -119,24 +119,24 @@ In order to avoid writing a lot of boilerplate code in all of your shaders,
  you can't edit it nor create your own at the moment.**
 
 
-* [lib-alpha.glsl](/libraries/lib-alpha.md) : contains opacity related helpers
-* [lib-bayer.glsl](/libraries/lib-bayer.md) : contains bayer matrix helpers
-* [lib-bent-normal.glsl](/libraries/lib-bent-normal.md) : contains bent normal helpers
-* [lib-coat.glsl](/libraries/lib-coat.md) : contains coating layer helpers
-* [lib-defines.glsl](/libraries/lib-defines.md) : contains useful math constants and base defines
-* [lib-emissive.glsl](/libraries/lib-emissive.md) : contains emissive properties helpers
-* [lib-env.glsl](/libraries/lib-env.md) : contains environment map related helpers
-* [lib-normal.glsl](/libraries/lib-normal.md) : contains normal map related helpers (and height-map generated normal map
-* [lib-pbr.glsl](/libraries/lib-pbr.md) : contains physically based rendering helpers
-* [lib-pbr-aniso.glsl](/libraries/lib-pbr-aniso.md) : contains anisotropic physically based rendering helpers
-* [lib-pom.glsl](/libraries/lib-pom.md) : contains parallax occlusion mapping helpers
-* [lib-random.glsl](/libraries/lib-random.md) : contains random utilities (low discrepancy sequences
-* [lib-sampler.glsl](/libraries/lib-sampler.md) : contains channel getters helpers
-* [lib-sheen.glsl](/libraries/lib-sheen.md) : contains sheen model reflection helpers
-* [lib-sparse.glsl](/libraries/lib-sparse.md) : contains safe sparse texture sampling helpers
-* [lib-sss.glsl](/libraries/lib-sss.md) : contains subsurface scattering helpers
-* [lib-utils.glsl](/libraries/lib-utils.md) : contains color utility functions (sRGB conversions, tone mapping
-* [lib-vectors.glsl](/libraries/lib-vectors.md) : contains common vectors helpers
+* [lib-alpha.glsl](/api/libraries/lib-alpha.html) : contains opacity related helpers
+* [lib-bayer.glsl](/api/libraries/lib-bayer.html) : contains bayer matrix helpers
+* [lib-bent-normal.glsl](/api/libraries/lib-bent-normal.html) : contains bent normal helpers
+* [lib-coat.glsl](/api/libraries/lib-coat.html) : contains coating layer helpers
+* [lib-defines.glsl](/api/libraries/lib-defines.html) : contains useful math constants and base defines
+* [lib-emissive.glsl](/api/libraries/lib-emissive.html) : contains emissive properties helpers
+* [lib-env.glsl](/api/libraries/lib-env.html) : contains environment map related helpers
+* [lib-normal.glsl](/api/libraries/lib-normal.html) : contains normal map related helpers (and height-map generated normal map
+* [lib-pbr.glsl](/api/libraries/lib-pbr.html) : contains physically based rendering helpers
+* [lib-pbr-aniso.glsl](/api/libraries/lib-pbr-aniso.html) : contains anisotropic physically based rendering helpers
+* [lib-pom.glsl](/api/libraries/lib-pom.html) : contains parallax occlusion mapping helpers
+* [lib-random.glsl](/api/libraries/lib-random.html) : contains random utilities (low discrepancy sequences
+* [lib-sampler.glsl](/api/libraries/lib-sampler.html) : contains channel getters helpers
+* [lib-sheen.glsl](/api/libraries/lib-sheen.html) : contains sheen model reflection helpers
+* [lib-sparse.glsl](/api/libraries/lib-sparse.html) : contains safe sparse texture sampling helpers
+* [lib-sss.glsl](/api/libraries/lib-sss.html) : contains subsurface scattering helpers
+* [lib-utils.glsl](/api/libraries/lib-utils.html) : contains color utility functions (sRGB conversions, tone mapping
+* [lib-vectors.glsl](/api/libraries/lib-vectors.html) : contains common vectors helpers
 
 
 Metadata
@@ -187,10 +187,10 @@ To better understand how to write a complete shader, here are a few examples,
  ordered by increasing complexity:
 
 
-* [pixelated.glsl](/shaders/pixelated.md) : a pixelating shader.
-* [toon.glsl](/shaders/toon.md) : a toon shader.
-* [pbr-metal-rough.glsl](/shaders/pbr-metal-rough.md) : the legacy PBR shader.
-* [asm-metal-rough.glsl](/shaders/asm-metal-rough.md) : the default PBR shader, which implements the Adobe Standard Material Definition.
+* [pixelated.glsl](/api/shaders/pixelated.html) : a pixelating shader.
+* [toon.glsl](/api/shaders/toon.html) : a toon shader.
+* [pbr-metal-rough.glsl](/api/shaders/pbr-metal-rough.html) : the legacy PBR shader.
+* [asm-metal-rough.glsl](/api/shaders/asm-metal-rough.html) : the default PBR shader, which implements the Adobe Standard Material Definition.
 
 
 Dynamic material layering
@@ -202,8 +202,8 @@ The Dynamic Material Layering is a specific workflow where materials are mixed t
  To enable this workflow, there are two new functionalities:
 
 
-* declare editable stacks from a shader definition: [layering_declare_stacks.glsl](/parameters/layering_declare_stacks.md)
-* bind materials as shader parameters: [layering_bind_materials.glsl](/parameters/layering_bind_materials.md)
+* declare editable stacks from a shader definition: [layering_declare_stacks.glsl](/api/parameters/layering_declare_stacks.html)
+* bind materials as shader parameters: [layering_bind_materials.glsl](/api/parameters/layering_bind_materials.html)
 
 
 

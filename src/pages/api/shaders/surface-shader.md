@@ -77,7 +77,7 @@ struct V2F {
 
 [ ](#section-3)
 
-Note: To obtain a SparseCoord for uv1-uv7, you have to explicitly call `getSparseCoord(vec2)` defined in [lib-sparse.glsl](/libraries/lib-sparse.md)
+Note: To obtain a SparseCoord for uv1-uv7, you have to explicitly call `getSparseCoord(vec2)` defined in [lib-sparse.glsl](/api/libraries/lib-sparse.html)
 
 
 Surface shader outputs:

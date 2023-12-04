@@ -45,7 +45,7 @@ For more information about this system, go to the [online documentation](https:/
 
 
 This system has repercussions on how to write shader code. We are providing helpers to simplify its use with the `SamplerSparse` structure and
- texture lookup functions (see [lib-sparse.glsl](/libraries/lib-sparse.md)).
+ texture lookup functions (see [lib-sparse.glsl](/api/libraries/lib-sparse.html)).
 
 
 Basic usage:
@@ -214,7 +214,7 @@ Where `TEXTURE_TAG` is one of the described tags below.
 
 `texture_blue_noise` : A blue noise texture  
 
-`texture_environment` : Environment map, **mip-mapped**, use [lib-env.glsl](/libraries/lib-env.md) to use this one  
+`texture_environment` : Environment map, **mip-mapped**, use [lib-env.glsl](/api/libraries/lib-env.html) to use this one  
 
 
 
