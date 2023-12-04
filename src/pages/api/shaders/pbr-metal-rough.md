@@ -2,16 +2,17 @@
 title: Substance 3D Painter Metal/Rough PBR shader (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-pbr-metal-rough.glsl
+
 
 
 
@@ -46,12 +47,12 @@ Import from libraries.
 
 
 ```glsl
-import lib-pbr.glsl
- import lib-bent-normal.glsl
- import lib-emissive.glsl
- import lib-pom.glsl
- import lib-sss.glsl
- import lib-utils.glsl
+
+
+
+
+
+
 ```
 
 

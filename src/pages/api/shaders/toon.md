@@ -2,16 +2,17 @@
 title: Basic toon shader (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-toon.glsl
+
 
 
 
@@ -46,7 +47,7 @@ Import from libraries.
 
 
 ```glsl
-import lib-sampler.glsl
+
 ```
 
 

@@ -2,16 +2,17 @@
 title: Substance 3D Painter Specular/Glossiness PBR shader (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-pbr-spec-gloss.glsl
+
 
 
 
@@ -46,12 +47,12 @@ Import from libraries.
 
 
 ```glsl
-import lib-pbr.glsl
- import lib-bent-normal.glsl
- import lib-emissive.glsl
- import lib-pom.glsl
- import lib-sss.glsl
- import lib-utils.glsl
+
+
+
+
+
+
  
  // Link Specular/Glossiness skin MDL for Iray
  //: metadata {

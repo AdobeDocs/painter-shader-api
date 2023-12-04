@@ -2,16 +2,17 @@
 title: Substance 3D Painter Specular/Glossiness Non-PBR shader (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-non-pbr-spec-gloss.glsl
+
 
 
 
@@ -46,11 +47,11 @@ Import from libraries.
 
 
 ```glsl
-import lib-alpha.glsl
- import lib-emissive.glsl
- import lib-env.glsl
- import lib-sampler.glsl
- import lib-vectors.glsl
+
+
+
+
+
  
  //: param auto channel_diffuse
  uniform SamplerSparse diffuse_tex;

@@ -2,16 +2,17 @@
 title: Substance 3D Painter Material Layering PBR shader (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-pbr-material-layering.glsl
+
 
 
 
@@ -46,10 +47,10 @@ Import from libraries.
 
 
 ```glsl
-import lib-pbr.glsl
- import lib-emissive.glsl
- import lib-sampler.glsl
- import lib-utils.glsl
+
+
+
+
  
  #define NB_MATERIALS 4
  #define NB_MASKS (NB_MATERIALS - 1)

@@ -2,16 +2,17 @@
 title: Substance 3D Painter Metal/Rough Coating PBR shader (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-pbr-coated.glsl
+
 
 
 
@@ -46,11 +47,11 @@ Import from libraries.
 
 
 ```glsl
-import lib-sss.glsl
- import lib-pbr.glsl
- import lib-emissive.glsl
- import lib-sampler.glsl
- import lib-utils.glsl
+
+
+
+
+
  
  // Link Coated Metal/Roughness MDL for Iray
  //: metadata {

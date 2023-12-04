@@ -2,16 +2,17 @@
 title: Substance 3D Painter Car Paint PBR shader (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-pbr-car-paint.glsl
+
 
 
 
@@ -46,8 +47,8 @@ Import from libraries.
 
 
 ```glsl
-import lib-sampler.glsl
- import lib-pbr.glsl
+
+
  
  //: param auto channel_basecolor
  uniform SamplerSparse basecolor_tex;

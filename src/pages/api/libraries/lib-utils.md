@@ -2,16 +2,17 @@
 title: Utility functions (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-lib-utils.glsl
+
 
 
 
@@ -362,7 +363,7 @@ Use 8x8 Bayer matrix for dithering mode
 
 
 ```glsl
-import lib-bayer.glsl
+
  
  float getDitherThreshold(uvec2 coords)
  {

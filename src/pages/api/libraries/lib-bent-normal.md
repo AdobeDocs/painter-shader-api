@@ -1,17 +1,18 @@
 ---
-title: lib-bent-normal.glsl (Shader API)
+title:  (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-lib-bent-normal.glsl
+
 
 
 
@@ -35,7 +36,7 @@ lib-bent-normal.glsl
 
 [ ](#section-1)
 
-lib-bent-normal.glsl
+
 ====================
 
 
@@ -53,7 +54,7 @@ Import from library
 
 
 ```glsl
-import lib-normal.glsl
+
  
  //: param auto texture_bent_normals
  uniform SamplerSparse bent_normal_texture;

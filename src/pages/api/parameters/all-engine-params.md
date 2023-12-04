@@ -2,16 +2,17 @@
 title: Engine parameters examples (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-all-engine-params.glsl
+
 
 
 
@@ -65,7 +66,7 @@ Basic usage:
 
 ```glsl
 // Defines the SamplerSparse structure
- import lib-sparse.glsl
+
  
  //: param auto TEXTURE_TAG
  uniform SamplerSparse uniform_tex; // Texture sampler and its information

@@ -2,16 +2,17 @@
 title: Substance 3D Painter Dota 2 shader (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-dota-2.glsl
+
 
 
 
@@ -46,11 +47,11 @@ Import from libraries.
 
 
 ```glsl
-import lib-sampler.glsl
- import lib-env.glsl
- import lib-normal.glsl
- import lib-alpha.glsl
- import lib-pbr.glsl
+
+
+
+
+
  
  //: state cull_face off
 ```

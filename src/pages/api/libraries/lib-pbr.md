@@ -1,17 +1,18 @@
 ---
-title: lib-pbr.glsl (Shader API)
+title:  (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-lib-pbr.glsl
+
 
 
 
@@ -35,7 +36,7 @@ lib-pbr.glsl
 
 [ ](#section-1)
 
-lib-pbr.glsl
+
 ============
 
 
@@ -135,10 +136,10 @@ Import from library, other parameters
 
 
 ```glsl
-import lib-env.glsl
- import lib-emissive.glsl
- import lib-random.glsl
- import lib-vectors.glsl
+
+
+
+
 ```
 
 

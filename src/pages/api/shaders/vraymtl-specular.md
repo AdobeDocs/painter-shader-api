@@ -2,16 +2,17 @@
 title: Substance Painter VRayMtl shader (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-vraymtl-specular.glsl
+
 
 
 
@@ -72,11 +73,11 @@ Channels needed for diffuse/specular workflow are bound here.
  //: param auto channel_anisotropylevel
  uniform SamplerSparse anisotropylevel_tex;
  
- import lib-env.glsl
- import lib-random.glsl
- import lib-sampler.glsl
- import lib-utils.glsl
- import lib-vectors.glsl
+
+
+
+
+
  
  //: state cull_face off
 ```

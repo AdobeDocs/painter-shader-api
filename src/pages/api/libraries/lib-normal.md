@@ -1,17 +1,18 @@
 ---
-title: lib-normal.glsl (Shader API)
+title:  (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-lib-normal.glsl
+
 
 
 
@@ -35,7 +36,7 @@ lib-normal.glsl
 
 [ ](#section-1)
 
-lib-normal.glsl
+
 ===============
 
 
@@ -59,8 +60,8 @@ Import from library
 
 
 ```glsl
-import lib-defines.glsl
- import lib-sparse.glsl
+
+
 ```
 
 

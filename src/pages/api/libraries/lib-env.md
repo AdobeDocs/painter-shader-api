@@ -1,17 +1,18 @@
 ---
-title: lib-env.glsl (Shader API)
+title:  (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-lib-env.glsl
+
 
 
 
@@ -35,7 +36,7 @@ lib-env.glsl
 
 [ ](#section-1)
 
-lib-env.glsl
+
 ============
 
 
@@ -52,7 +53,7 @@ Needed for math constants
 
 
 ```glsl
-import lib-defines.glsl
+
 ```
 
 

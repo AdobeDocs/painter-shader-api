@@ -2,16 +2,17 @@
 title: Substance 3D Painter Clay shader (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-clay.glsl
+
 
 
 
@@ -46,7 +47,7 @@ Import from libraries.
 
 
 ```glsl
-import lib-vectors.glsl
+
  
  
  //: param custom { "default": [0.3, 0.07, 0.05], "label": "Color", "widget": "color" }

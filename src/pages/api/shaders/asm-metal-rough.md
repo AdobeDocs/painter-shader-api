@@ -2,16 +2,17 @@
 title: Adobe Standard Material Definition (ASM) shader (Shader API)
 description: Substance 3D Shader API
 keywords:
-	- Creative Cloud
-	- Substance 3D
-	- Painter
+  - Creative Cloud
+  - API Documentation
+  - Substance 3D
+  - Painter
 layout: none
 ---
 
 
 
 
-asm-metal-rough.glsl
+
 
 
 
@@ -46,8 +47,8 @@ Import from libraries.
 
 
 ```glsl
-import lib-pbr.glsl
- import lib-pbr-aniso.glsl
+
+
  
  //: param custom {
  //: "group": "Base Surface",
@@ -76,7 +77,7 @@ import lib-pbr.glsl
  //: }
  uniform_specialization bool specularEdgeColorEnabled;
  
- import lib-sheen.glsl
+
  
  //: param custom {
  //: "group": "Geometry",
@@ -86,8 +87,8 @@ import lib-pbr.glsl
  //: }
  uniform_specialization bool doubleSided;
  
- import lib-pom.glsl
- import lib-bent-normal.glsl
+
+
  
  //: param custom {
  //: "group": "Interior",
@@ -100,7 +101,7 @@ import lib-pbr.glsl
  //: }
  uniform_specialization bool translucencyEnabled;
  
- import lib-sss.glsl
+
  
  //: param custom {
  //: "group": "Interior",
@@ -112,7 +113,7 @@ import lib-pbr.glsl
  //: }
  uniform_specialization bool absorptionEnabled;
  
- import lib-alpha-test.glsl
+
  
  //: param custom {
  //: "group": "Geometry/Opacity",
@@ -125,8 +126,8 @@ import lib-pbr.glsl
  //: }
  uniform_specialization bool alphaBlendEnabled;
  
- import lib-coat.glsl
- import lib-utils.glsl
+
+
 ```
 
 
