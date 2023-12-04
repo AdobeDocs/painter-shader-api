@@ -1,5 +1,5 @@
 ---
-title: Material layering: declare editable stacks (Shader API)
+title: Material layering declare editable stacks (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
