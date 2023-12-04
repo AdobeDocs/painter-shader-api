@@ -2,9 +2,9 @@
 title: Adobe Standard Material Definition (ASM) shader (Shader API)
 description: Substance 3D Shader API
 keywords:
-- Creative Cloud
-- Substance 3D
-- Painter
+	- Creative Cloud
+	- Substance 3D
+	- Painter
 layout: none
 ---
 
