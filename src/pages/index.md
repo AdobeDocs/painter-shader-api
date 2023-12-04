@@ -5,7 +5,9 @@ contributors:
   - https://github.com/Froyok
 ---
 
-<Hero slots="heading, text"/>
+<Hero slots="image, heading, text" background="rgb(1, 46, 24)" hideBreadcrumbNav={false}/>
+
+![Hero image](./hero.png)
 
 # Substance 3D Painter - Shader API
 
