@@ -23,3 +23,5 @@ Custom shaders can be used to develop new rendering behaviors in the main 3D vie
 
 - The API documentation is [available here](/api/index.html).
 - Note that the API documentation is also installed alongside the software and can be accessed via the **Help > Scripting Documentation** menu.
+
+---
