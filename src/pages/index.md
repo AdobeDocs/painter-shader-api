@@ -7,9 +7,9 @@ contributors:
 
 <Hero slots="heading, text"/>
 
-# Substance 3D Painter Shader API
+# Substance 3D Painter - Shader API
 
-This documentation provides an overview and Painter's shader system and a detailled API.
+This documentation provides an overview and Painter's shader system and its API.
 
 Custom shaders can be used to develop new rendering behaviors in the main 3D viewport of the application.
 
@@ -17,11 +17,9 @@ Custom shaders can be used to develop new rendering behaviors in the main 3D vie
 
 #### Learn more
 
-* [Substance 3d Painter](https://www.adobe.com/products/substance3d-painter.html)
-
+* [Substance 3D Painter](https://www.adobe.com/products/substance3d-painter.html)
 
 ### Get Started
 
-The API available [over here](/api/index.html).
-
-Note that the API documentation is also installed alongside the software and cna be accessed via the **Help > Scripting Documentation** menu.
+- The API documentation is [available here](/api/index.html).
+- Note that the API documentation is also installed alongside the software and can be accessed via the **Help > Scripting Documentation** menu.
