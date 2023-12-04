@@ -1,3 +1,12 @@
+---
+title: Substance 3D Painter Metal/Rough Coating PBR shader (Shader API)
+description: Substance 3D Shader API
+keywords:
+- Creative Cloud
+- Substance 3D
+- Painter
+layout: none
+---
 
 
 
