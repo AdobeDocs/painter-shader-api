@@ -9,7 +9,7 @@ contributors:
 
 # Substance 3D Painter - Shader API
 
-This documentation provides an overview and Painter's shader system and its API.
+This documentation provides an overview of Painter's shader system and its API.
 
 Custom shaders can be used to develop new rendering behaviors in the main 3D viewport of the application.
 
