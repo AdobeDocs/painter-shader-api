@@ -31,6 +31,10 @@ module.exports = {
         path: 'https://community.adobe.com/t5/substance-3d-painter/ct-p/ct-substance-3d-painter'
       }
     ],
+	home: {
+	  title: 'Photoshop',
+	  path: 'https://www.adobe.com/products/photoshop.html'
+	},
     subPages: [
 		{
 			title: "Shader API",
