@@ -1,5 +1,5 @@
 ---
-title:  (Shader API)
+title: lib-pbr-aniso (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
