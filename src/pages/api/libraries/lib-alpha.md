@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -47,7 +46,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
 
@@ -67,7 +65,6 @@ Opacity map, provided by the engine.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_opacity
  uniform SamplerSparse opacity_tex;
@@ -87,7 +84,6 @@ Alpha test threshold.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 0.33,
@@ -113,7 +109,6 @@ Alpha test dithering.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": false,
@@ -139,7 +134,6 @@ Emulate alpha test : discard current fragment if
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 void alphaKill(float alpha)
  {

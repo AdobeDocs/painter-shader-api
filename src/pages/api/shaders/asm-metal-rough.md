@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -46,7 +45,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
 
@@ -145,7 +143,6 @@ Declare the iray mdl material to use with this shader.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: metadata {
  //: "mdl":"mdl::alg::materials::painter::standard"
@@ -166,7 +163,6 @@ Disable culling if double sided option is enabled
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state cull_face off {"enable":"input.doubleSided"}
 ```
@@ -185,7 +181,6 @@ Enable 'over' alpha blending if opacity alpha blend
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state blend over {"enable":"input.alphaBlendEnabled && !input.sssEnabled && !input.translucencyEnabled"}
 ```
@@ -204,7 +199,6 @@ Enable 'premultiplied over' alpha blending if translucency
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state blend over_premult {"enable":"input.translucencyEnabled && !input.absorptionEnabled && !input.sssEnabled"}
 ```
@@ -223,7 +217,6 @@ Enable 'add multiply' alpha blending if absorption is required
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state blend add_multiply {"enable":"input.translucencyEnabled && input.absorptionEnabled && !input.sssEnabled"}
 ```
@@ -242,7 +235,6 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_basecolor
  uniform SamplerSparse basecolor_tex;
@@ -276,7 +268,6 @@ Shader entry point.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 void shade(V2F inputs)
  {

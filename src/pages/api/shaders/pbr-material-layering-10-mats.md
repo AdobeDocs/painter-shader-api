@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -46,7 +45,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
 
@@ -254,7 +252,6 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto texture_normal;
  uniform sampler2D mesh_normal_texture;
@@ -620,7 +617,6 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  //Global textures
 ```
@@ -641,7 +637,6 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  // Get detail (ambient occlusion) and global (shadow) occlusion factors
   float occlusion = getAO(inputs.sparse_coord) * getShadowFactor();
@@ -664,7 +659,6 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  //Materials Masks
 ```
@@ -685,7 +679,6 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  float UVscale[NB_MATERIALS] = float[NB_MATERIALS](
   u_coords1, u_coords2, u_coords3, u_coords4, u_coords5,
@@ -730,7 +723,6 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  //Mixing
 ```
@@ -751,7 +743,6 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  float roughSampled[NB_MATERIALS] = float[NB_MATERIALS](
   getRoughness(rough1, inputs.tex_coord*UVscale[0]),
@@ -854,7 +845,6 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  //Final
 ```
@@ -875,7 +865,6 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  //Debug mode display result of combined channels or Masks
   if( !DebugMode ) {

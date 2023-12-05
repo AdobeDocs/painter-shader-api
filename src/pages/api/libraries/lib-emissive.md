@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -50,7 +49,6 @@ Import from library
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
 ```
@@ -69,7 +67,6 @@ The emissive channel texture.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_emissive
  uniform SamplerSparse emissive_tex;
@@ -89,7 +86,6 @@ A value used to tweak the emissive intensity.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 1.0,
@@ -117,7 +113,6 @@ Compute the emissive radiance to the viewer's eye
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 vec3 pbrComputeEmissive(SamplerSparse emissive, SparseCoord coord)
  {

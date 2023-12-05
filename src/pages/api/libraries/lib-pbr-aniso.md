@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -56,7 +55,6 @@ Import from library
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
 ```
@@ -75,7 +73,6 @@ BRDF related functions
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 float normal_distrib(
   vec3 localH,

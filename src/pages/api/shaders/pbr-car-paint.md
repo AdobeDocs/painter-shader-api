@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -46,7 +45,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
 
@@ -73,7 +71,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": "flakes", "label": "Flakes Texture", "usage": "texture" }
  uniform sampler2D flakes_tex;

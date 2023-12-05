@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -46,7 +45,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
  
@@ -81,7 +79,6 @@ Entry point of the shader.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 void shade(V2F inputs)
  {
@@ -101,7 +98,6 @@ We generate local world space vectors
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  LocalVectors vectors = computeLocalFrame(inputs);
 ```
@@ -120,7 +116,6 @@ Simulate camera aligned lighting
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  float NdV = max(0.0, dot(vectors.normal, vectors.eye));
 ```
@@ -139,7 +134,6 @@ We generate main color from screen-space curvature
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  vec3 dNdx = dFdx(vectors.normal);
   vec3 dNdy = dFdy(vectors.normal);
@@ -169,7 +163,6 @@ Ambient and diffuse contribution
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  diffuseShadingOutput((ambient + NdV) * diffuse);
 ```
@@ -188,7 +181,6 @@ Specular contribution
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  specularShadingOutput(vec3(specular * pow(NdV, 64.0 * clayGloss)));
  }

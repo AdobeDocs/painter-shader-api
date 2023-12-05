@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -57,7 +56,6 @@ Channels needed for diffuse/specular workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_diffuse
  uniform SamplerSparse diffuse_tex;
@@ -97,7 +95,6 @@ Parameters from Substance
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto main_light
  uniform vec4 uniform_main_light;
@@ -140,7 +137,6 @@ VRayMtl specific options
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 // Group basic options
  //: param custom { "default": 1, "label": "Base color amount", "min": 0, "max": 1, "group": "Base color" }
@@ -1136,7 +1132,6 @@ Shader entry point.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 void shade(V2F inputs)
  {

@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -46,7 +45,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
 
@@ -75,7 +73,6 @@ Channels needed for spec/gloss workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_diffuse
  uniform SamplerSparse diffuse_tex;

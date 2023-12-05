@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -46,7 +45,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
 
@@ -71,7 +69,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_basecolor
  uniform SamplerSparse diffuseMapSampler;
@@ -91,7 +88,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_user0
  uniform SamplerSparse detail_tex;
@@ -117,7 +113,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_specular
  uniform SamplerSparse specularWarpSampler;
@@ -143,7 +138,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": 1, "label": "Specular Color", "widget": "color" }
  uniform vec3 fSpecularColor;
@@ -169,7 +163,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": 1, "label": "Rim Light Color", "widget": "color" }
  uniform vec3 fRimLightColor;
@@ -195,7 +188,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": 0, "label": "Ambient Color", "widget": "color" }
  uniform vec3 fAmbientColor;
@@ -224,7 +216,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": false, "label": "Diffuse Warp" }
  uniform bool bDoDiffuseWarp;
@@ -251,7 +242,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": [10.0, 10.0, 10.0], "label": "Light Position", "min": -20, "max": 20 }
  uniform vec3 lightPosition_1;
@@ -276,7 +266,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 struct lightProp
  {

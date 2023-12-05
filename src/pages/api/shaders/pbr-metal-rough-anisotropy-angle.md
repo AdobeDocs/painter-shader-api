@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -46,7 +45,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
 
@@ -71,7 +69,6 @@ Declare the iray mdl material to use with this shader.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: metadata {
  //: "mdl":"mdl::alg::materials::skin_metallic_roughness::skin_metallic_roughness"
@@ -92,7 +89,6 @@ Show back faces as there may be holes in front faces.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state cull_face off
 ```
@@ -111,7 +107,6 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_basecolor
  uniform SamplerSparse basecolor_tex;
@@ -139,7 +134,6 @@ Shader entry point.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 void shade(V2F inputs)
  {

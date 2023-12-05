@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -51,7 +50,6 @@ Import from library
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
 ```
@@ -70,7 +68,6 @@ Parallax occlusion mapping related uniforms
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto is_2d_view
  uniform bool isTextureView;
@@ -134,7 +131,6 @@ Compute the offset of texture coordinates based on parallax
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 vec2 getParallaxOffset(SparseCoord coord, vec3 viewTS)
  {
@@ -200,7 +196,6 @@ Update input texture coordinates with parallax offset
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 void applyParallaxOffset(inout V2F inputs, vec3 viewTS)
  {

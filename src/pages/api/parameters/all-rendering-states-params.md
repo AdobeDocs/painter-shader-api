@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -54,7 +53,6 @@ Cull back faces:
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state cull_face on
 ```
@@ -73,7 +71,6 @@ Draw front and back faces:
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state cull_face off
 ```
@@ -96,7 +93,6 @@ No blending, fully opaque objects:
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state blend none
 ```
@@ -115,7 +111,6 @@ Standard blending mode for back to front draw order:
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state blend over
 ```
@@ -135,7 +130,6 @@ Standard blending mode for back to front draw order.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state blend over_premult
 ```
@@ -154,7 +148,6 @@ Additive blending mode:
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state blend add
 ```
@@ -173,7 +166,6 @@ Multiplicative blending mode:
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state blend multiply
 ```
@@ -199,7 +191,6 @@ If artifacts appear set the `nonlocal` state to `on`.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state nonlocal on
  

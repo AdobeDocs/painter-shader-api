@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -54,7 +53,6 @@ Example:
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: materials [
  //: {
@@ -86,7 +84,6 @@ To bind a channel from a material to a sampler, define an auto param with the id
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto Material1.channel_basecolor
  uniform sampler2D basecolor_tex1;

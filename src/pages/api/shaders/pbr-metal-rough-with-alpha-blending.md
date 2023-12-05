@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -46,7 +45,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
 
@@ -74,7 +72,6 @@ Show back faces as there may be holes in front faces.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state cull_face off
 ```
@@ -93,7 +90,6 @@ Enable alpha blending
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: state blend over
 ```
@@ -112,7 +108,6 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_basecolor
  uniform SamplerSparse basecolor_tex;
@@ -140,7 +135,6 @@ Shader entry point.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 void shade(V2F inputs)
  {

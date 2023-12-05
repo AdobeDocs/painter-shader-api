@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -47,7 +46,6 @@ To create a shader resource that can be used in Substance 3D Painter, just creat
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 void shade(V2F inputs);
 ```
@@ -67,7 +65,6 @@ V2F input type definition:
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 struct V2F {
   vec3 normal; // interpolated normal
@@ -102,7 +99,6 @@ The following functions can be called from within the *shade* function to descri
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 // fragment opacity. default value: 1.0
  void alphaOutput(float);

@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -53,7 +52,6 @@ Import from library
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
  
@@ -106,7 +104,6 @@ Helper to compute the bent normal from tangent space normal given by
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 vec3 computeWSBentNormal(SparseCoord coord, vec3 tangent, vec3 bitangent, vec3 normal)
  {
@@ -134,7 +131,6 @@ Compute bent normals
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 void computeBentNormal(inout LocalVectors vectors, V2F inputs) {
   if (use_bent_normal) {

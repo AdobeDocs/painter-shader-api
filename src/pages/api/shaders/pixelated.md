@@ -25,7 +25,6 @@ keywords:
 
 
 
-<CodeBlock languages="glsl"/>
 
 
 
@@ -46,7 +45,6 @@ Import from libraries.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 
 ```
@@ -65,7 +63,6 @@ We define the global light position
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 const vec3 light_pos = vec3(10.0, 10.0, 10.0);
 ```
@@ -84,7 +81,6 @@ We **bind** the auto param world eye position to our uniform **camera_pos**.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto world_eye_position
  uniform vec3 camera_pos;
@@ -104,7 +100,6 @@ We **bind** the document's channel **base color** to our uniform **basecolor_tex
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_basecolor
  uniform SamplerSparse basecolor_tex;
@@ -125,7 +120,6 @@ We define a new custom tweak for this shader, along with its default value.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 0.4,
@@ -151,7 +145,6 @@ We define a new custom tweak for this shader, along with its default value.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 0.1,
@@ -176,7 +169,6 @@ Entry point of the shader.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
 void shade(V2F inputs)
  {
@@ -196,7 +188,6 @@ We compute a few useful values.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  vec3 V = normalize(camera_pos - inputs.position);
   vec3 N = normalize(inputs.normal);
@@ -220,7 +211,6 @@ We compute a few useful values.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  if (NdV < mix(unlit_outline_thickness, lit_outline_thickness, NdL)) {
   return;
@@ -243,7 +233,6 @@ Introduce some jitter to mask size, based on base color luminance
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  float maskRadiusJitter = pow(dot(baseColor, vec3(0.3333)), 0.1);
 ```
@@ -263,7 +252,6 @@ Compute a mask value, based on screen space position of fragment.
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  float mask = pow(1.0 - length(fract(gl_FragCoord.xy / 7.0) - vec2(0.5)), maskRadiusJitter * 5.0) * 5.0;
 ```
@@ -282,7 +270,6 @@ Here, we sample the base color and apply a simple diffuse attenuation
 
 
 
-<CodeBlock languages="glsl"/>
 ```glsl
  vec3 color = baseColor * NdL;
  
