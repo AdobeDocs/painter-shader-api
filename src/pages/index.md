@@ -1,11 +1,12 @@
 ---
-title: Substance 3D Painter Shader API
+title: Substance 3D Painter - Shader API
 description: This is the overview page of Substance 3D Painter Shader API
 contributors:
   - https://github.com/Froyok
+featured: true
 ---
 
-<Hero slots="image, heading, text" background="rgb(1, 46, 24)" hideBreadcrumbNav={false}/>
+<Hero slots="image, heading, text" background="rgb(1, 46, 24)" hideBreadcrumbNav={true} />
 
 ![Hero image](./hero.png)
 
