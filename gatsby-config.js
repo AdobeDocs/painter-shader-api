@@ -19,10 +19,6 @@ module.exports = {
         path: '/'
       },
       {
-        title: 'Guides',
-        path: '/guides/'
-      },
-      {
         title: 'API Reference',
         path: '/api/'
       },
@@ -61,5 +57,9 @@ module.exports = {
 		},
 	]
   },
-  plugins: [`@adobe/gatsby-theme-aio`]
+  plugins: [`@adobe/gatsby-theme-aio`],
+  home: {
+	title: 'Photoshop',
+	path: 'https://www.adobe.com/products/photoshop.html'
+  }
 };
