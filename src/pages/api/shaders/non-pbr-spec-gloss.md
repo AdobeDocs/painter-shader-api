@@ -46,11 +46,11 @@ Import from libraries.
 
 
 ```glsl
-
-
-
-
-
+import lib-alpha.glsl
+ import lib-emissive.glsl
+ import lib-env.glsl
+ import lib-sampler.glsl
+ import lib-vectors.glsl
  
  //: param auto channel_diffuse
  uniform SamplerSparse diffuse_tex;

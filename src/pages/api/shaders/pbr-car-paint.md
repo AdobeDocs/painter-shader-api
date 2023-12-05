@@ -46,8 +46,8 @@ Import from libraries.
 
 
 ```glsl
-
-
+import lib-sampler.glsl
+ import lib-pbr.glsl
  
  //: param auto channel_basecolor
  uniform SamplerSparse basecolor_tex;

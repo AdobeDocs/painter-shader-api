@@ -46,10 +46,10 @@ Import from libraries.
 
 
 ```glsl
-
-
-
-
+import lib-sampler.glsl
+ import lib-pbr.glsl
+ import lib-normal.glsl
+ import lib-utils.glsl
  
  //: param auto channel_basecolor
  uniform SamplerSparse basecolor_tex;

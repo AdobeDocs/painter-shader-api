@@ -1,5 +1,5 @@
 ---
-title: surface-shader (Shader API)
+title: surface-shader.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -35,7 +35,7 @@ keywords:
 
 [ ](#section-1)
 
-
+surface-shader.glsl
 ===================
 
 

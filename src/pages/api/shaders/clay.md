@@ -46,7 +46,7 @@ Import from libraries.
 
 
 ```glsl
-
+import lib-vectors.glsl
  
  
  //: param custom { "default": [0.3, 0.07, 0.05], "label": "Color", "widget": "color" }

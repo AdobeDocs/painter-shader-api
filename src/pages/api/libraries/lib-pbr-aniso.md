@@ -1,5 +1,5 @@
 ---
-title: lib-pbr-aniso (Shader API)
+title: lib-pbr-aniso.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -35,7 +35,7 @@ keywords:
 
 [ ](#section-1)
 
-
+lib-pbr-aniso.glsl
 ==================
 
 
@@ -56,7 +56,7 @@ Import from library
 
 
 ```glsl
-
+import lib-pbr.glsl
 ```
 
 

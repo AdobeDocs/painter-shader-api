@@ -1,5 +1,5 @@
 ---
-title: lib-vectors (Shader API)
+title: lib-vectors.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -35,7 +35,7 @@ keywords:
 
 [ ](#section-1)
 
-
+lib-vectors.glsl
 ================
 
 
@@ -53,7 +53,7 @@ Import from library
 
 
 ```glsl
-
+import lib-normal.glsl
 ```
 
 

@@ -1,5 +1,5 @@
 ---
-title: lib-random (Shader API)
+title: lib-random.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -35,7 +35,7 @@ keywords:
 
 [ ](#section-1)
 
-
+lib-random.glsl
 ===============
 
 
@@ -54,7 +54,7 @@ Import from library
 
 
 ```glsl
-
+import lib-defines.glsl
 ```
 
 

@@ -46,8 +46,8 @@ Import from libraries.
 
 
 ```glsl
-
-
+import lib-pbr.glsl
+ import lib-pbr-aniso.glsl
  
  //: param custom {
  //: "group": "Base Surface",
@@ -76,7 +76,7 @@ Import from libraries.
  //: }
  uniform_specialization bool specularEdgeColorEnabled;
  
-
+ import lib-sheen.glsl
  
  //: param custom {
  //: "group": "Geometry",
@@ -86,8 +86,8 @@ Import from libraries.
  //: }
  uniform_specialization bool doubleSided;
  
-
-
+ import lib-pom.glsl
+ import lib-bent-normal.glsl
  
  //: param custom {
  //: "group": "Interior",
@@ -100,7 +100,7 @@ Import from libraries.
  //: }
  uniform_specialization bool translucencyEnabled;
  
-
+ import lib-sss.glsl
  
  //: param custom {
  //: "group": "Interior",
@@ -112,7 +112,7 @@ Import from libraries.
  //: }
  uniform_specialization bool absorptionEnabled;
  
-
+ import lib-alpha-test.glsl
  
  //: param custom {
  //: "group": "Geometry/Opacity",
@@ -125,8 +125,8 @@ Import from libraries.
  //: }
  uniform_specialization bool alphaBlendEnabled;
  
-
-
+ import lib-coat.glsl
+ import lib-utils.glsl
 ```
 
 

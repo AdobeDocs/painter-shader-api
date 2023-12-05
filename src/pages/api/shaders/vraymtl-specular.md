@@ -72,11 +72,11 @@ Channels needed for diffuse/specular workflow are bound here.
  //: param auto channel_anisotropylevel
  uniform SamplerSparse anisotropylevel_tex;
  
-
-
-
-
-
+ import lib-env.glsl
+ import lib-random.glsl
+ import lib-sampler.glsl
+ import lib-utils.glsl
+ import lib-vectors.glsl
  
  //: state cull_face off
 ```

@@ -65,7 +65,7 @@ Basic usage:
 
 ```glsl
 // Defines the SamplerSparse structure
-
+ import lib-sparse.glsl
  
  //: param auto TEXTURE_TAG
  uniform SamplerSparse uniform_tex; // Texture sampler and its information

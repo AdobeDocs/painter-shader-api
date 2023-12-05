@@ -46,7 +46,7 @@ Import from libraries.
 
 
 ```glsl
-
+import lib-sampler.glsl
 ```
 
 

@@ -1,5 +1,5 @@
 ---
-title: lib-env (Shader API)
+title: lib-env.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -35,7 +35,7 @@ keywords:
 
 [ ](#section-1)
 
-
+lib-env.glsl
 ============
 
 
@@ -52,7 +52,7 @@ Needed for math constants
 
 
 ```glsl
-
+import lib-defines.glsl
 ```
 
 

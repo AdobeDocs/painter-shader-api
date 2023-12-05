@@ -46,13 +46,13 @@ Import from libraries.
 
 
 ```glsl
-
-
-
-
-
-
-
+import lib-pbr.glsl
+ import lib-bent-normal.glsl
+ import lib-emissive.glsl
+ import lib-pom.glsl
+ import lib-sss.glsl
+ import lib-alpha.glsl
+ import lib-utils.glsl
  
  // Link Metal/Roughness MDL for Iray
  //: metadata {

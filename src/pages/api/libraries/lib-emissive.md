@@ -1,5 +1,5 @@
 ---
-title: lib-emissive (Shader API)
+title: lib-emissive.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -35,7 +35,7 @@ keywords:
 
 [ ](#section-1)
 
-
+lib-emissive.glsl
 =================
 
 
@@ -50,7 +50,7 @@ Import from library
 
 
 ```glsl
-
+import lib-sparse.glsl
 ```
 
 

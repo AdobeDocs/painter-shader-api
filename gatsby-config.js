@@ -33,11 +33,6 @@ module.exports = {
     ],
     subPages: [
 		{
-			title: "Guides",
-			header: true,
-			path: "/guides/"
-		},
-		{
 			title: "Shader API",
 			header: true,
 			path: "/api/",

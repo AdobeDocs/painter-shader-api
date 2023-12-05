@@ -362,7 +362,7 @@ Use 8x8 Bayer matrix for dithering mode
 
 
 ```glsl
-
+import lib-bayer.glsl
  
  float getDitherThreshold(uvec2 coords)
  {

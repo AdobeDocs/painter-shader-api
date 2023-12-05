@@ -46,10 +46,10 @@ Import from libraries.
 
 
 ```glsl
-
-
-
-
+import lib-pbr.glsl
+ import lib-emissive.glsl
+ import lib-sampler.glsl
+ import lib-utils.glsl
  
  #define NB_MATERIALS 4
  #define NB_MASKS (NB_MATERIALS - 1)

@@ -1,5 +1,5 @@
 ---
-title: lib-coat (Shader API)
+title: lib-coat.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -35,7 +35,7 @@ keywords:
 
 [ ](#section-1)
 
-
+lib-coat.glsl
 =============
 
 
@@ -51,7 +51,7 @@ Import from library
 
 
 ```glsl
-
+import lib-defines.glsl
 ```
 
 
@@ -115,8 +115,8 @@ Import from library
 
 
 ```glsl
-
-
+import lib-normal.glsl
+ import lib-sampler.glsl
 ```
 
 

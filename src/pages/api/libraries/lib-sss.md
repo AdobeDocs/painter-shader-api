@@ -1,5 +1,5 @@
 ---
-title: lib-sss (Shader API)
+title: lib-sss.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -35,7 +35,7 @@ keywords:
 
 [ ](#section-1)
 
-
+lib-sss.glsl
 ============
 
 
@@ -51,7 +51,7 @@ Import from library
 
 
 ```glsl
-
+import lib-sampler.glsl
 ```
 
 

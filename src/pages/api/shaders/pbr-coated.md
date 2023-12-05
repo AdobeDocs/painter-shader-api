@@ -46,11 +46,11 @@ Import from libraries.
 
 
 ```glsl
-
-
-
-
-
+import lib-sss.glsl
+ import lib-pbr.glsl
+ import lib-emissive.glsl
+ import lib-sampler.glsl
+ import lib-utils.glsl
  
  // Link Coated Metal/Roughness MDL for Iray
  //: metadata {

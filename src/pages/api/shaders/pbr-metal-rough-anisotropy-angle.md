@@ -46,13 +46,13 @@ Import from libraries.
 
 
 ```glsl
-
-
-
-
-
-
-
+import lib-pbr.glsl
+ import lib-pbr-aniso.glsl
+ import lib-bent-normal.glsl
+ import lib-emissive.glsl
+ import lib-sss.glsl
+ import lib-alpha.glsl
+ import lib-utils.glsl
 ```
 
 

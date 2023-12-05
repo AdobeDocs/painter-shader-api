@@ -1,5 +1,5 @@
 ---
-title: lib-sparse (Shader API)
+title: lib-sparse.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -35,7 +35,7 @@ keywords:
 
 [ ](#section-1)
 
-
+lib-sparse.glsl
 ===============
 
 

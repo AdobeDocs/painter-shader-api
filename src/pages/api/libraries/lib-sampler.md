@@ -1,5 +1,5 @@
 ---
-title: lib-sampler (Shader API)
+title: lib-sampler.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -35,7 +35,7 @@ keywords:
 
 [ ](#section-1)
 
-
+lib-sampler.glsl
 ================
 
 
@@ -79,8 +79,8 @@ Import from library
 
 
 ```glsl
-
-
+import lib-defines.glsl
+ import lib-sparse.glsl
 ```
 
 
