@@ -32,8 +32,8 @@ module.exports = {
       }
     ],
 	home: {
-	  title: 'Photoshop',
-	  path: 'https://www.adobe.com/products/photoshop.html'
+	  title: 'Painter',
+	  path: 'https://www.adobe.com/products/substance3d-painter.html'
 	},
     subPages: [
 		{
