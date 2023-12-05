@@ -1,5 +1,5 @@
 ---
-title: lib-alpha (Shader API)
+title: lib-alpha.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -35,7 +35,7 @@ keywords:
 
 [ ](#section-1)
 
-
+lib-alpha.glsl
 ==============
 
 
@@ -47,8 +47,8 @@ keywords:
 
 
 ```glsl
-
-
+import lib-sampler.glsl
+ import lib-random.glsl
 ```
 
 

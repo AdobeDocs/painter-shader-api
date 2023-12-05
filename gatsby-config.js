@@ -35,12 +35,12 @@ module.exports = {
 		{
 			title: "Guides",
 			header: true,
-			path: ""
+			path: "/guides/"
 		},
 		{
 			title: "Shader API",
 			header: true,
-			path: "",
+			path: "/api/",
 			pages: [
 				{
 					title : "Home",
