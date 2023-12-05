@@ -23,6 +23,10 @@ module.exports = {
         path: '/api/'
       },
       {
+        title: 'Documentation',
+        path: 'https://helpx.adobe.com/substance-3d-painter/home.html'
+      },
+      {
         title: 'Support',
         path: 'https://community.adobe.com/t5/substance-3d-painter/ct-p/ct-substance-3d-painter'
       }
@@ -58,8 +62,4 @@ module.exports = {
 	]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  home: {
-	title: 'Photoshop',
-	path: 'https://www.adobe.com/products/photoshop.html'
-  }
 };
