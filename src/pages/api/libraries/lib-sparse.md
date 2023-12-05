@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -65,6 +66,7 @@ If enabled, process additional texture lookup checks to climb up mipmap pyramid 
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 #ifdef FEATURE_SPARSE_TEXTURE
  //: param auto material_lod_check_needed
@@ -99,6 +101,7 @@ Used to query all sampler related uniforms with a single auto binding
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 struct SamplerSparse {
   sampler2D tex;
@@ -126,6 +129,7 @@ Store the UV coordinates & material-wise sparse LoD mask
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 struct SparseCoord {
   vec2 tex_coord;
@@ -157,6 +161,7 @@ Example: `SparseCoord uv1coord = getSparseCoord(inputs.multi_tex_coord[1]);`
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 SparseCoord getSparseCoord(vec2 tex_coord) {
   SparseCoord res;
@@ -189,6 +194,7 @@ Build texture coordinates structure used by `textureSparse()` sampling function
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 SparseCoord getSparseCoordLod0(vec2 tex_coord) {
   SparseCoord res;
@@ -225,6 +231,7 @@ Climb up mipmap pyramid if texels are missing
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float textureSparseQueryLod(SamplerSparse smp, SparseCoord coord) {
  #ifdef FEATURE_SPARSE_TEXTURE
@@ -260,6 +267,7 @@ Climb up mipmap pyramid if texels are missing
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 void textureSparseQueryGrad(out vec2 dfdx, out vec2 dfdy, SamplerSparse smp, SparseCoord coord) {
  #ifdef FEATURE_SPARSE_TEXTURE
@@ -296,6 +304,7 @@ This function replaces the standard `texture(sampler2D, vec2)` to retrieve texel
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec4 textureSparse(SamplerSparse smp, SparseCoord coord) {
   vec2 dfdx,dfdy;
@@ -321,6 +330,7 @@ We are providing alternatives versions of this helper for up to N=4
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 void textureSparseOffsets(SamplerSparse smp, SparseCoord coord, vec2 offsets[N], out vec4 results[N]) {
   vec2 dfdx,dfdy;

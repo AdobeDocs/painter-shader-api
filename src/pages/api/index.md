@@ -46,6 +46,7 @@ In Substance 3D Painter, you can write your own shaders in *GLSL*. We allow
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 void shade(V2F inputs) {
   diffuseShadingOutput(vec3(1.0, 0.0, 1.0));
@@ -159,6 +160,7 @@ You can declare additional non required information to give some hint to the
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: metadata {
  //: "key1":"value1",

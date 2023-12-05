@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -61,6 +62,7 @@ Basic usage:
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": false, "label": "Heavy feature" }
  uniform_specialization bool u_enable_heavy_featureA;
@@ -85,6 +87,7 @@ Shader entry point
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec4 shade(V2F inputs)
  {

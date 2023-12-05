@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -58,6 +59,7 @@ Import from library
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 
@@ -77,6 +79,7 @@ All engine parameters useful for normal-centric operations.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_height
  uniform SamplerSparse height_texture;
@@ -104,6 +107,7 @@ Used to invert the Y axis of the normal map
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto normal_y_coeff
  uniform float base_normal_y_coeff;
@@ -123,6 +127,7 @@ Empirically determined by our artists...
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 const float HEIGHT_FACTOR = 400.0;
 ```
@@ -145,6 +150,7 @@ This is based on Whiteout blending
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 normalBlend(vec3 baseNormal, vec3 overNormal)
  {
@@ -172,6 +178,7 @@ This is based on Detail Oriented blending
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 normalBlendOriented(vec3 baseNormal, vec3 overNormal)
  {
@@ -196,6 +203,7 @@ Returns a normal flattened by an attenuation factor
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 normalFade(vec3 normal,float attenuation)
  {
@@ -224,6 +232,7 @@ Unpack a normal w/ alpha channel
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 normalUnpack(vec4 normal_alpha, float y_coeff)
  {
@@ -256,6 +265,7 @@ Unpack a normal w/ alpha channel, no Y invertion
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 normalUnpack(vec4 normal_alpha)
  {
@@ -277,6 +287,7 @@ Compute the tangent space normal from document's height channel
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 normalFromHeight(SparseCoord coord, float height_force)
  {
@@ -328,6 +339,7 @@ Helper to compute the tangent space normal from base normal and a height
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getTSNormal(SparseCoord coord, SamplerSparse texture, vec3 normalFromHeight)
  {
@@ -362,6 +374,7 @@ Overload that use base_normal_texture
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getTSNormal(SparseCoord coord, vec3 normalFromHeight)
  {
@@ -384,6 +397,7 @@ Helper to compute the tangent space normal from base normal and height, and
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getTSNormal(SparseCoord coord, SamplerSparse texture)
  {
@@ -407,6 +421,7 @@ Overload that use base_normal_texture
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getTSNormal(SparseCoord coord)
  {
@@ -428,6 +443,7 @@ Helper to compute the world space normal from tangent space base normal.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 computeWSBaseNormal(SparseCoord coord, vec3 tangent, vec3 bitangent, vec3 normal)
  {
@@ -455,6 +471,7 @@ Helper to compute the world space normal from tangent space normal given by
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 computeWSNormal(SparseCoord coord, vec3 tangent, vec3 bitangent, vec3 normal)
  {

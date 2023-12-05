@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -53,6 +54,7 @@ Import from library
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 ```
@@ -71,6 +73,7 @@ A 2D blue noise texture containing scalar values
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto texture_blue_noise
  uniform sampler2D texture_blue_noise;
@@ -90,6 +93,7 @@ Blue noise texture resolution
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 const ivec2 texture_blue_noise_size = ivec2(256);
 ```
@@ -108,6 +112,7 @@ Current frame random seed
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto random_seed
  uniform int alg_random_seed;
@@ -127,6 +132,7 @@ Get an uniform random value based on pixel coordinates.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getBlueNoiseThreshold()
  {
@@ -148,6 +154,7 @@ Get an uniform random value based on pixel coordinates and frame id.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getBlueNoiseThresholdTemporal()
  {
@@ -169,6 +176,7 @@ Return the i*th* number from fibonacci sequence.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float fibonacci1D(int i)
  {
@@ -191,6 +199,7 @@ Return the i*th* couple from the fibonacci sequence.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec2 fibonacci2D(int i, int nbSamples)
  {
@@ -217,6 +226,7 @@ Return the i*th* couple from the fibonacci sequence.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec2 fibonacci2DDitheredTemporal(int i, int nbSamples)
  {

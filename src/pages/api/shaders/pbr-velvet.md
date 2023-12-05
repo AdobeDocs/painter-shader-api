@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -45,6 +46,7 @@ Import from libraries.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 
@@ -75,6 +77,7 @@ Import from libraries.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": "fibers", "label": "Fibers Texture", "usage": "texture" }
  uniform sampler2D fiber_tex;

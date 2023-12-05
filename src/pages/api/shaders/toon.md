@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -45,6 +46,7 @@ Import from libraries.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 ```
@@ -63,6 +65,7 @@ We define the global light position
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 const vec3 light_pos = vec3(10.0, 10.0, 10.0);
 ```
@@ -81,6 +84,7 @@ We **bind** the auto param world eye position to our uniform **camera_pos**.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto world_eye_position
  uniform vec3 camera_pos;
@@ -100,6 +104,7 @@ We **bind** the document's channel **base color** to our uniform **basecolor_tex
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_basecolor
  uniform SamplerSparse basecolor_tex;
@@ -120,6 +125,7 @@ We **bind** the **mesh curvature** to our uniform **curvature_tex**.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto texture_curvature
  uniform SamplerSparse curvature_tex;
@@ -140,6 +146,7 @@ We define a new custom tweak for this shader, along with its default value.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 0.4,
@@ -165,6 +172,7 @@ We define a new custom tweak for this shader, along with its default value.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 0.1,
@@ -189,6 +197,7 @@ Whether we prefer using the curvature or not.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": false,
@@ -211,6 +220,7 @@ Entry point of the shader.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 void shade(V2F inputs)
  {
@@ -230,6 +240,7 @@ We compute a few useful values.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
  vec3 V = normalize(camera_pos - inputs.position);
   vec3 N = normalize(inputs.normal);
@@ -254,6 +265,7 @@ We compute a few useful values.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
  if (use_curvature) {
   float curv = textureSparse(curvature_tex, inputs.sparse_coord).r;
@@ -275,6 +287,7 @@ If outline condition is reach, exit with black color.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
  if (NdV < mix(unlit_outline_thickness, lit_outline_thickness, NdL)) {
   return;
@@ -295,6 +308,7 @@ Here, we perform a 4 steps discretization of color.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
  vec3 color = getBaseColor(basecolor_tex, inputs.sparse_coord);
   if (NdL > 0.75) {
@@ -321,6 +335,7 @@ Fallback is black.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
  color = vec3(0.0);
  

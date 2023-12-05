@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -78,6 +79,7 @@ Import from library
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 
@@ -97,6 +99,7 @@ Default background colors when there is no data in channel (alpha is 0)
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 const vec3 DEFAULT_BASE_COLOR = vec3(0.5);
  const float DEFAULT_ROUGHNESS = 0.3;
@@ -138,6 +141,7 @@ AO map.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto ao_blending_mode
  uniform int ao_blending_mode;
@@ -161,6 +165,7 @@ A value used to tweak the Ambient Occlusion intensity.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 0.75,
@@ -187,6 +192,7 @@ Shadowmask.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto shadow_mask_enable
  uniform bool sm_enable;
@@ -212,6 +218,7 @@ Return sampled glossiness or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getGlossiness(vec4 sampledValue)
  {
@@ -238,6 +245,7 @@ Return sampled roughness or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getRoughness(vec4 sampledValue)
  {
@@ -264,6 +272,7 @@ Return sampled metallic or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getMetallic(vec4 sampledValue)
  {
@@ -290,6 +299,7 @@ Return sampled anisotropy level or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getAnisotropyLevel(vec4 sampledValue)
  {
@@ -316,6 +326,7 @@ Return sampled anisotropy angle or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getAnisotropyAngle(vec4 sampledValue)
  {
@@ -381,6 +392,7 @@ Return sampled opacity or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getOpacity(vec4 sampledValue)
  {
@@ -407,6 +419,7 @@ Return sampled height or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getHeight(vec4 sampledValue)
  {
@@ -433,6 +446,7 @@ Return sampled displacement or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getDisplacement(vec4 sampledValue)
  {
@@ -459,6 +473,7 @@ Return ambient occlusion
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getAO(SparseCoord coord, bool is_premult, bool is_full_strength)
  {
@@ -506,6 +521,7 @@ Return specular level
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getSpecularLevel(vec4 sampledValue)
  {
@@ -532,6 +548,7 @@ Fetch the shadowing factor (screen-space)
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getShadowFactor()
  {
@@ -563,6 +580,7 @@ Return sampled base color or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getBaseColor(vec4 sampledValue)
  {
@@ -589,6 +607,7 @@ Return sampled diffuse color or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getDiffuse(vec4 sampledValue)
  {
@@ -616,6 +635,7 @@ Return sampled specular color or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getSpecularColor(vec4 sampledValue)
  {
@@ -644,6 +664,7 @@ Generate anisotropic roughness from roughness and anisotropy level
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec2 generateAnisotropicRoughness(float roughness, float anisoLevel)
  {
@@ -666,6 +687,7 @@ Generate anisotropic roughness from roughness and anisotropy level,
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec2 generateAnisotropicRoughnessASM(float roughness, float anisoLevel)
  {
@@ -688,6 +710,7 @@ Generate diffuse color from base color and metallic factor
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 generateDiffuseColor(vec3 baseColor, float metallic)
  {
@@ -709,6 +732,7 @@ Generate specular color from dielectric specular level, base color and metallic 
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 generateSpecularColor(float specularLevel, vec3 baseColor, float metallic)
  {
@@ -731,6 +755,7 @@ Generate specular color from base color and metallic factor, using default
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 generateSpecularColor(vec3 baseColor, float metallic)
  {
@@ -752,6 +777,7 @@ Return sampled transmissive value or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getTranslucency(vec4 sampledValue)
  {
@@ -789,6 +815,7 @@ Return sampled scattering value per component or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getScatteringPerComponent(SamplerSparse smp, SparseCoord coord)
  {
@@ -813,6 +840,7 @@ Return sampled scatter color or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getScatteringColor(vec4 sampledValue)
  {
@@ -839,6 +867,7 @@ Return sampled specular tint value or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getSpecularTint(vec4 sampledValue)
  {
@@ -875,6 +904,7 @@ Return sampled sheen opacity (sheen weight) value or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getSheenOpacity(vec4 sampledValue)
  {
@@ -901,6 +931,7 @@ Return sampled sheen color value or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getSheenColor(vec4 sampledValue)
  {
@@ -927,6 +958,7 @@ Return sampled sheen roughness value or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getSheenRoughness(vec4 sampledValue)
  {
@@ -953,6 +985,7 @@ Return sampled coat opacity (coat weight) value or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getCoatOpacity(vec4 sampledValue)
  {
@@ -979,6 +1012,7 @@ Return sampled coat color value or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getCoatColor(vec4 sampledValue)
  {
@@ -1005,6 +1039,7 @@ Return sampled coat roughness value or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getCoatRoughness(vec4 sampledValue)
  {
@@ -1031,6 +1066,7 @@ Return sampled coat specular level value or a default value
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float getCoatSpecularLevel(vec4 sampledValue)
  {

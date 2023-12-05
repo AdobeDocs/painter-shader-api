@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -54,6 +55,7 @@ Perform the S-curve tone mapping based on the parameters sigma and n.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 tonemapSCurve(vec3 value, float sigma, float n)
  {
@@ -83,6 +85,7 @@ sRGB to linear color conversion. Scalar version.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float sRGB2linear(float x)
  {
@@ -106,6 +109,7 @@ sRGB to linear color conversion. RGB version.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 sRGB2linear(vec3 rgb)
  {
@@ -130,6 +134,7 @@ sRGB to linear color conversion. RGB + Alpha version.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec4 sRGB2linear(vec4 rgba)
  {
@@ -151,6 +156,7 @@ Linear to sRGB color conversion. Scalar version.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float linear2sRGB(float x)
  {
@@ -174,6 +180,7 @@ Linear to sRGB color conversion. RGB version.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 linear2sRGB(vec3 rgb)
  {
@@ -198,6 +205,7 @@ Linear to sRGB color conversion. RGB + Alpha version.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec4 linear2sRGB(vec4 rgba)
  {
@@ -219,6 +227,7 @@ Linear to sRGB color conversion optional. Scalar version.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto conversion_linear_to_srgb
  uniform bool convert_to_srgb_opt;
@@ -242,6 +251,7 @@ Linear to sRGB color conversion optional. RGB version.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 linear2sRGBOpt(vec3 rgb)
  {
@@ -263,6 +273,7 @@ Linear to sRGB color conversion optional. RGB + Alpha version.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec4 linear2sRGBOpt(vec4 rgba)
  {
@@ -284,6 +295,7 @@ Color conversion. Scalar version.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 uniform int output_conversion_method;
  float convertOutput(float x)
@@ -308,6 +320,7 @@ Color conversion. RGB version.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 convertOutput(vec3 rgb)
  {
@@ -331,6 +344,7 @@ Color conversion. RGB + Alpha version.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec4 convertOutput(vec4 rgba)
  {
@@ -361,6 +375,7 @@ Use 8x8 Bayer matrix for dithering mode
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
  
@@ -391,6 +406,7 @@ Remove AO and shadows on glossy metallic surfaces (close to mirrors)
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float specularOcclusionCorrection(float diffuseOcclusion, float metallic, float roughness)
  {

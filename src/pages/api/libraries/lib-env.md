@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -51,6 +52,7 @@ Needed for math constants
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 ```
@@ -69,6 +71,7 @@ Engine provided parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto texture_environment
  uniform sampler2D environment_texture;
@@ -101,6 +104,7 @@ Helper that allows one to sample environment. Rotation is taken into
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 envSample(vec3 dir, float lod)
  {
@@ -128,6 +132,7 @@ Transform a direction from world to environment space
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 worldToEnvSpace(vec3 dirW)
  {
@@ -151,6 +156,7 @@ Return the irradiance for a given direction. The computation is based on
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 envIrradiance(vec3 dirW)
  {

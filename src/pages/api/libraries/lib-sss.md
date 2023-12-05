@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -50,6 +51,7 @@ Import from library
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 ```
@@ -68,6 +70,7 @@ The translucency texture, used as SSS weight
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_translucency
  uniform SamplerSparse sss_translucency_tex;
@@ -87,6 +90,7 @@ The scalar or per component (R,G & B) SSS coefficient texture
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_scattering
  uniform SamplerSparse sss_scattering_tex;
@@ -106,6 +110,7 @@ The scatter color texture, used as SSS albedo
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto channel_scatteringcolor
  uniform SamplerSparse sss_scatteringcolor_tex;
@@ -139,6 +144,7 @@ Select whether the light penetrates straight through the material (translucent)
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 2,
@@ -171,6 +177,7 @@ Select which channel is used for scatter color.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 0,
@@ -202,6 +209,7 @@ Enable subsurface weighting using translucency channel
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": false,
@@ -228,6 +236,7 @@ Global scale to the subsurface scattering effect
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 0.5,
@@ -256,6 +265,7 @@ Wavelength dependency of the SSS of the material
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": [0.701, 0.301, 0.305],
@@ -282,6 +292,7 @@ Red shift scattering
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 0.0,
@@ -310,6 +321,7 @@ Rayleigh scattering
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 0.0,
@@ -338,6 +350,7 @@ Return the material SSS coefficients from scattering value (per component)
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec4 getSSSCoefficients(vec3 scattering) {
   vec4 coeffs = vec4(0.0);
@@ -369,6 +382,7 @@ Return the material SSS coefficients
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec4 getSSSCoefficients(SparseCoord coord) {
   if (sssEnabled) {
@@ -392,6 +406,7 @@ Return the material SSS color from scatter color and weight (translucency)
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec4 getSSSColor(vec3 color, float weight) {
   return vec4(color,weight);
@@ -413,6 +428,7 @@ Return the material SSS color and weight (translucency)
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec4 getSSSColor(SparseCoord coord) {
   if (sssEnabled) {

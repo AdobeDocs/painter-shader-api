@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -109,6 +110,7 @@ Example:
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: stacks [
  //: {
@@ -140,6 +142,7 @@ To bind a channel from a stack to a sampler parameter, prefix the channel tag wi
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto Mask1.channel_opacity
  uniform sampler2D mask_tex1;

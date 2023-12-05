@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -50,6 +51,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 #ifndef uniform_specialization
   #define uniform_specialization uniform
@@ -70,6 +72,7 @@ Some useful constants
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 const float M_PI = 3.14159265;
  const float M_2PI = 2.0 * M_PI;
@@ -92,6 +95,7 @@ Blending modes constants
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 const int BlendingMode_Disable = 0;
  const int BlendingMode_Replace = 1;

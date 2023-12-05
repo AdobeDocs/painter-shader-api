@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -49,6 +50,7 @@ Import from library
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 ```
@@ -67,6 +69,7 @@ All engine parameters useful for sheen.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "group": "Base Surface",
@@ -98,6 +101,7 @@ Import from library
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 ```
@@ -116,6 +120,7 @@ Compute the sheen BRDF contribution for importance sampling.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 sheen_contrib(float ndh, float ndl, float ndv, vec3 Ks, float roughness)
  {
@@ -153,6 +158,7 @@ Compute the microfacets sheen specular reflection to the viewer's eye.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 pbrComputeSheen(LocalVectors vectors, vec3 specColor, float roughness)
  {

@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -45,6 +46,7 @@ Import from libraries.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 

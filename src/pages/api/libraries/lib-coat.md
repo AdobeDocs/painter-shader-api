@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -50,6 +51,7 @@ Import from library
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 ```
@@ -68,6 +70,7 @@ All engine parameters useful for coat.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "group": "Coat",
@@ -114,6 +117,7 @@ Import from library
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 
@@ -133,6 +137,7 @@ Compute an f0 at the interface between to materials from their indices of refrac
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float iorToSpecularLevel(float iorFrom, float iorTo)
  {
@@ -155,6 +160,7 @@ Return the coat normal in world space.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getWSCoatNormal(SparseCoord coord, vec3 tangent, vec3 bitangent, vec3 normal)
  {
@@ -183,6 +189,7 @@ Compute the approximate colored coat absorption for a given view direction.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 coatPassageColorMultiplier(vec3 coatColor, float coatOpacity, float ndv)
  {

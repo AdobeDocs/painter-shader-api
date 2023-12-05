@@ -39,7 +39,25 @@ module.exports = {
 		},
 		{
 			title: "Shader API",
-			path: "/api/"
+			path: "/api/",
+			pages: [
+				{
+					title : "Changelog",
+					path: "/api/changelog/",
+				},
+				{
+					title : "Libraries",
+					path: "/api/libraries/",
+				},
+				{
+					title : "Parameters",
+					path: "/api/parameters/",
+				},
+				{
+					title : "Shaders",
+					path: "/api/shaders/",
+				}
+			]
 		},
 	]
   },

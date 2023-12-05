@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -63,6 +64,7 @@ Basic usage:
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 // Defines the SamplerSparse structure
 
@@ -85,6 +87,7 @@ Texture parameters allow to use 'or' operator to define a fallback:
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto TEXTURE_TAG_1 or TEXTURE_TAG_2
  uniform SamplerSparse uniform_tex; // if TEXTURE_TAG_1 exists then TEXTURE_TAG_1 else TEXTURE_TAG_2
@@ -180,6 +183,7 @@ Basic usage:
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto TEXTURE_TAG
  uniform sampler2D uniform_tex; // The texture itself
@@ -202,6 +206,7 @@ Texture parameters allow to use 'or' operator to define a fallback:
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto TEXTURE_TAG_1 or TEXTURE_TAG_2
  uniform sampler2D uniform_tex; // if TEXTURE_TAG_1 exists then TEXTURE_TAG_1 else TEXTURE_TAG_2
@@ -238,6 +243,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto aspect_ratio
  uniform float uniform_aspect_ratio;
@@ -258,6 +264,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto camera_view_matrix
  uniform mat4 uniform_camera_view_matrix;
@@ -278,6 +285,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto camera_view_matrix_it
  uniform mat4 uniform_camera_view_matrix_it;
@@ -298,6 +306,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto camera_vp_matrix_inverse
  uniform mat4 uniform_camera_vp_matrix_inverse;
@@ -318,6 +327,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto environment_exposure
  uniform float uniform_environment_exposure;
@@ -338,6 +348,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto environment_max_lod
  uniform float uniform_max_lod;
@@ -358,6 +369,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto environment_matrix
  uniform mat3 uniform_environment_matrix;
@@ -380,6 +392,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto facing
  uniform int uniform_facing;
@@ -400,6 +413,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto fovy
  uniform float uniform_fovy;
@@ -420,6 +434,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto is_2d_view
  uniform bool uniform_2d_view;
@@ -440,6 +455,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto is_perspective_projection
  uniform bool uniform_perspective_projection;
@@ -460,6 +476,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto main_light
  uniform vec4 uniform_main_light;
@@ -480,6 +497,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto mvp_matrix
  uniform mat4 uniform_mvp_matrix;
@@ -500,6 +518,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto scene_original_radius
  uniform float uniform_scene_original_radius;
@@ -520,6 +539,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto screen_size
  uniform vec4 uniform_screen_size;
@@ -540,6 +560,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto world_camera_direction
  uniform vec3 uniform_world_camera_direction;
@@ -560,6 +581,7 @@ Other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto world_eye_position
  uniform vec3 uniform_world_eye_position;

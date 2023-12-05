@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -52,6 +53,7 @@ Import from library
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 ```
@@ -70,6 +72,7 @@ Which view is shaded.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto is_2d_view
  uniform bool is2DView;
@@ -89,6 +92,7 @@ What kind of projection is used.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto is_perspective_projection
  uniform bool is_perspective;
@@ -108,6 +112,7 @@ Eye position in world space.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto world_eye_position
  uniform vec3 camera_pos;
@@ -127,6 +132,7 @@ Camera orientation in world space.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto world_camera_direction
  uniform vec3 camera_dir;
@@ -153,6 +159,7 @@ Compute the world space eye vector
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 getEyeVec(vec3 position) {
   return is_perspective ?
@@ -175,6 +182,7 @@ Convert a vector from tangent space to world space
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 tangentSpaceToWorldSpace(vec3 vecTS, V2F inputs) {
   return normalize(
@@ -198,6 +206,7 @@ Convert a vector from world space to tangent space
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 worldSpaceToTangentSpace(vec3 vecWS, V2F inputs) {
   // Assume the transformation is orthogonal
@@ -219,6 +228,7 @@ Local frame of vertex in world space
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 struct LocalVectors {
   vec3 vertexNormal;
@@ -240,6 +250,7 @@ Compute local frame from custom world space normal and anisotropy angle
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 LocalVectors computeLocalFrame(V2F inputs, vec3 normal, float anisoAngle) {
   LocalVectors vectors;
@@ -297,6 +308,7 @@ Compute local frame from mesh and document height and normals
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 LocalVectors computeLocalFrame(V2F inputs) {
   // Get world space normal

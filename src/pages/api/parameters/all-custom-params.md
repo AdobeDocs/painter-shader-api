@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -66,6 +67,7 @@ One can hide or show the parameter in the UI, depending on other parameters valu
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": 0, "label": "Int slider", "min": 0, "max": 10 }
  uniform int u_slider_param1;
@@ -88,6 +90,7 @@ Color parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": 0, "label": "Color RGB", "widget": "color" }
  uniform vec3 u_color_float3;
@@ -110,6 +113,7 @@ Spinboxes parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": 0, "label": "Int spinbox" }
  uniform int u_spin_int1;
@@ -144,6 +148,7 @@ Slider parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": 0, "label": "Int slider", "min": 0, "max": 10 }
  uniform int u_slider_int1;
@@ -180,6 +185,7 @@ Bool parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": false, "label": "Boolean" }
  uniform bool u_bool;
@@ -203,6 +209,7 @@ The texture is defined by its name in the shelf and must be in the `Textures` or
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom { "default": "", "default_color": [1.0, 1.0, 0.0, 1.0], "label": "Texture" }
  uniform sampler2D u_sampler1;
@@ -229,6 +236,7 @@ Combobox parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": -1,
@@ -257,6 +265,7 @@ Shader entry point
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec4 shade(V2F inputs)
  {

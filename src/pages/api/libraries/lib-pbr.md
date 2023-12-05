@@ -25,6 +25,7 @@ keywords:
 
 
 
+<CodeBlock languages="glsl"/>
 
 
 
@@ -55,6 +56,7 @@ Number of miplevels in the envmap.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param auto environment_max_lod
  uniform float maxLod;
@@ -75,6 +77,7 @@ An int representing the number of samples made for specular contribution
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 16,
@@ -108,6 +111,7 @@ Value used to control specular reflection leaking through the surface.
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 //: param custom {
  //: "default": 1.3,
@@ -134,6 +138,7 @@ Import from library, other parameters
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 
 
@@ -155,6 +160,7 @@ BRDF related functions
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 const float EPSILON_COEF = 1e-4;
  
@@ -293,6 +299,7 @@ Horizon fading trick from <https://marmosetco.tumblr.com/post/81245981087>
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 float horizonFading(float ndl, float horizonFade)
  {
@@ -315,6 +322,7 @@ Compute the lambertian diffuse radiance to the viewer's eye
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 pbrComputeDiffuse(vec3 normal, vec3 diffColor)
  {
@@ -336,6 +344,7 @@ Compute the microfacets specular reflection to the viewer's eye
 
 
 
+<CodeBlock languages="glsl"/>
 ```glsl
 vec3 pbrComputeSpecular(
   LocalVectors vectors,
