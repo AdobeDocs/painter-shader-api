@@ -31,7 +31,17 @@ module.exports = {
         path: 'https://community.adobe.com/t5/substance-3d-painter/ct-p/ct-substance-3d-painter'
       }
     ],
-    subPages: []
+    subPages: [
+		{
+			title: "Guides",
+			header: true,
+			path: "/guides/"
+		},
+		{
+			title: "Shader API",
+			path: "/api/"
+		},
+	]
   },
   plugins: [`@adobe/gatsby-theme-aio`]
 };

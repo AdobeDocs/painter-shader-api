@@ -44,7 +44,7 @@ Changelog
 -----
 
 
-* Engine parameter *environment_rotation* in [lib-env.glsl](/api/libraries/lib-env.html) is replaced by *environment_matrix*. Allows more complex environment transformations.
+* Engine parameter *environment_rotation* in [lib-env.glsl](/src/pages/api/libraries/lib-env/) is replaced by *environment_matrix*. Allows more complex environment transformations.
 * Dynamic material layering: Add new optional *format* entry in sub-stack channels declaration.
 
 
@@ -53,9 +53,9 @@ Changelog
 
 
 * Add support for Bent Normals diffuse and specular shading
-* New [lib-bent-normal.glsl](/api/libraries/lib-bent-normal.html) library to regroup helpers functions
-* Updated [pbrComputeSpecular()](/api/pbrComputeSpecular().html
-* Added supports for Bent Normals to [asm-metal-rough.glsl](/api/shaders/asm-metal-rough.html) and [pbr-metal-rough.glsl
+* New [lib-bent-normal.glsl](/src/pages/api/libraries/lib-bent-normal/) library to regroup helpers functions
+* Updated [pbrComputeSpecular()](/src/pages/api/pbrComputeSpecular()/
+* Added supports for Bent Normals to [asm-metal-rough.glsl](/src/pages/api/shaders/asm-metal-rough/) and [pbr-metal-rough.glsl
 * Removed support for DISABLE_FRAMEBUFFER_SRGB_CONVERSION define.
 
 
@@ -63,43 +63,43 @@ Changelog
 -----
 
 
-* Add a new [lib-coat.glsl](/api/libraries/lib-coat.html) library to help handling coating layer in the material.
-* Add a new [lib-sheen.glsl](/api/libraries/lib-sheen.html) library to help handling sheen specular highlights.
-* [all-custom-params.glsl](/api/parameters/all-custom-params.html): Updated the *visible* parameter to support dynamic boolean condition.
-* [all-custom-qualifiers.glsl](/api/parameters/all-custom-qualifiers.html): Add new *uniform_qualifier* to enable/disable parameters at shader compilation time.
-* [lib-sampler.glsl](/api/libraries/lib-sampler.html): Add *generateAnisotropicRoughnessASM* function to interpret anisotropy parameters in the Adobe Shader Material definition (ASM
+* Add a new [lib-coat.glsl](/src/pages/api/libraries/lib-coat/) library to help handling coating layer in the material.
+* Add a new [lib-sheen.glsl](/src/pages/api/libraries/lib-sheen/) library to help handling sheen specular highlights.
+* [all-custom-params.glsl](/src/pages/api/parameters/all-custom-params/): Updated the *visible* parameter to support dynamic boolean condition.
+* [all-custom-qualifiers.glsl](/src/pages/api/parameters/all-custom-qualifiers/): Add new *uniform_qualifier* to enable/disable parameters at shader compilation time.
+* [lib-sampler.glsl](/src/pages/api/libraries/lib-sampler/): Add *generateAnisotropicRoughnessASM* function to interpret anisotropy parameters in the Adobe Shader Material definition (ASM
 
 
 2018.3.2
 --------
 
 
-* [lib-sparse.glsl](/api/libraries/lib-sparse.html): Sampling functions uses texture derivatives instead simple mipmap level. It's a requirement for the support of anisotropy sampling. Sampling functions signatures are not modified.
-* [lib-pom.glsl](/api/libraries/lib-pom.html): the *getParallaxOffset* function signature has changed in order to uses texture derivatives
+* [lib-sparse.glsl](/src/pages/api/libraries/lib-sparse/): Sampling functions uses texture derivatives instead simple mipmap level. It's a requirement for the support of anisotropy sampling. Sampling functions signatures are not modified.
+* [lib-pom.glsl](/src/pages/api/libraries/lib-pom/): the *getParallaxOffset* function signature has changed in order to uses texture derivatives
 
 
 2018.3.0
 --------
 
 
-* Add a new [lib-pbr-aniso.glsl](/api/libraries/lib-pbr-aniso.html) library to help visualizing anisotropic specular highlight
-* Add a new [lib-sparse.glsl](/api/libraries/lib-sparse.html) library to help channel sampling by taking care of mipmaps availability
+* Add a new [lib-pbr-aniso.glsl](/src/pages/api/libraries/lib-pbr-aniso/) library to help visualizing anisotropic specular highlight
+* Add a new [lib-sparse.glsl](/src/pages/api/libraries/lib-sparse/) library to help channel sampling by taking care of mipmaps availability
 * Update shader libraries interfaces to take care of this safe sampling
 * **Deprecation**: The previous functions based on the vec2 texture coordinates and the texture sampler have been deprecated (please use new signatures)
-* [lib-pom.glsl](/api/libraries/lib-pom.html): Add a *applyParallaxOffset* function to simplify to use of parallax occlusion effect
-* [lib-random.glsl](/api/libraries/lib-random.html): Add a Blue Noise random value generator and temporal alternatives
-* [lib-sampler.glsl](/api/libraries/lib-sampler.html): Split all channel sampling helpers to have both value interpretation and sampling helpers
+* [lib-pom.glsl](/src/pages/api/libraries/lib-pom/): Add a *applyParallaxOffset* function to simplify to use of parallax occlusion effect
+* [lib-random.glsl](/src/pages/api/libraries/lib-random/): Add a Blue Noise random value generator and temporal alternatives
+* [lib-sampler.glsl](/src/pages/api/libraries/lib-sampler/): Split all channel sampling helpers to have both value interpretation and sampling helpers
 
 
 2018.2.0
 --------
 
 
-* **Surface shader API change**: the *shade* function signature has changed, see [surface-shader.glsl](/api/shaders/surface-shader.html)
+* **Surface shader API change**: the *shade* function signature has changed, see [surface-shader.glsl](/src/pages/api/shaders/surface-shader/)
 * The *shadeShadow* function is no longer used and can safely be removed from custom surface shaders
-* Add Subsurface Scattering support, see [surface-shader.glsl](/api/shaders/surface-shader.html) and [lib-sss.glsl
-* [lib-pbr.glsl](/api/libraries/lib-pbr.html): the *pbrComputeBRDF* function has been removed. See [pbr-metal-rough.glsl
-* New engine parameters have been added: *texture_blue_noise*, *aspect_ratio*, *camera_vp_matrix_inverse*, *environment_exposure*, *environment_rotation*, *fovy*, *main_light* and *screen_size*. See [all-engine-params.glsl](/api/parameters/all-engine-params.html) for details
+* Add Subsurface Scattering support, see [surface-shader.glsl](/src/pages/api/shaders/surface-shader/) and [lib-sss.glsl
+* [lib-pbr.glsl](/src/pages/api/libraries/lib-pbr/): the *pbrComputeBRDF* function has been removed. See [pbr-metal-rough.glsl
+* New engine parameters have been added: *texture_blue_noise*, *aspect_ratio*, *camera_vp_matrix_inverse*, *environment_exposure*, *environment_rotation*, *fovy*, *main_light* and *screen_size*. See [all-engine-params.glsl](/src/pages/api/parameters/all-engine-params/) for details
 * Add the *description* metadata to provide tooltips for custom shader parameters
 
 
@@ -109,7 +109,7 @@ Changelog
 
 * Fix missing shaders in documentation samples (pixelated and toon shaders)
 * Fix dithering for high resolution
-	+ [lib-bayer.glsl](/api/libraries/lib-bayer.html): **bayerMatrix8(
+	+ [lib-bayer.glsl](/src/pages/api/libraries/lib-bayer/): **bayerMatrix8(
 
 
 2017.4.1
@@ -117,7 +117,7 @@ Changelog
 
 
 * Fix pbr-coated shader
-	+ [lib-vectors.glsl](/api/libraries/lib-vectors.html): **tangentSpaceToWorldSpace(
+	+ [lib-vectors.glsl](/src/pages/api/libraries/lib-vectors/): **tangentSpaceToWorldSpace(
 
 
 2017.4.0
