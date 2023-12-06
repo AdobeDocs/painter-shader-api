@@ -52,6 +52,12 @@ module.exports = {
 				{
 					title : "Libraries",
 					path: "/api/libraries/",
+					pages: [
+						{
+							title : "lib-alpha",
+							path: "/api/libraries/lib-alpha/",
+						}
+					]
 				},
 				{
 					title : "Parameters",
