@@ -38,6 +38,10 @@ keywords:
 lib-alpha.glsl
 ==============
 
+---
+
+
+
 
 **Public Functions:**
 `alphaKill`

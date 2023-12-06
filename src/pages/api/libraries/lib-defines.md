@@ -38,6 +38,10 @@ keywords:
 lib-defines.glsl
 ================
 
+---
+
+
+
 
 **Public Constants:**
 `M_PI`

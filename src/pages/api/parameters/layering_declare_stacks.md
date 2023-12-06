@@ -38,7 +38,10 @@ keywords:
 Material layering: declare editable stacks
 ==========================================
 
--
+---
+
+
+
 
 An editable stack is defined by a unique identifier and a list of document channels.
  Possible channel id(s) are:
@@ -146,8 +149,8 @@ To bind a channel from a stack to a sampler parameter, prefix the channel tag wi
  uniform sampler2D mask_tex1;
  //: param auto Mask2.channel_opacity
  uniform sampler2D mask_tex2;
-
-
+ 
+ 
 ```
 
 

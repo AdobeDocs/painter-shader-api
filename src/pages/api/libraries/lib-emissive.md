@@ -38,6 +38,10 @@ keywords:
 lib-emissive.glsl
 =================
 
+---
+
+
+
 
 **Public Functions:**
 `pbrComputeEmissive`

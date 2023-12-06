@@ -38,6 +38,10 @@ keywords:
 surface-shader.glsl
 ===================
 
+---
+
+
+
 
 To create a shader resource that can be used in Substance 3D Painter, just create a glsl file containing a single
  function called *shade* with the following profile:

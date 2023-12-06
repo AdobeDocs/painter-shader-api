@@ -38,6 +38,10 @@ keywords:
 lib-bayer.glsl
 ==============
 
+---
+
+
+
 
 **Public Functions:**
 `bayerMatrix8`

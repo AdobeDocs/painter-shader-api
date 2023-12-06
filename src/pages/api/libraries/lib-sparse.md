@@ -38,6 +38,10 @@ keywords:
 lib-sparse.glsl
 ===============
 
+---
+
+
+
 
 This file provides useful functions to ensure sparse textures sampling
  correctness (ARB_sparse_texture).

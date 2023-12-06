@@ -38,6 +38,10 @@ keywords:
 Material layering: bind materials as shader parameters
 ======================================================
 
+---
+
+
+
 
 A material is defined by a unique identifier 'id'. Additional parameters:
 

@@ -38,6 +38,10 @@ keywords:
 lib-pom.glsl
 ============
 
+---
+
+
+
 
 **Public Functions:**
 `getParallaxOffset`

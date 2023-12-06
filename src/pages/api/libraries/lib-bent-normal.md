@@ -38,6 +38,10 @@ keywords:
 lib-bent-normal.glsl
 ====================
 
+---
+
+
+
 
 **Public Functions:**
 `computeWSBentNormal`

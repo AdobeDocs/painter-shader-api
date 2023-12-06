@@ -38,6 +38,10 @@ keywords:
 lib-vectors.glsl
 ================
 
+---
+
+
+
 
 **Public Functions:**
 `computeLocalFrame`

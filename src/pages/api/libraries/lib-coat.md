@@ -38,6 +38,10 @@ keywords:
 lib-coat.glsl
 =============
 
+---
+
+
+
 
 **Public Functions:**
 `iorToSpecularLevel`

@@ -38,6 +38,10 @@ keywords:
 lib-random.glsl
 ===============
 
+---
+
+
+
 
 **Public Functions:**
 `getBlueNoiseThreshold`
