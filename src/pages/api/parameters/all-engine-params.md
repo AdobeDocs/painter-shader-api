@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Engine parameters examples
 ==========================
@@ -58,7 +58,7 @@ For more information about this system, go to the [online documentation](https:/
 
 
 This system has repercussions on how to write shader code. We are providing helpers to simplify its use with the `SamplerSparse` structure and
- texture lookup functions (see [lib-sparse.glsl](/src/pages/api/libraries/lib-sparse/)).
+ texture lookup functions (see [lib\-sparse.glsl](/src/pages/api/libraries/lib-sparse/)).
 
 
 Basic usage:
@@ -72,7 +72,7 @@ Basic usage:
  import lib-sparse.glsl
  
  //: param auto TEXTURE_TAG
- uniform SamplerSparse uniform_tex; // Texture sampler and its information
+ uniform SamplerSparse uniform_tex;   // Texture sampler and its information
 ```
 
 
@@ -81,7 +81,7 @@ Basic usage:
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 Texture parameters allow to use 'or' operator to define a fallback:
 
@@ -100,7 +100,7 @@ Texture parameters allow to use 'or' operator to define a fallback:
 
 
 
-[ ](#section-3)
+[\#](#section-3)
 
 Where `TEXTURE_TAG` is one of the described tags below.
 
@@ -186,10 +186,10 @@ Basic usage:
 
 ```glsl
 //: param auto TEXTURE_TAG
- uniform sampler2D uniform_tex; // The texture itself
+ uniform sampler2D uniform_tex;   // The texture itself
  
  //: param auto TEXTURE_TAG_size
- uniform vec4 uniform_tex_size; // The size of the texture (width, height, 1/width, 1/height)
+ uniform vec4 uniform_tex_size;   // The size of the texture (width, height, 1/width, 1/height)
 ```
 
 
@@ -198,7 +198,7 @@ Basic usage:
 
 
 
-[ ](#section-4)
+[\#](#section-4)
 
 Texture parameters allow to use 'or' operator to define a fallback:
 
@@ -220,14 +220,14 @@ Texture parameters allow to use 'or' operator to define a fallback:
 
 
 
-[ ](#section-5)
+[\#](#section-5)
 
 Where `TEXTURE_TAG` is one of the described tags below.
 
 
 `texture_blue_noise` : A blue noise texture  
 
-`texture_environment` : Environment map, **mip-mapped**, use [lib-env.glsl](/src/pages/api/libraries/lib-env/) to use this one  
+`texture_environment` : Environment map, **mip\-mapped**, use [lib\-env.glsl](/src/pages/api/libraries/lib-env/) to use this one  
 
 
 
@@ -253,7 +253,7 @@ Other parameters
 
 
 
-[ ](#section-6)
+[\#](#section-6)
 
 `camera_view_matrix`: a `mat4` representing the transformation from world space to camera space  
 
@@ -273,7 +273,7 @@ Other parameters
 
 
 
-[ ](#section-7)
+[\#](#section-7)
 
 `camera_view_matrix_it`: inverse transpose version of `camera_view_matrix`  
 
@@ -293,7 +293,7 @@ Other parameters
 
 
 
-[ ](#section-8)
+[\#](#section-8)
 
 `camera_vp_matrix_inverse`: inverse of `projection * camera_view_matrix` matrix   
 
@@ -313,7 +313,7 @@ Other parameters
 
 
 
-[ ](#section-9)
+[\#](#section-9)
 
 `environment_exposure`: a `float` representing the envmap's exposure  
 
@@ -333,9 +333,9 @@ Other parameters
 
 
 
-[ ](#section-10)
+[\#](#section-10)
 
-`environment_max_lod`: a `float` representing the envmap's depth of mip-map pyramid  
+`environment_max_lod`: a `float` representing the envmap's depth of mip\-map pyramid  
 
 
 
@@ -353,7 +353,7 @@ Other parameters
 
 
 
-[ ](#section-11)
+[\#](#section-11)
 
 `environment_matrix`: a `mat3` representing the transformation from world space vector to environment map direction  
 
@@ -373,11 +373,11 @@ Other parameters
 
 
 
-[ ](#section-12)
+[\#](#section-12)
 
-`facing`: an `integer` indicating rendered faces (-1: back faces, 0: undefined, 1: front faces)  
+`facing`: an `integer` indicating rendered faces (\-1: back faces, 0: undefined, 1: front faces)  
 
- value of 0 means you can safely rely on glsl built-in variable `gl_FrontFacing`  
+ value of 0 means you can safely rely on glsl built\-in variable `gl_FrontFacing`  
 
 
 
@@ -395,7 +395,7 @@ Other parameters
 
 
 
-[ ](#section-13)
+[\#](#section-13)
 
 `fovy`: a `float` representing the camera field of view along Y axis  
 
@@ -415,7 +415,7 @@ Other parameters
 
 
 
-[ ](#section-14)
+[\#](#section-14)
 
 `is_2d_view`: a `bool` indicating whether the rendering is performed for 2D view or not  
 
@@ -435,7 +435,7 @@ Other parameters
 
 
 
-[ ](#section-15)
+[\#](#section-15)
 
 `is_perspective_projection`: a `bool` indicating whether the projection is perspective or orthographic  
 
@@ -455,7 +455,7 @@ Other parameters
 
 
 
-[ ](#section-16)
+[\#](#section-16)
 
 `main_light`: a `vec4` indicating the position of the main light in the environment  
 
@@ -475,7 +475,7 @@ Other parameters
 
 
 
-[ ](#section-17)
+[\#](#section-17)
 
 `mvp_matrix`: a `mat4` representing the model view projection matrix  
 
@@ -495,7 +495,7 @@ Other parameters
 
 
 
-[ ](#section-18)
+[\#](#section-18)
 
 `scene_original_radius`: a `float` representing the radius of the scene's bounding sphere before its normalization  
 
@@ -515,7 +515,7 @@ Other parameters
 
 
 
-[ ](#section-19)
+[\#](#section-19)
 
 `screen_size`: a `vec4` containing screen size data `(width, height, 1/width, 1/height)`  
 
@@ -535,7 +535,7 @@ Other parameters
 
 
 
-[ ](#section-20)
+[\#](#section-20)
 
 `world_camera_direction`: a `vec3` representing the world camera orientation  
 
@@ -555,7 +555,7 @@ Other parameters
 
 
 
-[ ](#section-21)
+[\#](#section-21)
 
 `world_eye_position`: a `vec3` representing the world eye position  
 

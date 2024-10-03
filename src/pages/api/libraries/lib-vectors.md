@@ -1,5 +1,5 @@
 ---
-title: lib-vectors.glsl (Shader API)
+title: lib\-vectors.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,10 +33,10 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
-lib-vectors.glsl
-================
+lib\-vectors.glsl
+=================
 
 ---
 
@@ -66,7 +66,7 @@ import lib-normal.glsl
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 Which view is shaded.
 
@@ -85,7 +85,7 @@ Which view is shaded.
 
 
 
-[ ](#section-3)
+[\#](#section-3)
 
 What kind of projection is used.
 
@@ -104,7 +104,7 @@ What kind of projection is used.
 
 
 
-[ ](#section-4)
+[\#](#section-4)
 
 Eye position in world space.
 
@@ -123,7 +123,7 @@ Eye position in world space.
 
 
 
-[ ](#section-5)
+[\#](#section-5)
 
 Camera orientation in world space.
 
@@ -139,7 +139,7 @@ Camera orientation in world space.
  uniform int facing;
  
  bool isBackFace() {
-  return facing == -1 || (facing == 0 && !gl_FrontFacing);
+   return facing == -1 || (facing == 0 && !gl_FrontFacing);
  }
 ```
 
@@ -149,7 +149,7 @@ Camera orientation in world space.
 
 
 
-[ ](#section-6)
+[\#](#section-6)
 
 Compute the world space eye vector
 
@@ -159,9 +159,9 @@ Compute the world space eye vector
 
 ```glsl
 vec3 getEyeVec(vec3 position) {
-  return is_perspective ?
-  normalize(camera_pos - position) :
-  -camera_dir;
+   return is_perspective ?
+     normalize(camera_pos - position) :
+     -camera_dir;
  }
 ```
 
@@ -171,7 +171,7 @@ vec3 getEyeVec(vec3 position) {
 
 
 
-[ ](#section-7)
+[\#](#section-7)
 
 Convert a vector from tangent space to world space
 
@@ -181,10 +181,10 @@ Convert a vector from tangent space to world space
 
 ```glsl
 vec3 tangentSpaceToWorldSpace(vec3 vecTS, V2F inputs) {
-  return normalize(
-  vecTS.x * inputs.tangent +
-  vecTS.y * inputs.bitangent +
-  vecTS.z * inputs.normal);
+   return normalize(
+     vecTS.x * inputs.tangent +
+     vecTS.y * inputs.bitangent +
+     vecTS.z * inputs.normal);
  }
 ```
 
@@ -194,7 +194,7 @@ vec3 tangentSpaceToWorldSpace(vec3 vecTS, V2F inputs) {
 
 
 
-[ ](#section-8)
+[\#](#section-8)
 
 Convert a vector from world space to tangent space
 
@@ -204,8 +204,8 @@ Convert a vector from world space to tangent space
 
 ```glsl
 vec3 worldSpaceToTangentSpace(vec3 vecWS, V2F inputs) {
-  // Assume the transformation is orthogonal
-  return normalize(vecWS * mat3(inputs.tangent, inputs.bitangent, inputs.normal));
+   // Assume the transformation is orthogonal
+   return normalize(vecWS * mat3(inputs.tangent, inputs.bitangent, inputs.normal));
  }
 ```
 
@@ -215,7 +215,7 @@ vec3 worldSpaceToTangentSpace(vec3 vecWS, V2F inputs) {
 
 
 
-[ ](#section-9)
+[\#](#section-9)
 
 Local frame of vertex in world space
 
@@ -225,8 +225,8 @@ Local frame of vertex in world space
 
 ```glsl
 struct LocalVectors {
-  vec3 vertexNormal;
-  vec3 tangent, bitangent, normal, eye, bent;
+   vec3 vertexNormal;
+   vec3 tangent, bitangent, normal, eye, bent;
  };
 ```
 
@@ -236,7 +236,7 @@ struct LocalVectors {
 
 
 
-[ ](#section-10)
+[\#](#section-10)
 
 Compute local frame from custom world space normal and anisotropy angle
 
@@ -246,44 +246,44 @@ Compute local frame from custom world space normal and anisotropy angle
 
 ```glsl
 LocalVectors computeLocalFrame(V2F inputs, vec3 normal, float anisoAngle) {
-  LocalVectors vectors;
-  vectors.vertexNormal = inputs.normal;
-  vectors.normal = normal;
-  vectors.bent = vec3(0.0);
+   LocalVectors vectors;
+   vectors.vertexNormal = inputs.normal;
+   vectors.normal = normal;
+   vectors.bent = vec3(0.0);
  
-  // Flip the normals for back facing polygons
-  if (isBackFace()) {
-  vectors.vertexNormal = -vectors.vertexNormal;
-  vectors.normal = -vectors.normal;
-  }
+   // Flip the normals for back facing polygons
+   if (isBackFace()) {
+     vectors.vertexNormal = -vectors.vertexNormal;
+     vectors.normal = -vectors.normal;
+   }
  
-  vectors.eye = is2DView ?
-  vectors.normal : // In 2D view, put view vector along the normal
-  getEyeVec(inputs.position);
+   vectors.eye = is2DView ?
+     vectors.normal : // In 2D view, put view vector along the normal
+     getEyeVec(inputs.position);
  
-  // Trick to remove black artifacts
-  // Backface ? place the eye at the opposite - removes black zones
-  if (dot(vectors.eye, vectors.normal) < 0.0) {
-  vectors.eye = reflect(vectors.eye, vectors.normal);
-  }
+   // Trick to remove black artifacts
+   // Backface ? place the eye at the opposite - removes black zones
+   if (dot(vectors.eye, vectors.normal) < 0.0) {
+     vectors.eye = reflect(vectors.eye, vectors.normal);
+   }
  
-  // Create a local frame for BRDF work
-  vec3 tangent = normalize(
-  inputs.tangent
-  - vectors.normal * dot(inputs.tangent, vectors.normal)
-  );
-  vec3 bitangent = normalize(
-  inputs.bitangent
-  - vectors.normal * dot(inputs.bitangent, vectors.normal)
-  - tangent * dot(inputs.bitangent, tangent)
-  );
+   // Create a local frame for BRDF work
+   vec3 tangent = normalize(
+     inputs.tangent
+     - vectors.normal * dot(inputs.tangent, vectors.normal)
+   );
+   vec3 bitangent = normalize(
+     inputs.bitangent
+     - vectors.normal * dot(inputs.bitangent, vectors.normal)
+     - tangent * dot(inputs.bitangent, tangent)
+   );
  
-  float cosAngle = cos(anisoAngle);
-  float sinAngle = sin(anisoAngle);
-  vectors.tangent = cosAngle * tangent - sinAngle * bitangent;
-  vectors.bitangent = cosAngle * bitangent + sinAngle * tangent;
+   float cosAngle = cos(anisoAngle);
+   float sinAngle = sin(anisoAngle);
+   vectors.tangent = cosAngle * tangent - sinAngle * bitangent;
+   vectors.bitangent = cosAngle * bitangent + sinAngle * tangent;
  
-  return vectors;
+   return vectors;
  }
 ```
 
@@ -293,7 +293,7 @@ LocalVectors computeLocalFrame(V2F inputs, vec3 normal, float anisoAngle) {
 
 
 
-[ ](#section-11)
+[\#](#section-11)
 
 Compute local frame from mesh and document height and normals
 
@@ -303,9 +303,9 @@ Compute local frame from mesh and document height and normals
 
 ```glsl
 LocalVectors computeLocalFrame(V2F inputs) {
-  // Get world space normal
-  vec3 normal = computeWSNormal(inputs.sparse_coord, inputs.tangent, inputs.bitangent, inputs.normal);
-  return computeLocalFrame(inputs, normal, 0.0);
+   // Get world space normal
+   vec3 normal = computeWSNormal(inputs.sparse_coord, inputs.tangent, inputs.bitangent, inputs.normal);
+   return computeLocalFrame(inputs, normal, 0.0);
  }
  
  

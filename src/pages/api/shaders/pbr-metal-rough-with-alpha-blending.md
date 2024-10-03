@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Substance 3D Painter Metal/Rough and opacity PBR shader
 =======================================================
@@ -58,7 +58,7 @@ import lib-pbr.glsl
  
  // Link Metal/Roughness MDL for Iray
  //: metadata {
- //: "mdl":"mdl::alg::materials::physically_metallic_roughness::physically_metallic_roughness"
+ //:   "mdl":"mdl::alg::materials::physically_metallic_roughness::physically_metallic_roughness"
  //: }
 ```
 
@@ -68,7 +68,7 @@ import lib-pbr.glsl
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 Show back faces as there may be holes in front faces.
 
@@ -86,7 +86,7 @@ Show back faces as there may be holes in front faces.
 
 
 
-[ ](#section-3)
+[\#](#section-3)
 
 Enable alpha blending
 
@@ -104,7 +104,7 @@ Enable alpha blending
 
 
 
-[ ](#section-4)
+[\#](#section-4)
 
 Channels needed for metal/rough workflow are bound here.
 
@@ -131,7 +131,7 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-[ ](#section-5)
+[\#](#section-5)
 
 Shader entry point.
 
@@ -142,36 +142,36 @@ Shader entry point.
 ```glsl
 void shade(V2F inputs)
  {
-  // Apply parallax occlusion mapping if possible
-  vec3 viewTS = worldSpaceToTangentSpace(getEyeVec(inputs.position), inputs);
-  applyParallaxOffset(inputs, viewTS);
+   // Apply parallax occlusion mapping if possible
+   vec3 viewTS = worldSpaceToTangentSpace(getEyeVec(inputs.position), inputs);
+   applyParallaxOffset(inputs, viewTS);
  
-  // Fetch material parameters, and conversion to the specular/roughness model
-  float roughness = getRoughness(roughness_tex, inputs.sparse_coord);
-  vec3 baseColor = getBaseColor(basecolor_tex, inputs.sparse_coord);
-  float metallic = getMetallic(metallic_tex, inputs.sparse_coord);
-  float specularLevel = getSpecularLevel(specularlevel_tex, inputs.sparse_coord);
+   // Fetch material parameters, and conversion to the specular/roughness model
+   float roughness = getRoughness(roughness_tex, inputs.sparse_coord);
+   vec3 baseColor = getBaseColor(basecolor_tex, inputs.sparse_coord);
+   float metallic = getMetallic(metallic_tex, inputs.sparse_coord);
+   float specularLevel = getSpecularLevel(specularlevel_tex, inputs.sparse_coord);
  
-  vec3 diffColor = generateDiffuseColor(baseColor, metallic);
-  vec3 specColor = generateSpecularColor(specularLevel, baseColor, metallic);
+   vec3 diffColor = generateDiffuseColor(baseColor, metallic);
+   vec3 specColor = generateSpecularColor(specularLevel, baseColor, metallic);
  
-  // Get detail (ambient occlusion) and global (shadow) occlusion factors
-  // separately in order to blend the bent normals properly
-  float shadowFactor = getShadowFactor();
-  float occlusion = getAO(inputs.sparse_coord, true, use_bent_normal);
-  float specOcclusion = specularOcclusionCorrection(
-  use_bent_normal ? shadowFactor : occlusion * shadowFactor,
-  metallic,
-  roughness);
+   // Get detail (ambient occlusion) and global (shadow) occlusion factors
+   // separately in order to blend the bent normals properly
+   float shadowFactor = getShadowFactor();
+   float occlusion = getAO(inputs.sparse_coord, true, use_bent_normal);
+   float specOcclusion = specularOcclusionCorrection(
+     use_bent_normal ? shadowFactor : occlusion * shadowFactor,
+     metallic,
+     roughness);
  
-  LocalVectors vectors = computeLocalFrame(inputs);
-  computeBentNormal(vectors,inputs);
+   LocalVectors vectors = computeLocalFrame(inputs);
+   computeBentNormal(vectors,inputs);
  
-  // Feed parameters for a physically based BRDF integration
-  alphaOutput(getOpacity(opacity_tex, inputs.sparse_coord));
-  emissiveColorOutput(pbrComputeEmissive(emissive_tex, inputs.sparse_coord));
-  diffuseShadingOutput(occlusion * shadowFactor * pbrComputeDiffuse(getDiffuseBentNormal(vectors), diffColor));
-  specularShadingOutput(specOcclusion * pbrComputeSpecular(vectors, specColor, roughness, occlusion, getBentNormalSpecularAmount()));
+   // Feed parameters for a physically based BRDF integration
+   alphaOutput(getOpacity(opacity_tex, inputs.sparse_coord));
+   emissiveColorOutput(pbrComputeEmissive(emissive_tex, inputs.sparse_coord));
+   diffuseShadingOutput(occlusion * shadowFactor * pbrComputeDiffuse(getDiffuseBentNormal(vectors), diffColor));
+   specularShadingOutput(specOcclusion * pbrComputeSpecular(vectors, specColor, roughness, occlusion, getBentNormalSpecularAmount()));
  }
  
  

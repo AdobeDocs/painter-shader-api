@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Basic pixelating shader
 =======================
@@ -59,7 +59,7 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 We define the global light position
 
@@ -77,7 +77,7 @@ const vec3 light_pos = vec3(10.0, 10.0, 10.0);
 
 
 
-[ ](#section-3)
+[\#](#section-3)
 
 We **bind** the auto param world eye position to our uniform **camera_pos**.
 
@@ -96,7 +96,7 @@ We **bind** the auto param world eye position to our uniform **camera_pos**.
 
 
 
-[ ](#section-4)
+[\#](#section-4)
 
 We **bind** the document's channel **base color** to our uniform **basecolor_tex**.
 
@@ -115,7 +115,7 @@ We **bind** the document's channel **base color** to our uniform **basecolor_tex
 
 
 
-[ ](#section-5)
+[\#](#section-5)
 
 We define a new custom tweak for this shader, along with its default value.
  This one is used to tweak the thickness of outline, when shadowed.
@@ -126,10 +126,10 @@ We define a new custom tweak for this shader, along with its default value.
 
 ```glsl
 //: param custom {
- //: "default": 0.4,
- //: "min": 0.0,
- //: "max": 1.0,
- //: "label": "Unlit outline thickness"
+ //:  "default": 0.4,
+ //:   "min": 0.0,
+ //:   "max": 1.0,
+ //:   "label": "Unlit outline thickness"
  //: }
  uniform float unlit_outline_thickness;
 ```
@@ -140,7 +140,7 @@ We define a new custom tweak for this shader, along with its default value.
 
 
 
-[ ](#section-6)
+[\#](#section-6)
 
 We define a new custom tweak for this shader, along with its default value.
  This one is used to tweak the thickness of outline, when lit.
@@ -151,10 +151,10 @@ We define a new custom tweak for this shader, along with its default value.
 
 ```glsl
 //: param custom {
- //: "default": 0.1,
- //: "min": 0.0,
- //: "max": 1.0,
- //: "label": "Lit outline thickness"
+ //:   "default": 0.1,
+ //:   "min": 0.0,
+ //:   "max": 1.0,
+ //:   "label": "Lit outline thickness"
  //: }
  uniform float lit_outline_thickness;
 ```
@@ -165,7 +165,7 @@ We define a new custom tweak for this shader, along with its default value.
 
 
 
-[ ](#section-7)
+[\#](#section-7)
 
 Entry point of the shader.
 
@@ -184,7 +184,7 @@ void shade(V2F inputs)
 
 
 
-[ ](#section-8)
+[\#](#section-8)
 
 We compute a few useful values.
 
@@ -193,11 +193,11 @@ We compute a few useful values.
 
 
 ```glsl
- vec3 V = normalize(camera_pos - inputs.position);
-  vec3 N = normalize(inputs.normal);
-  vec3 L = normalize(light_pos - inputs.position);
-  float NdV = dot(N, V);
-  float NdL = max(0.0, dot(N, L));
+  vec3 V = normalize(camera_pos - inputs.position);
+   vec3 N = normalize(inputs.normal);
+   vec3 L = normalize(light_pos - inputs.position);
+   float NdV = dot(N, V);
+   float NdL = max(0.0, dot(N, L));
 ```
 
 
@@ -206,7 +206,7 @@ We compute a few useful values.
 
 
 
-[ ](#section-9)
+[\#](#section-9)
 
 **Priority** is to performs the **outline detection**.
  If outline condition is reach, exit with black color.
@@ -216,11 +216,11 @@ We compute a few useful values.
 
 
 ```glsl
- if (NdV < mix(unlit_outline_thickness, lit_outline_thickness, NdL)) {
-  return;
-  }
+  if (NdV < mix(unlit_outline_thickness, lit_outline_thickness, NdL)) {
+     return;
+   }
  
-  vec3 baseColor = getBaseColor(basecolor_tex, inputs.sparse_coord);
+   vec3 baseColor = getBaseColor(basecolor_tex, inputs.sparse_coord);
 ```
 
 
@@ -229,7 +229,7 @@ We compute a few useful values.
 
 
 
-[ ](#section-10)
+[\#](#section-10)
 
 Introduce some jitter to mask size, based on base color luminance
 
@@ -238,7 +238,7 @@ Introduce some jitter to mask size, based on base color luminance
 
 
 ```glsl
- float maskRadiusJitter = pow(dot(baseColor, vec3(0.3333)), 0.1);
+  float maskRadiusJitter = pow(dot(baseColor, vec3(0.3333)), 0.1);
 ```
 
 
@@ -247,7 +247,7 @@ Introduce some jitter to mask size, based on base color luminance
 
 
 
-[ ](#section-11)
+[\#](#section-11)
 
 Compute a mask value, based on screen space position of fragment.
  This will create a grid like pattern.
@@ -257,7 +257,7 @@ Compute a mask value, based on screen space position of fragment.
 
 
 ```glsl
- float mask = pow(1.0 - length(fract(gl_FragCoord.xy / 7.0) - vec2(0.5)), maskRadiusJitter * 5.0) * 5.0;
+  float mask = pow(1.0 - length(fract(gl_FragCoord.xy / 7.0) - vec2(0.5)), maskRadiusJitter * 5.0) * 5.0;
 ```
 
 
@@ -266,7 +266,7 @@ Compute a mask value, based on screen space position of fragment.
 
 
 
-[ ](#section-12)
+[\#](#section-12)
 
 Here, we sample the base color and apply a simple diffuse attenuation
 
@@ -275,9 +275,9 @@ Here, we sample the base color and apply a simple diffuse attenuation
 
 
 ```glsl
- vec3 color = baseColor * NdL;
+  vec3 color = baseColor * NdL;
  
-  diffuseShadingOutput(mask * color);
+   diffuseShadingOutput(mask * color);
  }
  
  

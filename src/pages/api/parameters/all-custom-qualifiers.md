@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Custom qualifiers
 =================
@@ -47,7 +47,7 @@ uniform_specialization
 -----------------------
 
 
-*uniform_specialization* custom qualifier can be used as drop-in replacement of *uniform*
+*uniform_specialization* custom qualifier can be used as drop\-in replacement of *uniform*
  qualifier before *bool*, *int*, *float*, *ivec2*, *ivec3*, *ivec4*, *vec2*, *vec3*, *vec4* types.
  It's handled as a regular uniform, except that it forces shader specializations: uniform value
  is inlined as a constant.
@@ -81,7 +81,7 @@ Basic usage:
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 Shader entry point
 
@@ -92,17 +92,17 @@ Shader entry point
 ```glsl
 vec4 shade(V2F inputs)
  {
-  vec4 result_color(0.0);
+   vec4 result_color(0.0);
  
-  if (u_enable_heavy_featureA) {
-  // Eliminated if u_enable_heavy_feature is false
-  result_color += heavyFeatureA();
-  }
+   if (u_enable_heavy_featureA) {
+     // Eliminated if u_enable_heavy_feature is false
+     result_color += heavyFeatureA();
+   }
  
-  // heavyFeatureB() is eliminated if u_weight_heavy_computation is 0
-  result_color += heavyFeatureB() * u_weight_heavy_featureB;
+   // heavyFeatureB() is eliminated if u_weight_heavy_computation is 0
+   result_color += heavyFeatureB() * u_weight_heavy_featureB;
  
-  return result_color;
+   return result_color;
  }
  
  

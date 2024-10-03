@@ -1,5 +1,5 @@
 ---
-title: lib-sparse.glsl (Shader API)
+title: lib\-sparse.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,10 +33,10 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
-lib-sparse.glsl
-===============
+lib\-sparse.glsl
+================
 
 ---
 
@@ -92,7 +92,7 @@ If enabled, process additional texture lookup checks to climb up mipmap pyramid 
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 Sampler and sparse texture information structure
 
@@ -105,11 +105,11 @@ Used to query all sampler related uniforms with a single auto binding
 
 ```glsl
 struct SamplerSparse {
-  sampler2D tex;
-  vec4 size; // width, height, 1/width, 1/height
-  bool is_set; // a boolean indicating whether the texture is in the texture set or not
-  bool is_color; // a boolean indicating whether the texture is color (RGBA) or grayscale (R, GB)
-  uvec3 lod_mask_select; // masking operations description allowing to retrieve loaded mipmaps information
+   sampler2D tex;
+   vec4 size; // width, height, 1/width, 1/height
+   bool is_set;   // a boolean indicating whether the texture is in the texture set or not
+   bool is_color; // a boolean indicating whether the texture is color (RGBA) or grayscale (R, GB)
+   uvec3 lod_mask_select; // masking operations description allowing to retrieve loaded mipmaps information
  };
 ```
 
@@ -119,12 +119,12 @@ struct SamplerSparse {
 
 
 
-[ ](#section-3)
+[\#](#section-3)
 
 Sparse sampling coordinates
 
 
-Store the UV coordinates & material-wise sparse LoD mask
+Store the UV coordinates \& material\-wise sparse LoD mask
 
 
 
@@ -132,11 +132,11 @@ Store the UV coordinates & material-wise sparse LoD mask
 
 ```glsl
 struct SparseCoord {
-  vec2 tex_coord;
-  vec2 dfdx;
-  vec2 dfdy;
-  float lod;
-  uint material_lod_mask;
+   vec2 tex_coord;
+   vec2 dfdx;
+   vec2 dfdy;
+   float lod;
+   uint material_lod_mask;
  };
  
  
@@ -149,7 +149,7 @@ struct SparseCoord {
 
 
 
-[ ](#section-4)
+[\#](#section-4)
 
 Build texture coordinates structure used by `textureSparse()` sampling function
  (must be called from fragment shader)
@@ -163,17 +163,17 @@ Example: `SparseCoord uv1coord = getSparseCoord(inputs.multi_tex_coord[1]);`
 
 ```glsl
 SparseCoord getSparseCoord(vec2 tex_coord) {
-  SparseCoord res;
-  res.tex_coord = tex_coord;
-  res.dfdx = dFdx(tex_coord);
-  res.dfdy = dFdy(tex_coord);
+   SparseCoord res;
+   res.tex_coord = tex_coord;
+   res.dfdx = dFdx(tex_coord);
+   res.dfdy = dFdy(tex_coord);
  #ifdef FEATURE_SPARSE_TEXTURE
-  res.material_lod_mask = material_lod_check_needed ?
-  textureLod(material_lod_mask,tex_coord,0.0).r :
-  0u;
-  res.lod = getLodFromReferenceSampler(tex_coord);
+   res.material_lod_mask = material_lod_check_needed ?
+     textureLod(material_lod_mask,tex_coord,0.0).r :
+     0u;
+   res.lod = getLodFromReferenceSampler(tex_coord);
  #endif // FEATURE_SPARSE_TEXTURE
-  return res;
+   return res;
  }
  #endif
 ```
@@ -184,7 +184,7 @@ SparseCoord getSparseCoord(vec2 tex_coord) {
 
 
 
-[ ](#section-5)
+[\#](#section-5)
 
 Build texture coordinates structure used by `textureSparse()` sampling function
  Base level sampling version (can be used if outside fragment shader)
@@ -195,17 +195,17 @@ Build texture coordinates structure used by `textureSparse()` sampling function
 
 ```glsl
 SparseCoord getSparseCoordLod0(vec2 tex_coord) {
-  SparseCoord res;
-  res.tex_coord = tex_coord;
-  res.dfdx = vec2(0.0);
-  res.dfdy = vec2(0.0);
+   SparseCoord res;
+   res.tex_coord = tex_coord;
+   res.dfdx = vec2(0.0);
+   res.dfdy = vec2(0.0);
  #ifdef FEATURE_SPARSE_TEXTURE
-  res.material_lod_mask = material_lod_check_needed ?
-  textureLod(material_lod_mask,tex_coord,0.0).r :
-  0u;
-  res.lod = 0.0;
+   res.material_lod_mask = material_lod_check_needed ?
+     textureLod(material_lod_mask,tex_coord,0.0).r :
+     0u;
+   res.lod = 0.0;
  #endif // FEATURE_SPARSE_TEXTURE
-  return res;
+   return res;
  }
  
  #if defined(SHADER_FRAGMENT)
@@ -217,9 +217,9 @@ SparseCoord getSparseCoordLod0(vec2 tex_coord) {
 
 
 
-[ ](#section-6)
+[\#](#section-6)
 
-Compute the level-of-detail that would be used to sample from a sparse texture
+Compute the level\-of\-detail that would be used to sample from a sparse texture
 
 
 Climb up mipmap pyramid if texels are missing
@@ -232,16 +232,16 @@ Climb up mipmap pyramid if texels are missing
 ```glsl
 float textureSparseQueryLod(SamplerSparse smp, SparseCoord coord) {
  #ifdef FEATURE_SPARSE_TEXTURE
-  float lodfix = coord.lod;
-  if (material_lod_check_needed) {
-  lodfix = getFixedSparseLod(getTextureLodMask(smp.lod_mask_select, coord.material_lod_mask), lodfix);
-  }
-  return lodfix-uvtile_lod_bias;
+   float lodfix = coord.lod;
+   if (material_lod_check_needed) {
+     lodfix = getFixedSparseLod(getTextureLodMask(smp.lod_mask_select, coord.material_lod_mask), lodfix);
+   }
+   return lodfix-uvtile_lod_bias;
  #else // FEATURE_SPARSE_TEXTURE
-  // Do not use textureQueryLod here: workaround of MacOS driver issue (dramatic FPS drop)
-  vec2 dx = coord.dfdx * smp.size.xy;
-  vec2 dy = coord.dfdy * smp.size.xy;
-  return max(0.0, 0.5 * log2(max(dot(dx, dx), dot(dy, dy))));
+   // Do not use textureQueryLod here: workaround of MacOS driver issue (dramatic FPS drop)
+   vec2 dx = coord.dfdx * smp.size.xy;
+   vec2 dy = coord.dfdy * smp.size.xy;
+   return max(0.0, 0.5 * log2(max(dot(dx, dx), dot(dy, dy))));
  #endif // FEATURE_SPARSE_TEXTURE
  }
  #endif // SHADER_FRAGMENT
@@ -253,7 +253,7 @@ float textureSparseQueryLod(SamplerSparse smp, SparseCoord coord) {
 
 
 
-[ ](#section-7)
+[\#](#section-7)
 
 Compute the derivatives that would be used to sample from a sparse texture
 
@@ -267,19 +267,19 @@ Climb up mipmap pyramid if texels are missing
 ```glsl
 void textureSparseQueryGrad(out vec2 dfdx, out vec2 dfdy, SamplerSparse smp, SparseCoord coord) {
  #ifdef FEATURE_SPARSE_TEXTURE
-  if (material_lod_check_needed) {
-  float lodfix = getFixedSparseLod(getTextureLodMask(smp.lod_mask_select, coord.material_lod_mask), coord.lod);
-  if (coord.lod!=lodfix) {
-  // Fix dfdx dfdy, take account offset, no more anisotropy
-  vec2 ddfix = exp2(lodfix-uvtile_lod_bias) * uvtile_inverse_size;
-  dfdx = vec2(ddfix.x,0.0);
-  dfdy = vec2(0.0,ddfix.y);
-  return;
-  }
-  }
+   if (material_lod_check_needed) {
+     float lodfix = getFixedSparseLod(getTextureLodMask(smp.lod_mask_select, coord.material_lod_mask), coord.lod);
+     if (coord.lod!=lodfix) {
+       // Fix dfdx dfdy, take account offset, no more anisotropy
+       vec2 ddfix = exp2(lodfix-uvtile_lod_bias) * uvtile_inverse_size;
+       dfdx = vec2(ddfix.x,0.0);
+       dfdy = vec2(0.0,ddfix.y);
+       return;
+     }
+   }
  #endif // FEATURE_SPARSE_TEXTURE
-  dfdx = coord.dfdx;
-  dfdy = coord.dfdy;
+   dfdx = coord.dfdx;
+   dfdy = coord.dfdy;
  }
 ```
 
@@ -289,7 +289,7 @@ void textureSparseQueryGrad(out vec2 dfdx, out vec2 dfdy, SamplerSparse smp, Spa
 
 
 
-[ ](#section-8)
+[\#](#section-8)
 
 Performs a texture lookup on a sparse texture, go up the mipmap levels if necessary
 
@@ -302,9 +302,9 @@ This function replaces the standard `texture(sampler2D, vec2)` to retrieve texel
 
 ```glsl
 vec4 textureSparse(SamplerSparse smp, SparseCoord coord) {
-  vec2 dfdx,dfdy;
-  textureSparseQueryGrad(dfdx, dfdy, smp, coord);
-  return textureGrad(smp.tex, coord.tex_coord, dfdx, dfdy);
+   vec2 dfdx,dfdy;
+   textureSparseQueryGrad(dfdx, dfdy, smp, coord);
+   return textureGrad(smp.tex, coord.tex_coord, dfdx, dfdy);
  }
 ```
 
@@ -314,12 +314,12 @@ vec4 textureSparse(SamplerSparse smp, SparseCoord coord) {
 
 
 
-[ ](#section-9)
+[\#](#section-9)
 
 Given a texture, performs an optimized multiple texture lookups with small offsets
 
 
-We are providing alternatives versions of this helper for up to N=4
+We are providing alternatives versions of this helper for up to N\=4
 
 
 
@@ -327,11 +327,11 @@ We are providing alternatives versions of this helper for up to N=4
 
 ```glsl
 void textureSparseOffsets(SamplerSparse smp, SparseCoord coord, vec2 offsets[N], out vec4 results[N]) {
-  vec2 dfdx,dfdy;
-  textureSparseQueryGrad(dfdx, dfdy, smp, coord);
-  for(int i = 0; i < N; ++i) {
-  results[i] = textureGrad(smp.tex, coord.tex_coord + offsets[i], dfdx, dfdy);
-  }
+   vec2 dfdx,dfdy;
+   textureSparseQueryGrad(dfdx, dfdy, smp, coord);
+   for(int i = 0; i < N; ++i) {
+     results[i] = textureGrad(smp.tex, coord.tex_coord + offsets[i], dfdx, dfdy);
+   }
  }
  
  

@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Material layering: declare editable stacks
 ==========================================
@@ -114,20 +114,20 @@ Example:
 
 
 ```glsl
-//: stacks [
- //: {
- //: "id": "Mask1",
- //: "channels": [
- //: {"id": "opacity"}
- //: ]
- //: }, {
- //: "id": "Mask2",
- //: "channels": [
- //: {"id": "opacity"},
- //: {"id": "user0", "format": "RGB8"}
- //: ]
- //: }
- //: ]
+//:  stacks [
+ //:    {
+ //:      "id": "Mask1",
+ //:      "channels": [
+ //:        {"id": "opacity"}
+ //:      ]
+ //:    }, {
+ //:      "id": "Mask2",
+ //:      "channels": [
+ //:        {"id": "opacity"},
+ //:        {"id": "user0", "format": "RGB8"}
+ //:      ]
+ //:    }
+ //:  ]
 ```
 
 
@@ -136,7 +136,7 @@ Example:
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 To bind a channel from a stack to a sampler parameter, prefix the channel tag with the stack identifier:
 

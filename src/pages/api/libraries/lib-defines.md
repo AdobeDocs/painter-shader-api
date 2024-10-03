@@ -1,5 +1,5 @@
 ---
-title: lib-defines.glsl (Shader API)
+title: lib\-defines.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,10 +33,10 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
-lib-defines.glsl
-================
+lib\-defines.glsl
+=================
 
 ---
 
@@ -56,7 +56,7 @@ lib-defines.glsl
 
 ```glsl
 #ifndef uniform_specialization
-  #define uniform_specialization uniform
+ 	#define uniform_specialization uniform
  #endif
 ```
 
@@ -66,7 +66,7 @@ lib-defines.glsl
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 Some useful constants
 
@@ -88,7 +88,7 @@ const float M_PI = 3.14159265;
 
 
 
-[ ](#section-3)
+[\#](#section-3)
 
 Blending modes constants
 
@@ -97,38 +97,38 @@ Blending modes constants
 
 
 ```glsl
-const int BlendingMode_Disable = 0;
- const int BlendingMode_Replace = 1;
- const int BlendingMode_Normal = 2;
- const int BlendingMode_Darken = 3;
- const int BlendingMode_Multiply = 4;
- const int BlendingMode_ColorBurn = 5;
- const int BlendingMode_LinearBurn = 6;
- const int BlendingMode_Lighten = 7;
- const int BlendingMode_Screen = 8;
- const int BlendingMode_ColorDodge = 9;
- const int BlendingMode_LinearDodge = 10;
- const int BlendingMode_Overlay = 11;
- const int BlendingMode_SoftLight = 12;
- const int BlendingMode_HardLight = 13;
- const int BlendingMode_VividLight = 14;
- const int BlendingMode_LinearLight = 15;
- const int BlendingMode_PinLight = 16;
- const int BlendingMode_Difference = 17;
- const int BlendingMode_Exclusion = 18;
- const int BlendingMode_Tint = 19;
- const int BlendingMode_Saturation = 20;
- const int BlendingMode_Color = 21;
- const int BlendingMode_Value = 22;
- const int BlendingMode_Divide = 23;
- const int BlendingMode_InverseDivide = 24;
- const int BlendingMode_Passthru = 25;
- const int BlendingMode_NM_Combine = 26;
- const int BlendingMode_NM_Oriented = 27;
+const int BlendingMode_Disable            =  0;
+ const int BlendingMode_Replace            =  1;
+ const int BlendingMode_Normal             =  2;
+ const int BlendingMode_Darken             =  3;
+ const int BlendingMode_Multiply           =  4;
+ const int BlendingMode_ColorBurn          =  5;
+ const int BlendingMode_LinearBurn         =  6;
+ const int BlendingMode_Lighten            =  7;
+ const int BlendingMode_Screen             =  8;
+ const int BlendingMode_ColorDodge         =  9;
+ const int BlendingMode_LinearDodge        = 10;
+ const int BlendingMode_Overlay            = 11;
+ const int BlendingMode_SoftLight          = 12;
+ const int BlendingMode_HardLight          = 13;
+ const int BlendingMode_VividLight         = 14;
+ const int BlendingMode_LinearLight        = 15;
+ const int BlendingMode_PinLight           = 16;
+ const int BlendingMode_Difference         = 17;
+ const int BlendingMode_Exclusion          = 18;
+ const int BlendingMode_Tint               = 19;
+ const int BlendingMode_Saturation         = 20;
+ const int BlendingMode_Color              = 21;
+ const int BlendingMode_Value              = 22;
+ const int BlendingMode_Divide             = 23;
+ const int BlendingMode_InverseDivide      = 24;
+ const int BlendingMode_Passthru           = 25;
+ const int BlendingMode_NM_Combine         = 26;
+ const int BlendingMode_NM_Oriented        = 27;
  const int BlendingMode_NM_InverseOriented = 28;
- const int BlendingMode_Subtract = 29;
- const int BlendingMode_InverseSubtract = 30;
- const int BlendingMode_AddSub = 31;
+ const int BlendingMode_Subtract           = 29;
+ const int BlendingMode_InverseSubtract    = 30;
+ const int BlendingMode_AddSub             = 31;
  
  
 ```

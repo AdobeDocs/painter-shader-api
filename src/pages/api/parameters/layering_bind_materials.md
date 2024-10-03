@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Material layering: bind materials as shader parameters
 ======================================================
@@ -58,19 +58,19 @@ Example:
 
 
 ```glsl
-//: materials [
- //: {
- //: "id": "Material1",
- //: "default": "Concrete 044",
- //: "size": 512,
- //: "group": "Material 1"
- //: }, {
- //: "id": "Material2",
- //: "default": "Leaves elm",
- //: "size": 1024,
- //: "group": "Material 2"
- //: }
- //: ]
+//:  materials [
+ //:    {
+ //:       "id": "Material1",
+ //:       "default": "Concrete 044",
+ //:       "size": 512,
+ //:       "group": "Material 1"
+ //:    }, {
+ //:       "id": "Material2",
+ //:       "default": "Leaves elm",
+ //:       "size": 1024,
+ //:       "group": "Material 2"
+ //:    }
+ //:  ]
 ```
 
 
@@ -79,10 +79,10 @@ Example:
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 To bind a channel from a material to a sampler, define an auto param with the id of the material
- followed by the channel tag (see the available channels in [all-engine-params.glsl](/src/pages/api/parameters/all-engine-params/)):
+ followed by the channel tag (see the available channels in [all\-engine\-params.glsl](/src/pages/api/parameters/all-engine-params/)):
 
 
 

@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Custom parameters sample shader
 ===============================
@@ -62,7 +62,7 @@ Visible value
 One can hide or show the parameter in the UI, depending on other parameters values.
  Simply write an expression resulting in a boolean in the `visible` parameter.
  Acces other parameters values with `input.parameterName` syntax.
- Consider the following example where `param2` is visible to the user only when `param1` is less than 5.
+ Consider the following example where `param2` is visible to the user only when `param1` is less than 5\.
  For more examples and exhaustive syntax, please see the
  [Substance Visible If documentation](https://www.adobe.com/go/painter-visible-display-hide-inputs-outputs).
 
@@ -83,7 +83,7 @@ One can hide or show the parameter in the UI, depending on other parameters valu
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 Color parameters
 ----------------
@@ -105,7 +105,7 @@ Color parameters
 
 
 
-[ ](#section-3)
+[\#](#section-3)
 
 Spinboxes parameters
 --------------------
@@ -139,7 +139,7 @@ Spinboxes parameters
 
 
 
-[ ](#section-4)
+[\#](#section-4)
 
 Slider parameters
 -----------------
@@ -175,7 +175,7 @@ Slider parameters
 
 
 
-[ ](#section-5)
+[\#](#section-5)
 
 Bool parameters
 ---------------
@@ -195,7 +195,7 @@ Bool parameters
 
 
 
-[ ](#section-6)
+[\#](#section-6)
 
 Sampler parameters
 ------------------
@@ -224,7 +224,7 @@ The texture is defined by its name in the shelf and must be in the `Textures` or
 
 
 
-[ ](#section-7)
+[\#](#section-7)
 
 Combobox parameters
 -------------------
@@ -235,14 +235,14 @@ Combobox parameters
 
 ```glsl
 //: param custom {
- //: "default": -1,
- //: "label": "Combobox",
- //: "widget": "combobox",
- //: "values": {
- //: "Value -1": -1,
- //: "Value 0": 0,
- //: "Value 10": 10
- //: }
+ //:   "default": -1,
+ //:   "label": "Combobox",
+ //:   "widget": "combobox",
+ //:   "values": {
+ //:     "Value -1": -1,
+ //:     "Value 0": 0,
+ //:     "Value 10": 10
+ //:   }
  //: }
  uniform int u_combobox;
 ```
@@ -253,7 +253,7 @@ Combobox parameters
 
 
 
-[ ](#section-8)
+[\#](#section-8)
 
 Shader entry point
 
@@ -264,8 +264,8 @@ Shader entry point
 ```glsl
 vec4 shade(V2F inputs)
  {
-  // We simply return the value of the RGB color picker
-  return vec4(u_color_float3, 1.0);
+   // We simply return the value of the RGB color picker
+   return vec4(u_color_float3, 1.0);
  }
  
  

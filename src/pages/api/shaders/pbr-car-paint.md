@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Substance 3D Painter Car Paint PBR shader
 =========================================
@@ -67,9 +67,9 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
--------EXTERNAL ---------------------------------------------------//
+\-\-\-\-\-\-\-EXTERNAL \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-//
 
 
 
@@ -97,34 +97,34 @@ import lib-sampler.glsl
  
  void shade(V2F inputs)
  {
-  vec3 baseColor = getBaseColor(basecolor_tex, inputs.sparse_coord);
-  float metallic = getMetallic(metallic_tex, inputs.sparse_coord);
-  vec3 diffColor = generateDiffuseColor(baseColor, metallic);
-  // Get detail (ambient occlusion) and global (shadow) occlusion factors
-  float occlusion = getAO(inputs.sparse_coord) * getShadowFactor();
+   vec3 baseColor = getBaseColor(basecolor_tex, inputs.sparse_coord);
+   float metallic = getMetallic(metallic_tex, inputs.sparse_coord);
+   vec3 diffColor = generateDiffuseColor(baseColor, metallic);
+   // Get detail (ambient occlusion) and global (shadow) occlusion factors
+   float occlusion = getAO(inputs.sparse_coord) * getShadowFactor();
  
-  LocalVectors vectors = computeLocalFrame(inputs);
+   LocalVectors vectors = computeLocalFrame(inputs);
  
-  //Flakes
-  vec3 vFlakesNormal = texture(flakes_tex, inputs.tex_coord * flakes_scale).rgb;
-  vec3 vNp1 = normalize(vectors.normal + 0.2 * vFlakesNormal);
-  vec3 vNp2 = normalize(vectors.normal + normalPerturbation * vFlakesNormal);
+   //Flakes
+   vec3 vFlakesNormal = texture(flakes_tex, inputs.tex_coord * flakes_scale).rgb;
+   vec3 vNp1 = normalize(vectors.normal + 0.2 * vFlakesNormal);
+   vec3 vNp2 = normalize(vectors.normal + normalPerturbation * vFlakesNormal);
  
-  vec3 vNp1World = computeWSNormal(inputs.sparse_coord, inputs.tangent, inputs.bitangent, vNp1);
-  float fFresnel1 = max(0.0, dot(vNp1World, vectors.eye));
+   vec3 vNp1World = computeWSNormal(inputs.sparse_coord, inputs.tangent, inputs.bitangent, vNp1);
+   float fFresnel1 = max(0.0, dot(vNp1World, vectors.eye));
  
-  vec3 vNp2World = computeWSNormal(inputs.sparse_coord, inputs.tangent, inputs.bitangent, vNp2);
-  float fFresnel2 = max(0.0, dot(vNp2World, vectors.eye));
+   vec3 vNp2World = computeWSNormal(inputs.sparse_coord, inputs.tangent, inputs.bitangent, vNp2);
+   float fFresnel2 = max(0.0, dot(vNp2World, vectors.eye));
  
-  float fFresnel1Sq = fFresnel1 * fFresnel1;
-  vec3 paintColor =
-  fFresnel1 * baseColor +
-  fFresnel1Sq * paintColorMid +
-  fFresnel1Sq * fFresnel1Sq * paintColor2 +
-  pow(fFresnel2, 16.0) * flakeLayerColor;
-  diffColor = mix(diffColor, paintColor, metallic);
+   float fFresnel1Sq = fFresnel1 * fFresnel1;
+   vec3 paintColor =
+     fFresnel1 * baseColor +
+     fFresnel1Sq * paintColorMid +
+     fFresnel1Sq * fFresnel1Sq * paintColor2 +
+     pow(fFresnel2, 16.0) * flakeLayerColor;
+   diffColor = mix(diffColor, paintColor, metallic);
  
-  diffuseShadingOutput(occlusion * pbrComputeDiffuse(vectors.normal, diffColor));
+   diffuseShadingOutput(occlusion * pbrComputeDiffuse(vectors.normal, diffColor));
  }
  
  

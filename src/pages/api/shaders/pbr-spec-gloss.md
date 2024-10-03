@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Substance 3D Painter Specular/Glossiness PBR shader
 ===================================================
@@ -59,7 +59,7 @@ import lib-pbr.glsl
  
  // Link Specular/Glossiness skin MDL for Iray
  //: metadata {
- //: "mdl" : "mdl::alg::materials::skin_specular_glossiness::skin_specular_glossiness"
+ //:   "mdl" : "mdl::alg::materials::skin_specular_glossiness::skin_specular_glossiness"
  //: }
 ```
 
@@ -69,7 +69,7 @@ import lib-pbr.glsl
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 Channels needed for spec/gloss workflow are bound here.
 
@@ -88,36 +88,36 @@ Channels needed for spec/gloss workflow are bound here.
  
  void shade(V2F inputs)
  {
-  // Apply parallax occlusion mapping if possible
-  vec3 viewTS = worldSpaceToTangentSpace(getEyeVec(inputs.position), inputs);
-  applyParallaxOffset(inputs, viewTS);
+   // Apply parallax occlusion mapping if possible
+   vec3 viewTS = worldSpaceToTangentSpace(getEyeVec(inputs.position), inputs);
+   applyParallaxOffset(inputs, viewTS);
  
-  float glossiness = getGlossiness(glossiness_tex, inputs.sparse_coord);
-  vec3 specColor = getSpecularColor(specularcolor_tex, inputs.sparse_coord);
-  vec3 diffColor = getDiffuse(diffuse_tex, inputs.sparse_coord) * (vec3(1.0) - specColor);
+   float glossiness = getGlossiness(glossiness_tex, inputs.sparse_coord);
+   vec3 specColor = getSpecularColor(specularcolor_tex, inputs.sparse_coord);
+   vec3 diffColor = getDiffuse(diffuse_tex, inputs.sparse_coord) * (vec3(1.0) - specColor);
  
-  // Get detail (ambient occlusion) and global (shadow) occlusion factors
-  // separately in order to blend the bent normals properly
-  float shadowFactor = getShadowFactor();
-  float occlusion = getAO(inputs.sparse_coord, true, use_bent_normal);
-  float specOcclusion = use_bent_normal ? shadowFactor : occlusion * shadowFactor;
+   // Get detail (ambient occlusion) and global (shadow) occlusion factors
+   // separately in order to blend the bent normals properly
+   float shadowFactor = getShadowFactor();
+   float occlusion = getAO(inputs.sparse_coord, true, use_bent_normal);
+   float specOcclusion = use_bent_normal ? shadowFactor : occlusion * shadowFactor;
  
-  LocalVectors vectors = computeLocalFrame(inputs);
-  computeBentNormal(vectors,inputs);
+   LocalVectors vectors = computeLocalFrame(inputs);
+   computeBentNormal(vectors,inputs);
  
-  // Feed parameters for a physically based BRDF integration
-  emissiveColorOutput(pbrComputeEmissive(emissive_tex, inputs.sparse_coord));
-  albedoOutput(diffColor);
-  diffuseShadingOutput(occlusion * shadowFactor * envIrradiance(getDiffuseBentNormal(vectors)));
-  specularShadingOutput(specOcclusion * pbrComputeSpecular(vectors, specColor, 1.0 - glossiness, occlusion, getBentNormalSpecularAmount()));
-  sssCoefficientsOutput(getSSSCoefficients(inputs.sparse_coord));
+   // Feed parameters for a physically based BRDF integration
+   emissiveColorOutput(pbrComputeEmissive(emissive_tex, inputs.sparse_coord));
+   albedoOutput(diffColor);
+   diffuseShadingOutput(occlusion * shadowFactor * envIrradiance(getDiffuseBentNormal(vectors)));
+   specularShadingOutput(specOcclusion * pbrComputeSpecular(vectors, specColor, 1.0 - glossiness, occlusion, getBentNormalSpecularAmount()));
+   sssCoefficientsOutput(getSSSCoefficients(inputs.sparse_coord));
  
-  vec4 baseSSSColor = getSSSColor(inputs.sparse_coord);
-  if (usesSSSScatteringColorChannel()) {
-  // Must be dimmed by specColor as for diffuse color
-  baseSSSColor.rgb *= vec3(1.0) - specColor;
-  }
-  sssColorOutput(baseSSSColor);
+   vec4 baseSSSColor = getSSSColor(inputs.sparse_coord);
+   if (usesSSSScatteringColorChannel()) {
+     // Must be dimmed by specColor as for diffuse color
+     baseSSSColor.rgb *= vec3(1.0) - specColor;
+   }
+   sssColorOutput(baseSSSColor);
  }
  
  

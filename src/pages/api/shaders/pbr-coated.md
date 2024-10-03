@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Substance 3D Painter Metal/Rough Coating PBR shader
 ===================================================
@@ -58,7 +58,7 @@ import lib-sss.glsl
  
  // Link Coated Metal/Roughness MDL for Iray
  //: metadata {
- //: "mdl":"mdl::alg::materials::skin_metallic_roughness_coated::skin_metallic_roughness_coated"
+ //:   "mdl":"mdl::alg::materials::skin_metallic_roughness_coated::skin_metallic_roughness_coated"
  //: }
  
  //: param auto channel_basecolor
@@ -83,14 +83,14 @@ import lib-sss.glsl
  //: param custom { "group": "Coat Layer", "default": "false", "label": "Multiply with MaskCoat (user1) channel" }
  uniform bool coating_opacity_use_tex;
  //: param custom {
- //: "group": "Coat Layer",
- //: "label": "Surface behavior",
- //: "widget": "combobox",
- //: "default": 1,
- //: "values": {
- //: "Smooth surface": 0,
- //: "Keep details": 1
- //: }
+ //:   "group": "Coat Layer",
+ //:   "label": "Surface behavior",
+ //:   "widget": "combobox",
+ //:   "default": 1,
+ //:   "values": {
+ //:     "Smooth surface": 0,
+ //:     "Keep details": 1
+ //:   }
  //: }
  uniform int coating_surface_behavior;
  //: param custom { "group": "Coat Layer", "default": 1.5, "label": "IOR", "min": 1.0, "max": 1.8 }
@@ -98,72 +98,72 @@ import lib-sss.glsl
  
  float iorToSpecularLevel(float ior)
  {
-  float sqrtR0 = (ior-1) / (ior+1);
-  return sqrtR0*sqrtR0;
+ 	float sqrtR0 = (ior-1) / (ior+1);
+ 	return sqrtR0*sqrtR0;
  }
  
  float textureLookup(SamplerSparse samplerSparse, SparseCoord coord, float defaultValue)
  {
-  vec2 sampledValue = textureSparse(samplerSparse, coord).rg;
-  return sampledValue.r + defaultValue * (1.0 - sampledValue.g);
+ 	vec2 sampledValue = textureSparse(samplerSparse, coord).rg;
+ 	return sampledValue.r + defaultValue * (1.0 - sampledValue.g);
  }
  
  float getCoatRoughness(SparseCoord coord)
  {
-  return coating_rough_use_tex?
-  textureLookup(roughnesscoat_tex, coord, 0.01) :
-  coating_rough;
+ 	return coating_rough_use_tex?
+ 		textureLookup(roughnesscoat_tex, coord, 0.01) :
+ 		coating_rough;
  }
  
  float getCoatOpacity(SparseCoord coord)
  {
-  return coating_opacity_use_tex?
-  textureLookup(maskcoat_tex, coord, 1.0) * coating_opacity :
-  coating_opacity;
+ 	return coating_opacity_use_tex?
+ 		textureLookup(maskcoat_tex, coord, 1.0) * coating_opacity :
+ 		coating_opacity;
  }
  
  void shade(V2F inputs)
  {
-  float roughness = getRoughness(roughness_tex, inputs.sparse_coord);
-  vec3 baseColor = getBaseColor(basecolor_tex, inputs.sparse_coord);
-  float metallic = getMetallic(metallic_tex, inputs.sparse_coord);
-  float specularLevel = getSpecularLevel(specularlevel_tex, inputs.sparse_coord);
-  vec3 diffColor = generateDiffuseColor(baseColor, metallic);
-  vec3 specColor = generateSpecularColor(specularLevel, baseColor, metallic);
-  // Get detail (ambient occlusion) and global (shadow) occlusion factors
-  float occlusion = getAO(inputs.sparse_coord) * getShadowFactor();
-  float specOcclusion = specularOcclusionCorrection(occlusion, metallic, roughness);
+ 	float roughness = getRoughness(roughness_tex, inputs.sparse_coord);
+ 	vec3 baseColor = getBaseColor(basecolor_tex, inputs.sparse_coord);
+ 	float metallic = getMetallic(metallic_tex, inputs.sparse_coord);
+ 	float specularLevel = getSpecularLevel(specularlevel_tex, inputs.sparse_coord);
+ 	vec3 diffColor = generateDiffuseColor(baseColor, metallic);
+ 	vec3 specColor = generateSpecularColor(specularLevel, baseColor, metallic);
+ 	// Get detail (ambient occlusion) and global (shadow) occlusion factors
+ 	float occlusion = getAO(inputs.sparse_coord) * getShadowFactor();
+ 	float specOcclusion = specularOcclusionCorrection(occlusion, metallic, roughness);
  
-  // Material layer
-  LocalVectors vectors = computeLocalFrame(inputs);
+ 	// Material layer
+ 	LocalVectors vectors = computeLocalFrame(inputs);
  
-  // Feed parameters for a physically based BRDF integration
-  vec3 emissiveColor = pbrComputeEmissive(emissive_tex, inputs.sparse_coord);
-  albedoOutput(diffColor);
-  vec3 diffuseShading = occlusion * envIrradiance(vectors.normal);
-  vec3 specularShading = specOcclusion * pbrComputeSpecular(vectors, specColor, roughness);
-  sssCoefficientsOutput(getSSSCoefficients(inputs.sparse_coord));
+ 	// Feed parameters for a physically based BRDF integration
+ 	vec3 emissiveColor = pbrComputeEmissive(emissive_tex, inputs.sparse_coord);
+ 	albedoOutput(diffColor);
+ 	vec3 diffuseShading = occlusion * envIrradiance(vectors.normal);
+ 	vec3 specularShading = specOcclusion * pbrComputeSpecular(vectors, specColor, roughness);
+ 	sssCoefficientsOutput(getSSSCoefficients(inputs.sparse_coord));
  
-  vec4 baseSSSColor = getSSSColor(inputs.sparse_coord);
-  if (usesSSSScatteringColorChannel()) {
-  // Must be dimmed by metallic factor as for diffuse color
-  baseSSSColor.rgb = generateDiffuseColor(baseSSSColor.rgb, metallic);
-  }
-  sssColorOutput(baseSSSColor);
+ 	vec4 baseSSSColor = getSSSColor(inputs.sparse_coord);
+ 	if (usesSSSScatteringColorChannel()) {
+ 		// Must be dimmed by metallic factor as for diffuse color
+ 		baseSSSColor.rgb = generateDiffuseColor(baseSSSColor.rgb, metallic);
+ 	}
+ 	sssColorOutput(baseSSSColor);
  
-  // Coat layer, specular only
-  vec3 wsCoatNormal = coating_surface_behavior == 0?
-  tangentSpaceToWorldSpace(vec3(0, 0, 1.0), inputs) :
-  computeWSNormal(inputs.sparse_coord, inputs.tangent, inputs.bitangent, inputs.normal);
-  LocalVectors coatVectors = computeLocalFrame(inputs, wsCoatNormal, 0.0);
-  float coatRoughness = getCoatRoughness(inputs.sparse_coord);
-  vec3 coat = specOcclusion * pbrComputeSpecular(coatVectors, vec3(1.0), coatRoughness);
+ 	// Coat layer, specular only
+ 	vec3 wsCoatNormal = coating_surface_behavior == 0?
+ 		tangentSpaceToWorldSpace(vec3(0, 0, 1.0), inputs) :
+ 		computeWSNormal(inputs.sparse_coord, inputs.tangent, inputs.bitangent, inputs.normal);
+ 	LocalVectors coatVectors = computeLocalFrame(inputs, wsCoatNormal, 0.0);
+ 	float coatRoughness = getCoatRoughness(inputs.sparse_coord);
+ 	vec3 coat = specOcclusion * pbrComputeSpecular(coatVectors, vec3(1.0), coatRoughness);
  
-  float coatOpacity = getCoatOpacity(inputs.sparse_coord);
-  float blendFactor = coatOpacity * fresnel(max(1e-8, dot(vectors.eye, vectors.normal)), vec3(iorToSpecularLevel(coating_ior))).x;
-  emissiveColorOutput(emissiveColor * (1.0 - blendFactor));
-  diffuseShadingOutput(diffuseShading * (1.0 - blendFactor));
-  specularShadingOutput(mix(specularShading, coat, blendFactor));
+ 	float coatOpacity = getCoatOpacity(inputs.sparse_coord);
+ 	float blendFactor = coatOpacity * fresnel(max(1e-8, dot(vectors.eye, vectors.normal)), vec3(iorToSpecularLevel(coating_ior))).x;
+ 	emissiveColorOutput(emissiveColor * (1.0 - blendFactor));
+ 	diffuseShadingOutput(diffuseShading * (1.0 - blendFactor));
+ 	specularShadingOutput(mix(specularShading, coat, blendFactor));
  }
  
  

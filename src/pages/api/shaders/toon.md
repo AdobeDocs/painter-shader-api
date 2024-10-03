@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Basic toon shader
 =================
@@ -59,7 +59,7 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 We define the global light position
 
@@ -77,7 +77,7 @@ const vec3 light_pos = vec3(10.0, 10.0, 10.0);
 
 
 
-[ ](#section-3)
+[\#](#section-3)
 
 We **bind** the auto param world eye position to our uniform **camera_pos**.
 
@@ -96,7 +96,7 @@ We **bind** the auto param world eye position to our uniform **camera_pos**.
 
 
 
-[ ](#section-4)
+[\#](#section-4)
 
 We **bind** the document's channel **base color** to our uniform **basecolor_tex**.
 
@@ -115,7 +115,7 @@ We **bind** the document's channel **base color** to our uniform **basecolor_tex
 
 
 
-[ ](#section-5)
+[\#](#section-5)
 
 We **bind** the **mesh curvature** to our uniform **curvature_tex**.
  If no curvature is available, transparent texture is provided.
@@ -135,7 +135,7 @@ We **bind** the **mesh curvature** to our uniform **curvature_tex**.
 
 
 
-[ ](#section-6)
+[\#](#section-6)
 
 We define a new custom tweak for this shader, along with its default value.
  This one is used to tweak the thickness of outline, when shadowed.
@@ -146,10 +146,10 @@ We define a new custom tweak for this shader, along with its default value.
 
 ```glsl
 //: param custom {
- //: "default": 0.4,
- //: "min": 0.0,
- //: "max": 1.0,
- //: "label": "Unlit outline thickness"
+ //:  "default": 0.4,
+ //:   "min": 0.0,
+ //:   "max": 1.0,
+ //:   "label": "Unlit outline thickness"
  //: }
  uniform float unlit_outline_thickness;
 ```
@@ -160,7 +160,7 @@ We define a new custom tweak for this shader, along with its default value.
 
 
 
-[ ](#section-7)
+[\#](#section-7)
 
 We define a new custom tweak for this shader, along with its default value.
  This one is used to tweak the thickness of outline, when lit.
@@ -171,10 +171,10 @@ We define a new custom tweak for this shader, along with its default value.
 
 ```glsl
 //: param custom {
- //: "default": 0.1,
- //: "min": 0.0,
- //: "max": 1.0,
- //: "label": "Lit outline thickness"
+ //:   "default": 0.1,
+ //:   "min": 0.0,
+ //:   "max": 1.0,
+ //:   "label": "Lit outline thickness"
  //: }
  uniform float lit_outline_thickness;
 ```
@@ -185,7 +185,7 @@ We define a new custom tweak for this shader, along with its default value.
 
 
 
-[ ](#section-8)
+[\#](#section-8)
 
 Whether we prefer using the curvature or not.
 
@@ -195,8 +195,8 @@ Whether we prefer using the curvature or not.
 
 ```glsl
 //: param custom {
- //: "default": false,
- //: "label": "Use curvature"
+ //:   "default": false,
+ //:   "label": "Use curvature"
  //: }
  uniform bool use_curvature;
 ```
@@ -207,7 +207,7 @@ Whether we prefer using the curvature or not.
 
 
 
-[ ](#section-9)
+[\#](#section-9)
 
 Entry point of the shader.
 
@@ -226,7 +226,7 @@ void shade(V2F inputs)
 
 
 
-[ ](#section-10)
+[\#](#section-10)
 
 We compute a few useful values.
 
@@ -235,11 +235,11 @@ We compute a few useful values.
 
 
 ```glsl
- vec3 V = normalize(camera_pos - inputs.position);
-  vec3 N = normalize(inputs.normal);
-  vec3 L = normalize(light_pos - inputs.position);
-  float NdV = dot(N, V);
-  float NdL = max(0.0, dot(N, L));
+  vec3 V = normalize(camera_pos - inputs.position);
+   vec3 N = normalize(inputs.normal);
+   vec3 L = normalize(light_pos - inputs.position);
+   float NdV = dot(N, V);
+   float NdL = max(0.0, dot(N, L));
 ```
 
 
@@ -248,7 +248,7 @@ We compute a few useful values.
 
 
 
-[ ](#section-11)
+[\#](#section-11)
 
 **Priority** is to performs the **outline detection**.
  Allow the user to choose whether he prefers using the curvature map
@@ -259,10 +259,10 @@ We compute a few useful values.
 
 
 ```glsl
- if (use_curvature) {
-  float curv = textureSparse(curvature_tex, inputs.sparse_coord).r;
-  NdV = 1.0 - curv;
-  }
+  if (use_curvature) {
+     float curv = textureSparse(curvature_tex, inputs.sparse_coord).r;
+     NdV = 1.0 - curv;
+   }
 ```
 
 
@@ -271,7 +271,7 @@ We compute a few useful values.
 
 
 
-[ ](#section-12)
+[\#](#section-12)
 
 If outline condition is reach, exit with black color.
 
@@ -280,9 +280,9 @@ If outline condition is reach, exit with black color.
 
 
 ```glsl
- if (NdV < mix(unlit_outline_thickness, lit_outline_thickness, NdL)) {
-  return;
-  }
+  if (NdV < mix(unlit_outline_thickness, lit_outline_thickness, NdL)) {
+     return;
+   }
 ```
 
 
@@ -291,7 +291,7 @@ If outline condition is reach, exit with black color.
 
 
 
-[ ](#section-13)
+[\#](#section-13)
 
 Here, we perform a 4 steps discretization of color.
 
@@ -300,15 +300,15 @@ Here, we perform a 4 steps discretization of color.
 
 
 ```glsl
- vec3 color = getBaseColor(basecolor_tex, inputs.sparse_coord);
-  if (NdL > 0.75) {
-  color = color;
-  } else if (NdL > 0.5) {
-  color = color * 0.5;
-  } else if (NdL > 0.1) {
-  color = color * 0.1;
-  }
-  else
+  vec3 color = getBaseColor(basecolor_tex, inputs.sparse_coord);
+   if (NdL > 0.75) {
+     color = color;
+   } else if (NdL > 0.5) {
+     color = color * 0.5;
+   } else if (NdL > 0.1) {
+     color = color * 0.1;
+   }
+   else
 ```
 
 
@@ -317,7 +317,7 @@ Here, we perform a 4 steps discretization of color.
 
 
 
-[ ](#section-14)
+[\#](#section-14)
 
 Fallback is black.
 
@@ -326,9 +326,9 @@ Fallback is black.
 
 
 ```glsl
- color = vec3(0.0);
+    color = vec3(0.0);
  
-  diffuseShadingOutput(color);
+   diffuseShadingOutput(color);
  }
  
  

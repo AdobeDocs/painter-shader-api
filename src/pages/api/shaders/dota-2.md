@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Substance 3D Painter Dota 2 shader
 ==================================
@@ -65,9 +65,9 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
-------------------------- Diffuse Map --------------------------//
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- Diffuse Map \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-//
 
 
 
@@ -84,9 +84,9 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-3)
+[\#](#section-3)
 
--------MASK1 ---------------------------------------------------//
+\-\-\-\-\-\-\-MASK1 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-//
 
 
 
@@ -109,9 +109,9 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-4)
+[\#](#section-4)
 
--------MASK2 ---------------------------------------------------//
+\-\-\-\-\-\-\-MASK2 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-//
 
 
 
@@ -134,9 +134,9 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-5)
+[\#](#section-5)
 
-------- Specular Parameters ---------------------------------------------------//
+\-\-\-\-\-\-\- Specular Parameters \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-//
 
 
 
@@ -159,9 +159,9 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-6)
+[\#](#section-6)
 
-------- Rim Lighting Parameters ---------------------------------------------------//
+\-\-\-\-\-\-\- Rim Lighting Parameters \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-//
 
 
 
@@ -184,9 +184,9 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-7)
+[\#](#section-7)
 
-------- Ambient ---------------------------------------------------//
+\-\-\-\-\-\-\- Ambient \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-//
 
 
 
@@ -212,9 +212,9 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-8)
+[\#](#section-8)
 
-------- Textures ----------------------------------------------------//
+\-\-\-\-\-\-\- Textures \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-//
 
 
 
@@ -238,9 +238,9 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-9)
+[\#](#section-9)
 
-------- Lights ----------------------------------------------------//
+\-\-\-\-\-\-\- Lights \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-//
 
 
 
@@ -260,11 +260,11 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-10)
+[\#](#section-10)
 
------------------------------------------------------------------//
- ------------------------- Data Stucts ---------------------------//
- -----------------------------------------------------------------//
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-//
+ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- Data Stucts \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-//
+ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-//
 
 
 
@@ -273,8 +273,8 @@ import lib-sampler.glsl
 ```glsl
 struct lightProp
  {
-  vec3 lightVector;
-  vec3 lightColor;
+ 	vec3 lightVector;
+ 	vec3 lightColor;
  };
  
  lightProp lightArray[1];
@@ -282,106 +282,106 @@ struct lightProp
  // Lights! Method based on Xoluil Shader ( http://www.laurenscorijn.com/xoliulshader ) Thanks mate :)
  void PropagateLights( vec3 position )
  {
-  lightArray[0].lightVector = lightPosition_1 - position;
-  lightArray[0].lightColor = lightColor_1;
+ 	lightArray[0].lightVector = lightPosition_1 - position;
+ 	lightArray[0].lightColor = lightColor_1;
  }
  
  float Fresnel( vec3 N, vec3 V, float X )
  {
-  float Fresnel = 1.0 - clamp(dot(N, V), 0.0, 1.0);
-  return pow(Fresnel, X);
+ 	float Fresnel = 1.0 - clamp(dot(N, V), 0.0, 1.0);
+ 	return pow(Fresnel, X);
  }
  
  void CustomHeroDoLighting( vec3 N, vec3 L, vec3 V, vec3 LightColor, float diffuseWarpMask, float flSpecularExponent, inout vec3 finalDiffuse, inout vec3 finalSpecular)
  {
-  // Normalize
-  L = normalize(L);
-  float NdotL = dot(N, L);
-  float halfLambert = NdotL * 0.5 + 0.5;
+ 	// Normalize
+ 	L = normalize(L);
+ 	float NdotL = dot(N, L);
+ 	float halfLambert = NdotL * 0.5 + 0.5;
  
-  vec3 diffuseLight = LightColor;
-  // diffuse warp
-  diffuseLight *= bDoDiffuseWarp ? texture(difwarp, vec2(halfLambert, diffuseWarpMask)).rgb : vec3(halfLambert);
-  finalDiffuse += diffuseLight; // Output our diffuse lighting
+ 	vec3 diffuseLight = LightColor;
+ 	// diffuse warp
+ 	diffuseLight *= bDoDiffuseWarp ? texture(difwarp, vec2(halfLambert, diffuseWarpMask)).rgb : vec3(halfLambert);
+ 	finalDiffuse += diffuseLight; // Output our diffuse lighting
  
-  NdotL = max(0.0, NdotL);
-  vec3 R = reflect( V, N ); // No half-vector so this is consistent in look with ps2.0
-  float RdotL = max(0.0, dot( L, -R ));
+ 	NdotL = max(0.0, NdotL);
+ 	vec3 R = reflect( V, N ); // No half-vector so this is consistent in look with ps2.0
+ 	float RdotL = max(0.0, dot( L, -R ));
  
-  flSpecularExponent *= fSpecularExponent; // fSpecularExponent is from the UI Spinner
-  float flSpecularIntensity = NdotL * pow( RdotL, flSpecularExponent );
-  vec3 SpecularLighting = flSpecularIntensity * LightColor;
-  finalSpecular += SpecularLighting;
+ 	flSpecularExponent *= fSpecularExponent; // fSpecularExponent is from the UI Spinner
+ 	float flSpecularIntensity = NdotL * pow( RdotL, flSpecularExponent );
+ 	vec3 SpecularLighting = flSpecularIntensity * LightColor;
+ 	finalSpecular += SpecularLighting;
  }
  
  float sampleWithDefault(SamplerSparse samplerSparse, SparseCoord coord, float defaultValue)
  {
-  vec2 value = textureSparse(samplerSparse, coord).rg;
-  return value.r + defaultValue * (1.0 - value.g);
+ 	vec2 value = textureSparse(samplerSparse, coord).rg;
+ 	return value.r + defaultValue * (1.0 - value.g);
  }
  
  void shade(V2F inputs)
  {
-  PropagateLights(inputs.position.xyz); // Bring in lights
+ 	PropagateLights(inputs.position.xyz); // Bring in lights
  
-  // Get world space vectors
-  inputs.normal = normalize(inputs.normal);
-  LocalVectors vectors = computeLocalFrame(inputs);
+ 	// Get world space vectors
+ 	inputs.normal = normalize(inputs.normal);
+ 	LocalVectors vectors = computeLocalFrame(inputs);
  
-  float flDetailMask = sampleWithDefault(detail_tex , inputs.sparse_coord, 0.0);
-  float flDiffuseWarpMask = sampleWithDefault(fresnelMaskSampler, inputs.sparse_coord, 0.3);
-  float flMetalnessMask = sampleWithDefault(metallicSampler , inputs.sparse_coord, 0.0);
-  float flSelfIllumMask = sampleWithDefault(emissiveSampler , inputs.sparse_coord, 0.0);
+ 	float flDetailMask      = sampleWithDefault(detail_tex        , inputs.sparse_coord, 0.0);
+ 	float flDiffuseWarpMask = sampleWithDefault(fresnelMaskSampler, inputs.sparse_coord, 0.3);
+ 	float flMetalnessMask   = sampleWithDefault(metallicSampler   , inputs.sparse_coord, 0.0);
+ 	float flSelfIllumMask   = sampleWithDefault(emissiveSampler   , inputs.sparse_coord, 0.0);
  
-  float flSpecularMask = sampleWithDefault(specularWarpSampler, inputs.sparse_coord, 0.3);
-  float flRimMask = sampleWithDefault(rimSampler , inputs.sparse_coord, 0.3);
-  float flTintByBaseMask = sampleWithDefault(tintSpecSampler , inputs.sparse_coord, 0.0);
-  float flSpecularExponent = sampleWithDefault(glossinessSampler , inputs.sparse_coord, 0.3);
+ 	float flSpecularMask     = sampleWithDefault(specularWarpSampler, inputs.sparse_coord, 0.3);
+ 	float flRimMask          = sampleWithDefault(rimSampler         , inputs.sparse_coord, 0.3);
+ 	float flTintByBaseMask   = sampleWithDefault(tintSpecSampler    , inputs.sparse_coord, 0.0);
+ 	float flSpecularExponent = sampleWithDefault(glossinessSampler  , inputs.sparse_coord, 0.3);
  
-  vec3 FresnelTerm = vec3(Fresnel(vectors.normal, vectors.eye, 5.0));
-  FresnelTerm.b = max( FresnelTerm.b, flDiffuseWarpMask );
+ 	vec3 FresnelTerm = vec3(Fresnel(vectors.normal, vectors.eye, 5.0));
+ 	FresnelTerm.b = max( FresnelTerm.b, flDiffuseWarpMask );
  
-  vec3 albedo = getBaseColor(diffuseMapSampler, inputs.sparse_coord);
-  vec3 final = albedo * vec3(flSelfIllumMask); // emissive
+ 	vec3 albedo = getBaseColor(diffuseMapSampler, inputs.sparse_coord);
+ 	vec3 final = albedo * vec3(flSelfIllumMask); // emissive
  
-  vec3 diffuseColor = albedo; // assign the diffuse texture to our global diffuse color
-  vec3 Detail = texture(detailMapSampler, inputs.tex_coord * fDetailScale).rgb;
-  diffuseColor += Detail * flDetailMask;
+ 	vec3 diffuseColor = albedo; // assign the diffuse texture to our global diffuse color
+ 	vec3 Detail = texture(detailMapSampler, inputs.tex_coord * fDetailScale).rgb;
+ 	diffuseColor += Detail * flDetailMask;
  
-  if (bHasAlpha) {
-  alphaKill(inputs.sparse_coord);
-  }
+ 	if (bHasAlpha) {
+ 		alphaKill(inputs.sparse_coord);
+ 	}
  
-  vec3 ambient = fAmbientColor + fAmbientScale;
-  if(bUseIBL)
-  {
-  ambient = envIrradiance(vectors.normal) * fAmbientScale;
-  }
+ 	vec3 ambient = fAmbientColor + fAmbientScale;
+ 	if(bUseIBL)
+ 	{
+ 		ambient = envIrradiance(vectors.normal) * fAmbientScale;
+ 	}
  
-  vec3 finalDiffuse = vec3(0.0);
-  vec3 finalSpecular = vec3(0.0);
-  CustomHeroDoLighting(vectors.normal, lightArray[0].lightVector, vectors.eye, lightArray[0].lightColor, flDiffuseWarpMask, flSpecularExponent, finalDiffuse, finalSpecular);
+ 	vec3 finalDiffuse = vec3(0.0);
+ 	vec3 finalSpecular = vec3(0.0);
+ 	CustomHeroDoLighting(vectors.normal, lightArray[0].lightVector, vectors.eye, lightArray[0].lightColor, flDiffuseWarpMask, flSpecularExponent, finalDiffuse, finalSpecular);
  
-  final += finalDiffuse * diffuseColor * ambient;
+ 	final += finalDiffuse * diffuseColor * ambient;
  
-  vec3 SpecularTint = mix(diffuseColor, fSpecularColor, flTintByBaseMask);
-  vec3 cSpecular = finalSpecular * SpecularTint * fSpecularScale * flSpecularMask * FresnelTerm.b;
-  final += cSpecular;
+ 	vec3 SpecularTint = mix(diffuseColor, fSpecularColor, flTintByBaseMask);
+ 	vec3 cSpecular = finalSpecular * SpecularTint * fSpecularScale * flSpecularMask * FresnelTerm.b;
+ 	final += cSpecular;
  
-  final = mix(final, cSpecular, flMetalnessMask);
+ 	final = mix(final, cSpecular, flMetalnessMask);
  
-  vec3 rimLighting = vec3(0.0);
-  if ( bDoRimLighting )
-  {
-  rimLighting = vec3((FresnelTerm.r * fRimLightScale) * flRimMask);
-  rimLighting *= max(0.0, vectors.normal.y); // Masked by a 'sky light'
-  rimLighting *= fRimLightColor;
-  rimLighting *= (1.0 - flMetalnessMask); // Metalness
-  }
-  final += rimLighting;
+ 	vec3 rimLighting = vec3(0.0);
+ 	if ( bDoRimLighting )
+ 	{
+ 		rimLighting = vec3((FresnelTerm.r * fRimLightScale) * flRimMask);
+ 		rimLighting *= max(0.0, vectors.normal.y); // Masked by a 'sky light'
+ 		rimLighting *= fRimLightColor;
+ 		rimLighting *= (1.0 - flMetalnessMask); // Metalness
+ 	}
+ 	final += rimLighting;
  
-  final *= getShadowFactor();
-  diffuseShadingOutput(final);
+ 	final *= getShadowFactor();
+ 	diffuseShadingOutput(final);
  }
  
  

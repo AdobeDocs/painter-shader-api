@@ -1,5 +1,5 @@
 ---
-title: lib-random.glsl (Shader API)
+title: lib\-random.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,10 +33,10 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
-lib-random.glsl
-===============
+lib\-random.glsl
+================
 
 ---
 
@@ -67,7 +67,7 @@ import lib-defines.glsl
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 A 2D blue noise texture containing scalar values
 
@@ -86,7 +86,7 @@ A 2D blue noise texture containing scalar values
 
 
 
-[ ](#section-3)
+[\#](#section-3)
 
 Blue noise texture resolution
 
@@ -104,7 +104,7 @@ const ivec2 texture_blue_noise_size = ivec2(256);
 
 
 
-[ ](#section-4)
+[\#](#section-4)
 
 Current frame random seed
 
@@ -123,7 +123,7 @@ Current frame random seed
 
 
 
-[ ](#section-5)
+[\#](#section-5)
 
 Get an uniform random value based on pixel coordinates.
 
@@ -134,7 +134,7 @@ Get an uniform random value based on pixel coordinates.
 ```glsl
 float getBlueNoiseThreshold()
  {
-  return texture(texture_blue_noise, gl_FragCoord.xy / vec2(texture_blue_noise_size)).x + 0.5 / 65536.0;
+   return texture(texture_blue_noise, gl_FragCoord.xy / vec2(texture_blue_noise_size)).x + 0.5 / 65536.0;
  }
 ```
 
@@ -144,7 +144,7 @@ float getBlueNoiseThreshold()
 
 
 
-[ ](#section-6)
+[\#](#section-6)
 
 Get an uniform random value based on pixel coordinates and frame id.
 
@@ -155,7 +155,7 @@ Get an uniform random value based on pixel coordinates and frame id.
 ```glsl
 float getBlueNoiseThresholdTemporal()
  {
-  return fract(getBlueNoiseThreshold() + M_GOLDEN_RATIO * alg_random_seed);
+   return fract(getBlueNoiseThreshold() + M_GOLDEN_RATIO * alg_random_seed);
  }
 ```
 
@@ -165,7 +165,7 @@ float getBlueNoiseThresholdTemporal()
 
 
 
-[ ](#section-7)
+[\#](#section-7)
 
 Return the i*th* number from fibonacci sequence.
 
@@ -176,7 +176,7 @@ Return the i*th* number from fibonacci sequence.
 ```glsl
 float fibonacci1D(int i)
  {
-  return fract((float(i) + 1.0) * M_GOLDEN_RATIO);
+   return fract((float(i) + 1.0) * M_GOLDEN_RATIO);
  }
 ```
 
@@ -186,7 +186,7 @@ float fibonacci1D(int i)
 
 
 
-[ ](#section-8)
+[\#](#section-8)
 
 Return the i*th* couple from the fibonacci sequence.
  nbSample is required to get an uniform distribution.
@@ -198,10 +198,10 @@ Return the i*th* couple from the fibonacci sequence.
 ```glsl
 vec2 fibonacci2D(int i, int nbSamples)
  {
-  return vec2(
-  (float(i)+0.5) / float(nbSamples),
-  fibonacci1D(i)
-  );
+   return vec2(
+     (float(i)+0.5) / float(nbSamples),
+     fibonacci1D(i)
+   );
  }
 ```
 
@@ -211,11 +211,11 @@ vec2 fibonacci2D(int i, int nbSamples)
 
 
 
-[ ](#section-9)
+[\#](#section-9)
 
 Return the i*th* couple from the fibonacci sequence.
  nbSample is required to get an uniform distribution.
- This version has a per frame and per pixel pseudo-random rotation applied.
+ This version has a per frame and per pixel pseudo\-random rotation applied.
 
 
 
@@ -224,9 +224,9 @@ Return the i*th* couple from the fibonacci sequence.
 ```glsl
 vec2 fibonacci2DDitheredTemporal(int i, int nbSamples)
  {
-  vec2 s = fibonacci2D(i, nbSamples);
-  s.x += getBlueNoiseThresholdTemporal();
-  return s;
+   vec2 s = fibonacci2D(i, nbSamples);
+   s.x += getBlueNoiseThresholdTemporal();
+   return s;
  }
  
  

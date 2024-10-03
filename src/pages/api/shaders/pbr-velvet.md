@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Substance 3D Painter PBR Velvet shader
 ======================================
@@ -71,9 +71,9 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
--------EXTERNAL ---------------------------------------------------//
+\-\-\-\-\-\-\-EXTERNAL \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-//
 
 
 
@@ -99,33 +99,33 @@ import lib-sampler.glsl
  // SHADER
  void shade(V2F inputs)
  {
-  float roughness = getRoughness(roughness_tex, inputs.sparse_coord);
-  vec3 baseColor = getBaseColor(basecolor_tex, inputs.sparse_coord);
-  float metallic = getMetallic(metallic_tex, inputs.sparse_coord);
-  float specularLevel = getSpecularLevel(specularlevel_tex, inputs.sparse_coord);
-  vec3 diffColor = generateDiffuseColor(baseColor, metallic);
-  vec3 specColor = generateSpecularColor(specularLevel, baseColor, metallic);
-  // Get detail (ambient occlusion) and global (shadow) occlusion factors
-  float occlusion = getAO(inputs.sparse_coord) * getShadowFactor();
-  float specOcclusion = specularOcclusionCorrection(occlusion, metallic, roughness);
+   float roughness = getRoughness(roughness_tex, inputs.sparse_coord);
+   vec3 baseColor = getBaseColor(basecolor_tex, inputs.sparse_coord);
+   float metallic = getMetallic(metallic_tex, inputs.sparse_coord);
+   float specularLevel = getSpecularLevel(specularlevel_tex, inputs.sparse_coord);
+   vec3 diffColor = generateDiffuseColor(baseColor, metallic);
+   vec3 specColor = generateSpecularColor(specularLevel, baseColor, metallic);
+   // Get detail (ambient occlusion) and global (shadow) occlusion factors
+   float occlusion = getAO(inputs.sparse_coord) * getShadowFactor();
+   float specOcclusion = specularOcclusionCorrection(occlusion, metallic, roughness);
  
-  LocalVectors vectors = computeLocalFrame(inputs);
+   LocalVectors vectors = computeLocalFrame(inputs);
  
-  // Material
-  vec3 diffuse = occlusion * pbrComputeDiffuse(vectors.normal, diffColor);
-  vec3 specular = specOcclusion * pbrComputeSpecular(vectors, specColor, roughness);
+   // Material
+   vec3 diffuse = occlusion * pbrComputeDiffuse(vectors.normal, diffColor);
+   vec3 specular = specOcclusion * pbrComputeSpecular(vectors, specColor, roughness);
  
-  // Velvet reflection, simply summed over previous computation
-  float cosine = clamp(dot(normalize(vectors.normal), normalize(vectors.eye)), 0.0, 1.0);
-  float sine = sqrt(1.0 - cosine * cosine);
-  float rand = texture(fiber_tex, inputs.tex_coord * fiber_scale).r;
-  float noise = texture(sheen_noise, inputs.tex_coord * sheen_noise_scale).r;
-  float intensity = rand * (sheen * noise + 0.002) * pow(sine, edginess);
-  vec3 tint = mix(vec3(1.0), diffColor, tint_amount);
-  diffuse += intensity * mix(occlusion, 1.0, 1.0 / edginess) * envIrradiance(vectors.normal) * tint;
+   // Velvet reflection, simply summed over previous computation
+   float cosine = clamp(dot(normalize(vectors.normal), normalize(vectors.eye)), 0.0, 1.0);
+   float sine = sqrt(1.0 - cosine * cosine);
+   float rand = texture(fiber_tex, inputs.tex_coord * fiber_scale).r;
+   float noise = texture(sheen_noise, inputs.tex_coord * sheen_noise_scale).r;
+   float intensity = rand * (sheen * noise + 0.002) * pow(sine, edginess);
+   vec3 tint = mix(vec3(1.0), diffColor, tint_amount);
+   diffuse += intensity * mix(occlusion, 1.0, 1.0 / edginess) * envIrradiance(vectors.normal) * tint;
  
-  diffuseShadingOutput(diffuse);
-  specularShadingOutput(specular);
+   diffuseShadingOutput(diffuse);
+   specularShadingOutput(specular);
  }
  
  

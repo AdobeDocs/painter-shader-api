@@ -1,5 +1,5 @@
 ---
-title: surface-shader.glsl (Shader API)
+title: surface\-shader.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,10 +33,10 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
-surface-shader.glsl
-===================
+surface\-shader.glsl
+====================
 
 ---
 
@@ -60,7 +60,7 @@ void shade(V2F inputs);
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 V2F input type definition:
 --------------------------
@@ -71,14 +71,14 @@ V2F input type definition:
 
 ```glsl
 struct V2F {
-  vec3 normal; // interpolated normal
-  vec3 tangent; // interpolated tangent
-  vec3 bitangent; // interpolated bitangent
-  vec3 position; // interpolated position
-  vec4 color[1]; // interpolated vertex colors (color0)
-  vec2 tex_coord; // interpolated texture coordinates (uv0)
-  SparseCoord sparse_coord; // interpolated sparse texture coordinates used by textureSparse() sampling function
-  vec2 multi_tex_coord[8]; // interpolated texture coordinates (uv0-uv7)
+   vec3 normal;               // interpolated normal
+   vec3 tangent;              // interpolated tangent
+   vec3 bitangent;            // interpolated bitangent
+   vec3 position;             // interpolated position
+   vec4 color[1];             // interpolated vertex colors (color0)
+   vec2 tex_coord;            // interpolated texture coordinates (uv0)
+   SparseCoord sparse_coord;  // interpolated sparse texture coordinates used by textureSparse() sampling function
+   vec2 multi_tex_coord[8];   // interpolated texture coordinates (uv0-uv7)
  };
 ```
 
@@ -88,9 +88,9 @@ struct V2F {
 
 
 
-[ ](#section-3)
+[\#](#section-3)
 
-Note: To obtain a SparseCoord for uv1-uv7, you have to explicitly call `getSparseCoord(vec2)` defined in [lib-sparse.glsl](/src/pages/api/libraries/lib-sparse/)
+Note: To obtain a SparseCoord for uv1\-uv7, you have to explicitly call `getSparseCoord(vec2)` defined in [lib\-sparse.glsl](/src/pages/api/libraries/lib-sparse/)
 
 
 Surface shader outputs:
@@ -126,7 +126,7 @@ The following functions can be called from within the *shade* function to descri
 
 
 
-[ ](#section-4)
+[\#](#section-4)
 
 As an example, the most basic rendering equation for computing the fragment color is: `emissiveColor + albedo * diffuseShading + specularShading`
 

@@ -1,5 +1,5 @@
 ---
-title: lib-bayer.glsl (Shader API)
+title: lib\-bayer.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,10 +33,10 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
-lib-bayer.glsl
-==============
+lib\-bayer.glsl
+===============
 
 ---
 
@@ -52,7 +52,7 @@ lib-bayer.glsl
 
 ```glsl
 float bayerMatrix8(uvec2 coords) {
-  return (float(bayer(coords.x, coords.y)) + 0.5) / 64.0;
+   return (float(bayer(coords.x, coords.y)) + 0.5) / 64.0;
  }
  
  

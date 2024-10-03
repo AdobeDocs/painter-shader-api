@@ -1,5 +1,5 @@
 ---
-title: lib-sss.glsl (Shader API)
+title: lib\-sss.glsl (Shader API)
 description: Substance 3D Shader API
 keywords:
   - Creative Cloud
@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,10 +33,10 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
-lib-sss.glsl
-============
+lib\-sss.glsl
+=============
 
 ---
 
@@ -65,7 +65,7 @@ import lib-sampler.glsl
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 The translucency texture, used as SSS weight
 
@@ -84,9 +84,9 @@ The translucency texture, used as SSS weight
 
 
 
-[ ](#section-3)
+[\#](#section-3)
 
-The scalar or per component (R,G & B) SSS coefficient texture
+The scalar or per component (R,G \& B) SSS coefficient texture
 
 
 
@@ -103,7 +103,7 @@ The scalar or per component (R,G & B) SSS coefficient texture
 
 
 
-[ ](#section-4)
+[\#](#section-4)
 
 The scatter color texture, used as SSS albedo
 
@@ -120,11 +120,11 @@ The scatter color texture, used as SSS albedo
  uniform float sssSceneScale;
  
  //: param custom {
- //: "label": "Enable",
- //: "default": false,
- //: "group": "Interior/Subsurface Scattering Parameters",
- //: "description": "<html><head/><body><p>Scatters light below the surface, rather than passing straight through.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
- //: "asm": "scatter"
+ //:   "label": "Enable",
+ //:   "default": false,
+ //:   "group": "Interior/Subsurface Scattering Parameters",
+ //:   "description": "<html><head/><body><p>Scatters light below the surface, rather than passing straight through.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
+ //:   "asm": "scatter"
  //: }
  uniform_specialization bool sssEnabled;
 ```
@@ -135,7 +135,7 @@ The scatter color texture, used as SSS albedo
 
 
 
-[ ](#section-5)
+[\#](#section-5)
 
 Select whether the light penetrates straight through the material (translucent)
  or is diffused before starting to scatter (skin).
@@ -146,18 +146,18 @@ Select whether the light penetrates straight through the material (translucent)
 
 ```glsl
 //: param custom {
- //: "default": 2,
- //: "label": "Scattering type",
- //: "widget": "combobox",
- //: "values": {
- //: "Translucent": 0,
- //: "Skin": 1,
- //: "Red Shift - Rayleigh": 2
- //: },
- //: "group": "Interior/Subsurface Scattering Parameters",
- //: "description": "<html><head/><body><p>Skin, Translucent/Generic or Red Shift & Rayleigh controls.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
- //: "visible": "input.sssEnabled",
- //: "asm": "_scatter_type"
+ //:   "default": 2,
+ //:   "label": "Scattering type",
+ //:   "widget": "combobox",
+ //:   "values": {
+ //:     "Translucent": 0,
+ //:     "Skin": 1,
+ //:     "Red Shift - Rayleigh": 2
+ //:   },
+ //:   "group": "Interior/Subsurface Scattering Parameters",
+ //:   "description": "<html><head/><body><p>Skin, Translucent/Generic or Red Shift & Rayleigh controls.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
+ //:   "visible": "input.sssEnabled",
+ //:   "asm": "_scatter_type"
  //: }
  uniform int sssType;
 ```
@@ -168,7 +168,7 @@ Select whether the light penetrates straight through the material (translucent)
 
 
 
-[ ](#section-6)
+[\#](#section-6)
 
 Select which channel is used for scatter color.
 
@@ -178,17 +178,17 @@ Select which channel is used for scatter color.
 
 ```glsl
 //: param custom {
- //: "default": 0,
- //: "label": "Scatter color",
- //: "widget": "combobox",
- //: "values": {
- //: "Default albedo": 0,
- //: "ScatteringColor channel": 1
- //: },
- //: "group": "Interior/Subsurface Scattering Parameters",
- //: "description": "<html><head/><body><p>Select which channel is used to define scatter color.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
- //: "visible": "input.sssEnabled",
- //: "asm": "_scattering_color_source"
+ //:   "default": 0,
+ //:   "label": "Scatter color",
+ //:   "widget": "combobox",
+ //:   "values": {
+ //:     "Default albedo": 0,
+ //:     "ScatteringColor channel": 1
+ //:   },
+ //:   "group": "Interior/Subsurface Scattering Parameters",
+ //:   "description": "<html><head/><body><p>Select which channel is used to define scatter color.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
+ //:   "visible": "input.sssEnabled",
+ //:   "asm": "_scattering_color_source"
  //: }
  uniform int sssScatteringColorSource;
 ```
@@ -199,7 +199,7 @@ Select which channel is used for scatter color.
 
 
 
-[ ](#section-7)
+[\#](#section-7)
 
 Enable subsurface weighting using translucency channel
 
@@ -209,12 +209,12 @@ Enable subsurface weighting using translucency channel
 
 ```glsl
 //: param custom {
- //: "default": false,
- //: "label": "Use translucency channel as scattering mask",
- //: "group": "Interior/Subsurface Scattering Parameters",
- //: "description": "<html><head/><body><p>Select if <b>Translucency</b> channel is used to interpolate between the scattered diffuse and the original diffuse.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
- //: "visible": "input.sssEnabled",
- //: "asm": "_scattering_uses_translucency"
+ //:   "default": false,
+ //:   "label": "Use translucency channel as scattering mask",
+ //:   "group": "Interior/Subsurface Scattering Parameters",
+ //:   "description": "<html><head/><body><p>Select if <b>Translucency</b> channel is used to interpolate between the scattered diffuse and the original diffuse.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
+ //:   "visible": "input.sssEnabled",
+ //:   "asm": "_scattering_uses_translucency"
  //: }
  uniform_specialization bool sssScatteringUsesTranslucency;
 ```
@@ -225,7 +225,7 @@ Enable subsurface weighting using translucency channel
 
 
 
-[ ](#section-8)
+[\#](#section-8)
 
 Global scale to the subsurface scattering effect
 
@@ -235,14 +235,14 @@ Global scale to the subsurface scattering effect
 
 ```glsl
 //: param custom {
- //: "default": 0.5,
- //: "label": "Scale",
- //: "min": 0.01,
- //: "max": 1.0,
- //: "group": "Interior/Subsurface Scattering Parameters",
- //: "description": "<html><head/><body><p>Controls the radius/depth of the light absorption in the material.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
- //: "visible": "input.sssEnabled",
- //: "asm": "scatter_distance"
+ //:   "default": 0.5,
+ //:   "label": "Scale",
+ //:   "min": 0.01,
+ //:   "max": 1.0,
+ //:   "group": "Interior/Subsurface Scattering Parameters",
+ //:   "description": "<html><head/><body><p>Controls the radius/depth of the light absorption in the material.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
+ //:   "visible": "input.sssEnabled",
+ //:   "asm": "scatter_distance"
  //: }
  uniform float sssScale;
 ```
@@ -253,7 +253,7 @@ Global scale to the subsurface scattering effect
 
 
 
-[ ](#section-9)
+[\#](#section-9)
 
 Wavelength dependency of the SSS of the material
 
@@ -263,12 +263,12 @@ Wavelength dependency of the SSS of the material
 
 ```glsl
 //: param custom {
- //: "default": [0.701, 0.301, 0.305],
- //: "label": "Color",
- //: "widget": "color",
- //: "group": "Interior/Subsurface Scattering Parameters",
- //: "description": "<html><head/><body><p>The color below the surface that scattered light will become.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
- //: "visible": "input.sssEnabled && (input.sssType == 0 || input.sssType == 1)"
+ //:   "default": [0.701, 0.301, 0.305],
+ //:   "label": "Color",
+ //:   "widget": "color",
+ //:   "group": "Interior/Subsurface Scattering Parameters",
+ //:   "description": "<html><head/><body><p>The color below the surface that scattered light will become.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
+ //:   "visible": "input.sssEnabled && (input.sssType == 0 || input.sssType == 1)"
  //: }
  uniform vec3 sssColor;
 ```
@@ -279,7 +279,7 @@ Wavelength dependency of the SSS of the material
 
 
 
-[ ](#section-10)
+[\#](#section-10)
 
 Red shift scattering
 
@@ -289,14 +289,14 @@ Red shift scattering
 
 ```glsl
 //: param custom {
- //: "default": 0.0,
- //: "label": "Red shift",
- //: "min": 0.0,
- //: "max": 1.0,
- //: "group": "Interior/Subsurface Scattering Parameters",
- //: "description": "<html><head/><body><p>Sets red light to travel further than other light colors. Useful for skin.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
- //: "visible": "input.sssEnabled && input.sssType == 2",
- //: "asm": "scatter_red_shift"
+ //:   "default": 0.0,
+ //:   "label": "Red shift",
+ //:   "min": 0.0,
+ //:   "max": 1.0,
+ //:   "group": "Interior/Subsurface Scattering Parameters",
+ //:   "description": "<html><head/><body><p>Sets red light to travel further than other light colors. Useful for skin.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
+ //:   "visible": "input.sssEnabled && input.sssType == 2",
+ //:   "asm": "scatter_red_shift"
  //: }
  uniform float sssRedShift;
 ```
@@ -307,7 +307,7 @@ Red shift scattering
 
 
 
-[ ](#section-11)
+[\#](#section-11)
 
 Rayleigh scattering
 
@@ -317,14 +317,14 @@ Rayleigh scattering
 
 ```glsl
 //: param custom {
- //: "default": 0.0,
- //: "label": "Rayleigh",
- //: "min": 0.0,
- //: "max": 1.0,
- //: "group": "Interior/Subsurface Scattering Parameters",
- //: "description": "<html><head/><body><p>Sets orange light to travel further beneath the surface and blue light to travel less.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
- //: "visible": "input.sssEnabled && input.sssType == 2",
- //: "asm": "scatter_rayleigh"
+ //:   "default": 0.0,
+ //:   "label": "Rayleigh",
+ //:   "min": 0.0,
+ //:   "max": 1.0,
+ //:   "group": "Interior/Subsurface Scattering Parameters",
+ //:   "description": "<html><head/><body><p>Sets orange light to travel further beneath the surface and blue light to travel less.<br/><b>Please note</b>: <b>Activate Subsurface Scattering</b> needs to be enabled in <b>Display Settings</b> and the following channel needs to be present for the subsurface scattering parameters to have an effect: <b>Scattering</b></p></body></html>",
+ //:   "visible": "input.sssEnabled && input.sssType == 2",
+ //:   "asm": "scatter_rayleigh"
  //: }
  uniform float sssRayleigh;
 ```
@@ -335,7 +335,7 @@ Rayleigh scattering
 
 
 
-[ ](#section-12)
+[\#](#section-12)
 
 Return the material SSS coefficients from scattering value (per component)
 
@@ -345,17 +345,17 @@ Return the material SSS coefficients from scattering value (per component)
 
 ```glsl
 vec4 getSSSCoefficients(vec3 scattering) {
-  vec4 coeffs = vec4(0.0);
-  if (sssEnabled) {
-  coeffs.xyz = sssScale / sssSceneScale * scattering;
-  coeffs.w = coeffs.xyz==vec3(0.0) ? 0.0 : 1.0;
-  // sssColor still applied here: do not break project that use
-  // stored shader fallbacks (in case of compilation error)
-  if (sssType != 2) {
-  coeffs.xyz *= sssColor;
-  }
-  }
-  return coeffs;
+ 	vec4 coeffs = vec4(0.0);
+ 	if (sssEnabled) {
+ 		coeffs.xyz = sssScale / sssSceneScale * scattering;
+ 		coeffs.w = coeffs.xyz==vec3(0.0) ? 0.0 : 1.0;
+ 		// sssColor still applied here: do not break project that use
+ 		// stored shader fallbacks (in case of compilation error)
+ 		if (sssType != 2) {
+ 			coeffs.xyz *= sssColor;
+ 		}
+ 	}
+ 	return coeffs;
  }
 ```
 
@@ -365,7 +365,7 @@ vec4 getSSSCoefficients(vec3 scattering) {
 
 
 
-[ ](#section-13)
+[\#](#section-13)
 
 Return the material SSS coefficients
  Computed from SSS uniforms and Scattering channel sampling
@@ -376,10 +376,10 @@ Return the material SSS coefficients
 
 ```glsl
 vec4 getSSSCoefficients(SparseCoord coord) {
-  if (sssEnabled) {
-  return getSSSCoefficients(getScatteringPerComponent(sss_scattering_tex, coord));
-  }
-  return vec4(0.0);
+ 	if (sssEnabled) {
+ 		return getSSSCoefficients(getScatteringPerComponent(sss_scattering_tex, coord));
+ 	}
+ 	return vec4(0.0);
  }
 ```
 
@@ -389,7 +389,7 @@ vec4 getSSSCoefficients(SparseCoord coord) {
 
 
 
-[ ](#section-14)
+[\#](#section-14)
 
 Return the material SSS color from scatter color and weight (translucency)
 
@@ -399,7 +399,7 @@ Return the material SSS color from scatter color and weight (translucency)
 
 ```glsl
 vec4 getSSSColor(vec3 color, float weight) {
-  return vec4(color,weight);
+ 	return vec4(color,weight);
  }
 ```
 
@@ -409,7 +409,7 @@ vec4 getSSSColor(vec3 color, float weight) {
 
 
 
-[ ](#section-15)
+[\#](#section-15)
 
 Return the material SSS color and weight (translucency)
  Sample into the ScatteringColor and Translucency channels
@@ -420,12 +420,12 @@ Return the material SSS color and weight (translucency)
 
 ```glsl
 vec4 getSSSColor(SparseCoord coord) {
-  if (sssEnabled) {
-  return getSSSColor(
-  sssScatteringColorSource==1 ? getScatteringColor(sss_scatteringcolor_tex, coord) : vec3(1.0),
-  sssScatteringUsesTranslucency ? getTranslucency(sss_translucency_tex, coord) : 1.0);
-  }
-  return vec4(0.0);
+ 	if (sssEnabled) {
+ 		return getSSSColor(
+ 			sssScatteringColorSource==1 ? getScatteringColor(sss_scatteringcolor_tex, coord) : vec3(1.0),
+ 			sssScatteringUsesTranslucency ? getTranslucency(sss_translucency_tex, coord) : 1.0);
+ 	}
+ 	return vec4(0.0);
  }
 ```
 
@@ -435,7 +435,7 @@ vec4 getSSSColor(SparseCoord coord) {
 
 
 
-[ ](#section-16)
+[\#](#section-16)
 
 Return if SSS ScatteringColor channel is used for scatter color
 
@@ -445,7 +445,7 @@ Return if SSS ScatteringColor channel is used for scatter color
 
 ```glsl
 bool usesSSSScatteringColorChannel() {
-  return sssEnabled && sssScatteringColorSource==1;
+ 	return sssEnabled && sssScatteringColorSource==1;
  }
  
  

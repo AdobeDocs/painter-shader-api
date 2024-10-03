@@ -20,7 +20,7 @@ keywords:
 
 
 
-[ ](#section-0)
+[\#](#section-0)
 
 
 
@@ -33,7 +33,7 @@ keywords:
 
 
 
-[ ](#section-1)
+[\#](#section-1)
 
 Substance 3D Painter Clay shader
 ================================
@@ -75,7 +75,7 @@ import lib-vectors.glsl
 
 
 
-[ ](#section-2)
+[\#](#section-2)
 
 Entry point of the shader.
 
@@ -94,7 +94,7 @@ void shade(V2F inputs)
 
 
 
-[ ](#section-3)
+[\#](#section-3)
 
 We generate local world space vectors
 
@@ -103,7 +103,7 @@ We generate local world space vectors
 
 
 ```glsl
- LocalVectors vectors = computeLocalFrame(inputs);
+  LocalVectors vectors = computeLocalFrame(inputs);
 ```
 
 
@@ -112,7 +112,7 @@ We generate local world space vectors
 
 
 
-[ ](#section-4)
+[\#](#section-4)
 
 Simulate camera aligned lighting
 
@@ -121,7 +121,7 @@ Simulate camera aligned lighting
 
 
 ```glsl
- float NdV = max(0.0, dot(vectors.normal, vectors.eye));
+  float NdV = max(0.0, dot(vectors.normal, vectors.eye));
 ```
 
 
@@ -130,27 +130,27 @@ Simulate camera aligned lighting
 
 
 
-[ ](#section-5)
+[\#](#section-5)
 
-We generate main color from screen-space curvature
+We generate main color from screen\-space curvature
 
 
 
 
 
 ```glsl
- vec3 dNdx = dFdx(vectors.normal);
-  vec3 dNdy = dFdy(vectors.normal);
-  vec3 xneg = vectors.normal - dNdx;
-  vec3 xpos = vectors.normal + dNdx;
-  vec3 yneg = vectors.normal - dNdy;
-  vec3 ypos = vectors.normal + dNdy;
-  float depth = length(inputs.position);
-  float curvature = 2.0 * (cross(xneg, xpos).y - cross(yneg, ypos).x) / depth;
+  vec3 dNdx = dFdx(vectors.normal);
+   vec3 dNdy = dFdy(vectors.normal);
+   vec3 xneg = vectors.normal - dNdx;
+   vec3 xpos = vectors.normal + dNdx;
+   vec3 yneg = vectors.normal - dNdy;
+   vec3 ypos = vectors.normal + dNdy;
+   float depth = length(inputs.position);
+   float curvature = 2.0 * (cross(xneg, xpos).y - cross(yneg, ypos).x) / depth;
  
-  float dirt = clamp(-4.0 * curvature, 0.0, 1.0) * clayDirt;
-  vec3 diffuse = mix(clayColor, dirtColor, dirt);
-  float specular = clayGloss * (1.0 - dirt) * (0.5 * curvature + 0.5);
+   float dirt = clamp(-4.0 * curvature, 0.0, 1.0) * clayDirt;
+   vec3 diffuse = mix(clayColor, dirtColor, dirt);
+   float specular = clayGloss * (1.0 - dirt) * (0.5 * curvature + 0.5);
 ```
 
 
@@ -159,7 +159,7 @@ We generate main color from screen-space curvature
 
 
 
-[ ](#section-6)
+[\#](#section-6)
 
 Ambient and diffuse contribution
 
@@ -168,7 +168,7 @@ Ambient and diffuse contribution
 
 
 ```glsl
- diffuseShadingOutput((ambient + NdV) * diffuse);
+  diffuseShadingOutput((ambient + NdV) * diffuse);
 ```
 
 
@@ -177,7 +177,7 @@ Ambient and diffuse contribution
 
 
 
-[ ](#section-7)
+[\#](#section-7)
 
 Specular contribution
 
@@ -186,7 +186,7 @@ Specular contribution
 
 
 ```glsl
- specularShadingOutput(vec3(specular * pow(NdV, 64.0 * clayGloss)));
+  specularShadingOutput(vec3(specular * pow(NdV, 64.0 * clayGloss)));
  }
  
  
