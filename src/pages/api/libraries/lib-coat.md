@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-coat.glsl
 ==============
@@ -64,7 +64,7 @@ import lib-defines.glsl
 
 
 
-[\#](#section-2)
+
 
 All engine parameters useful for coat.
 
@@ -110,7 +110,7 @@ All engine parameters useful for coat.
 
 
 
-[\#](#section-3)
+
 
 Import from library
 
@@ -129,7 +129,7 @@ import lib-normal.glsl
 
 
 
-[\#](#section-4)
+
 
 Compute an f0 at the interface between to materials from their indices of refraction.
 
@@ -151,7 +151,7 @@ float iorToSpecularLevel(float iorFrom, float iorTo)
 
 
 
-[\#](#section-5)
+
 
 Return the coat normal in world space.
 
@@ -179,7 +179,7 @@ vec3 getWSCoatNormal(SparseCoord coord, vec3 tangent, vec3 bitangent, vec3 norma
 
 
 
-[\#](#section-6)
+
 
 Compute the approximate colored coat absorption for a given view direction.
 

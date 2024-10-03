@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Material layering: declare editable stacks
 ==========================================
@@ -136,7 +136,7 @@ Example:
 
 
 
-[\#](#section-2)
+
 
 To bind a channel from a stack to a sampler parameter, prefix the channel tag with the stack identifier:
 

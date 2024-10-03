@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-vectors.glsl
 =================
@@ -66,7 +66,7 @@ import lib-normal.glsl
 
 
 
-[\#](#section-2)
+
 
 Which view is shaded.
 
@@ -85,7 +85,7 @@ Which view is shaded.
 
 
 
-[\#](#section-3)
+
 
 What kind of projection is used.
 
@@ -104,7 +104,7 @@ What kind of projection is used.
 
 
 
-[\#](#section-4)
+
 
 Eye position in world space.
 
@@ -123,7 +123,7 @@ Eye position in world space.
 
 
 
-[\#](#section-5)
+
 
 Camera orientation in world space.
 
@@ -149,7 +149,7 @@ Camera orientation in world space.
 
 
 
-[\#](#section-6)
+
 
 Compute the world space eye vector
 
@@ -171,7 +171,7 @@ vec3 getEyeVec(vec3 position) {
 
 
 
-[\#](#section-7)
+
 
 Convert a vector from tangent space to world space
 
@@ -194,7 +194,7 @@ vec3 tangentSpaceToWorldSpace(vec3 vecTS, V2F inputs) {
 
 
 
-[\#](#section-8)
+
 
 Convert a vector from world space to tangent space
 
@@ -215,7 +215,7 @@ vec3 worldSpaceToTangentSpace(vec3 vecWS, V2F inputs) {
 
 
 
-[\#](#section-9)
+
 
 Local frame of vertex in world space
 
@@ -236,7 +236,7 @@ struct LocalVectors {
 
 
 
-[\#](#section-10)
+
 
 Compute local frame from custom world space normal and anisotropy angle
 
@@ -293,7 +293,7 @@ LocalVectors computeLocalFrame(V2F inputs, vec3 normal, float anisoAngle) {
 
 
 
-[\#](#section-11)
+
 
 Compute local frame from mesh and document height and normals
 

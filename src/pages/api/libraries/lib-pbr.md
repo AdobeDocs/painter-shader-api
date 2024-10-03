@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-pbr.glsl
 =============
@@ -70,7 +70,7 @@ Number of miplevels in the envmap.
 
 
 
-[\#](#section-2)
+
 
 An int representing the number of samples made for specular contribution
  computation. The more the higher quality and the performance impact.
@@ -104,7 +104,7 @@ An int representing the number of samples made for specular contribution
 
 
 
-[\#](#section-3)
+
 
 Value used to control specular reflection leaking through the surface.
 
@@ -130,7 +130,7 @@ Value used to control specular reflection leaking through the surface.
 
 
 
-[\#](#section-4)
+
 
 Import from library, other parameters
 
@@ -151,7 +151,7 @@ import lib-env.glsl
 
 
 
-[\#](#section-5)
+
 
 BRDF related functions
 
@@ -289,7 +289,7 @@ const float EPSILON_COEF = 1e-4;
 
 
 
-[\#](#section-6)
+
 
 Horizon fading trick from <https://marmosetco.tumblr.com/post/81245981087>
 
@@ -311,7 +311,7 @@ float horizonFading(float ndl, float horizonFade)
 
 
 
-[\#](#section-7)
+
 
 Compute the lambertian diffuse radiance to the viewer's eye
 
@@ -332,7 +332,7 @@ vec3 pbrComputeDiffuse(vec3 normal, vec3 diffColor)
 
 
 
-[\#](#section-8)
+
 
 Compute the microfacets specular reflection to the viewer's eye
 

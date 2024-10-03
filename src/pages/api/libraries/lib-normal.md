@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-normal.glsl
 ================
@@ -73,7 +73,7 @@ import lib-defines.glsl
 
 
 
-[\#](#section-2)
+
 
 All engine parameters useful for normal\-centric operations.
 
@@ -100,7 +100,7 @@ All engine parameters useful for normal\-centric operations.
 
 
 
-[\#](#section-3)
+
 
 Used to invert the Y axis of the normal map
 
@@ -119,7 +119,7 @@ Used to invert the Y axis of the normal map
 
 
 
-[\#](#section-4)
+
 
 Empirically determined by our artists...
 
@@ -137,7 +137,7 @@ const float HEIGHT_FACTOR = 400.0;
 
 
 
-[\#](#section-5)
+
 
 Perform the blending between 2 normal maps
 
@@ -164,7 +164,7 @@ vec3 normalBlend(vec3 baseNormal, vec3 overNormal)
 
 
 
-[\#](#section-6)
+
 
 Perform a detail oriented blending between 2 normal maps
 
@@ -192,7 +192,7 @@ vec3 normalBlendOriented(vec3 baseNormal, vec3 overNormal)
 
 
 
-[\#](#section-7)
+
 
 Returns a normal flattened by an attenuation factor
 
@@ -220,7 +220,7 @@ vec3 normalFade(vec3 normal,float attenuation)
 
 
 
-[\#](#section-8)
+
 
 Unpack a normal w/ alpha channel
 
@@ -252,7 +252,7 @@ vec3 normalUnpack(vec4 normal_alpha, float y_coeff)
 
 
 
-[\#](#section-9)
+
 
 Unpack a normal w/ alpha channel, no Y invertion
 
@@ -273,7 +273,7 @@ vec3 normalUnpack(vec4 normal_alpha)
 
 
 
-[\#](#section-10)
+
 
 Compute the tangent space normal from document's height channel
 
@@ -323,7 +323,7 @@ vec3 normalFromHeight(SparseCoord coord, float height_force)
 
 
 
-[\#](#section-11)
+
 
 Helper to compute the tangent space normal from base normal and a height
  value, and an optional detail normal.
@@ -358,7 +358,7 @@ vec3 getTSNormal(SparseCoord coord, SamplerSparse texture, vec3 normalFromHeight
 
 
 
-[\#](#section-12)
+
 
 Overload that use base_normal_texture
 
@@ -379,7 +379,7 @@ vec3 getTSNormal(SparseCoord coord, vec3 normalFromHeight)
 
 
 
-[\#](#section-13)
+
 
 Helper to compute the tangent space normal from base normal and height, and
  an optional detail normal.
@@ -403,7 +403,7 @@ vec3 getTSNormal(SparseCoord coord, SamplerSparse texture)
 
 
 
-[\#](#section-14)
+
 
 Overload that use base_normal_texture
 
@@ -424,7 +424,7 @@ vec3 getTSNormal(SparseCoord coord)
 
 
 
-[\#](#section-15)
+
 
 Helper to compute the world space normal from tangent space base normal.
 
@@ -450,7 +450,7 @@ vec3 computeWSBaseNormal(SparseCoord coord, vec3 tangent, vec3 bitangent, vec3 n
 
 
 
-[\#](#section-16)
+
 
 Helper to compute the world space normal from tangent space normal given by
  getTSNormal helpers, and local frame of the mesh.

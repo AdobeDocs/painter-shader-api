@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Basic toon shader
 =================
@@ -59,7 +59,7 @@ import lib-sampler.glsl
 
 
 
-[\#](#section-2)
+
 
 We define the global light position
 
@@ -77,7 +77,7 @@ const vec3 light_pos = vec3(10.0, 10.0, 10.0);
 
 
 
-[\#](#section-3)
+
 
 We **bind** the auto param world eye position to our uniform **camera_pos**.
 
@@ -96,7 +96,7 @@ We **bind** the auto param world eye position to our uniform **camera_pos**.
 
 
 
-[\#](#section-4)
+
 
 We **bind** the document's channel **base color** to our uniform **basecolor_tex**.
 
@@ -115,7 +115,7 @@ We **bind** the document's channel **base color** to our uniform **basecolor_tex
 
 
 
-[\#](#section-5)
+
 
 We **bind** the **mesh curvature** to our uniform **curvature_tex**.
  If no curvature is available, transparent texture is provided.
@@ -135,7 +135,7 @@ We **bind** the **mesh curvature** to our uniform **curvature_tex**.
 
 
 
-[\#](#section-6)
+
 
 We define a new custom tweak for this shader, along with its default value.
  This one is used to tweak the thickness of outline, when shadowed.
@@ -160,7 +160,7 @@ We define a new custom tweak for this shader, along with its default value.
 
 
 
-[\#](#section-7)
+
 
 We define a new custom tweak for this shader, along with its default value.
  This one is used to tweak the thickness of outline, when lit.
@@ -185,7 +185,7 @@ We define a new custom tweak for this shader, along with its default value.
 
 
 
-[\#](#section-8)
+
 
 Whether we prefer using the curvature or not.
 
@@ -207,7 +207,7 @@ Whether we prefer using the curvature or not.
 
 
 
-[\#](#section-9)
+
 
 Entry point of the shader.
 
@@ -226,7 +226,7 @@ void shade(V2F inputs)
 
 
 
-[\#](#section-10)
+
 
 We compute a few useful values.
 
@@ -248,7 +248,7 @@ We compute a few useful values.
 
 
 
-[\#](#section-11)
+
 
 **Priority** is to performs the **outline detection**.
  Allow the user to choose whether he prefers using the curvature map
@@ -271,7 +271,7 @@ We compute a few useful values.
 
 
 
-[\#](#section-12)
+
 
 If outline condition is reach, exit with black color.
 
@@ -291,7 +291,7 @@ If outline condition is reach, exit with black color.
 
 
 
-[\#](#section-13)
+
 
 Here, we perform a 4 steps discretization of color.
 
@@ -317,7 +317,7 @@ Here, we perform a 4 steps discretization of color.
 
 
 
-[\#](#section-14)
+
 
 Fallback is black.
 

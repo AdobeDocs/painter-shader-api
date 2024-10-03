@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Substance 3D Painter Metal/Rough PBR shader
 ===========================================
@@ -64,7 +64,7 @@ import lib-pbr.glsl
 
 
 
-[\#](#section-2)
+
 
 Declare the iray mdl material to use with this shader.
 
@@ -84,7 +84,7 @@ Declare the iray mdl material to use with this shader.
 
 
 
-[\#](#section-3)
+
 
 Channels needed for metal/rough workflow are bound here.
 
@@ -109,7 +109,7 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-[\#](#section-4)
+
 
 Shader entry point.
 

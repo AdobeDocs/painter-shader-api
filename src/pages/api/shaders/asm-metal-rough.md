@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Adobe Standard Material Definition (ASM) shader
 ===============================================
@@ -139,7 +139,7 @@ import lib-pbr.glsl
 
 
 
-[\#](#section-2)
+
 
 Declare the iray mdl material to use with this shader.
 
@@ -159,7 +159,7 @@ Declare the iray mdl material to use with this shader.
 
 
 
-[\#](#section-3)
+
 
 Disable culling if double sided option is enabled
 
@@ -177,7 +177,7 @@ Disable culling if double sided option is enabled
 
 
 
-[\#](#section-4)
+
 
 Enable 'over' alpha blending if opacity alpha blend
 
@@ -195,7 +195,7 @@ Enable 'over' alpha blending if opacity alpha blend
 
 
 
-[\#](#section-5)
+
 
 Enable 'premultiplied over' alpha blending if translucency
 
@@ -213,7 +213,7 @@ Enable 'premultiplied over' alpha blending if translucency
 
 
 
-[\#](#section-6)
+
 
 Enable 'add multiply' alpha blending if absorption is required
 
@@ -231,7 +231,7 @@ Enable 'add multiply' alpha blending if absorption is required
 
 
 
-[\#](#section-7)
+
 
 Channels needed for metal/rough workflow are bound here.
 
@@ -264,7 +264,7 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-[\#](#section-8)
+
 
 Shader entry point.
 

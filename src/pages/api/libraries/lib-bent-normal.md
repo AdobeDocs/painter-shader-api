@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-bent\-normal.glsl
 ======================
@@ -99,7 +99,7 @@ import lib-normal.glsl
 
 
 
-[\#](#section-2)
+
 
 Helper to compute the bent normal from tangent space normal given by
  getTSNormal helpers, and local frame of the mesh.
@@ -126,7 +126,7 @@ vec3 computeWSBentNormal(SparseCoord coord, vec3 tangent, vec3 bitangent, vec3 n
 
 
 
-[\#](#section-3)
+
 
 Compute bent normals
  Fill world space bent normal in vectors

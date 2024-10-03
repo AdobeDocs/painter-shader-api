@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Rendering states examples
 =========================
@@ -73,7 +73,7 @@ uniform_specialization  int u_slider_param1;
 
 
 
-[\#](#section-2)
+
 
 Backface culling
 ----------------
@@ -95,7 +95,7 @@ Cull back faces:
 
 
 
-[\#](#section-3)
+
 
 Draw front and back faces:
 
@@ -113,7 +113,7 @@ Draw front and back faces:
 
 
 
-[\#](#section-4)
+
 
 Blending
 --------
@@ -135,7 +135,7 @@ No blending, fully opaque objects:
 
 
 
-[\#](#section-5)
+
 
 Standard blending mode for back to front draw order:
 
@@ -153,7 +153,7 @@ Standard blending mode for back to front draw order:
 
 
 
-[\#](#section-6)
+
 
 Standard blending mode for back to front draw order.
  Assume color is pre\-multiplied by alpha:
@@ -172,7 +172,7 @@ Standard blending mode for back to front draw order.
 
 
 
-[\#](#section-7)
+
 
 Additive blending mode:
 
@@ -190,7 +190,7 @@ Additive blending mode:
 
 
 
-[\#](#section-8)
+
 
 Multiplicative blending mode:
 
@@ -208,7 +208,7 @@ Multiplicative blending mode:
 
 
 
-[\#](#section-9)
+
 
 Additive and multiplicative blending mode.
  Uses dual blending. The destination color is multiplied by the second output set by *color1Output*.
@@ -227,7 +227,7 @@ Additive and multiplicative blending mode.
 
 
 
-[\#](#section-10)
+
 
 Shader sampling locality
 ------------------------

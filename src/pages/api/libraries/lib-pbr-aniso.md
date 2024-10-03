@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-pbr\-aniso.glsl
 ====================
@@ -69,7 +69,7 @@ import lib-pbr.glsl
 
 
 
-[\#](#section-2)
+
 
 BRDF related functions
 

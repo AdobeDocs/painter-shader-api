@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Basic pixelating shader
 =======================
@@ -59,7 +59,7 @@ import lib-sampler.glsl
 
 
 
-[\#](#section-2)
+
 
 We define the global light position
 
@@ -77,7 +77,7 @@ const vec3 light_pos = vec3(10.0, 10.0, 10.0);
 
 
 
-[\#](#section-3)
+
 
 We **bind** the auto param world eye position to our uniform **camera_pos**.
 
@@ -96,7 +96,7 @@ We **bind** the auto param world eye position to our uniform **camera_pos**.
 
 
 
-[\#](#section-4)
+
 
 We **bind** the document's channel **base color** to our uniform **basecolor_tex**.
 
@@ -115,7 +115,7 @@ We **bind** the document's channel **base color** to our uniform **basecolor_tex
 
 
 
-[\#](#section-5)
+
 
 We define a new custom tweak for this shader, along with its default value.
  This one is used to tweak the thickness of outline, when shadowed.
@@ -140,7 +140,7 @@ We define a new custom tweak for this shader, along with its default value.
 
 
 
-[\#](#section-6)
+
 
 We define a new custom tweak for this shader, along with its default value.
  This one is used to tweak the thickness of outline, when lit.
@@ -165,7 +165,7 @@ We define a new custom tweak for this shader, along with its default value.
 
 
 
-[\#](#section-7)
+
 
 Entry point of the shader.
 
@@ -184,7 +184,7 @@ void shade(V2F inputs)
 
 
 
-[\#](#section-8)
+
 
 We compute a few useful values.
 
@@ -206,7 +206,7 @@ We compute a few useful values.
 
 
 
-[\#](#section-9)
+
 
 **Priority** is to performs the **outline detection**.
  If outline condition is reach, exit with black color.
@@ -229,7 +229,7 @@ We compute a few useful values.
 
 
 
-[\#](#section-10)
+
 
 Introduce some jitter to mask size, based on base color luminance
 
@@ -247,7 +247,7 @@ Introduce some jitter to mask size, based on base color luminance
 
 
 
-[\#](#section-11)
+
 
 Compute a mask value, based on screen space position of fragment.
  This will create a grid like pattern.
@@ -266,7 +266,7 @@ Compute a mask value, based on screen space position of fragment.
 
 
 
-[\#](#section-12)
+
 
 Here, we sample the base color and apply a simple diffuse attenuation
 

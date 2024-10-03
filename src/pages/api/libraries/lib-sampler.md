@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-sampler.glsl
 =================
@@ -93,7 +93,7 @@ import lib-defines.glsl
 
 
 
-[\#](#section-2)
+
 
 Default background colors when there is no data in channel (alpha is 0\)
 
@@ -134,7 +134,7 @@ const vec3  DEFAULT_BASE_COLOR       = vec3(0.5);
 
 
 
-[\#](#section-3)
+
 
 AO map.
 
@@ -157,7 +157,7 @@ AO map.
 
 
 
-[\#](#section-4)
+
 
 A value used to tweak the Ambient Occlusion intensity.
 
@@ -183,7 +183,7 @@ A value used to tweak the Ambient Occlusion intensity.
 
 
 
-[\#](#section-5)
+
 
 Shadowmask.
 
@@ -208,7 +208,7 @@ Shadowmask.
 
 
 
-[\#](#section-6)
+
 
 Return sampled glossiness or a default value
 
@@ -234,7 +234,7 @@ float getGlossiness(vec4 sampledValue)
 
 
 
-[\#](#section-7)
+
 
 Return sampled roughness or a default value
 
@@ -260,7 +260,7 @@ float getRoughness(vec4 sampledValue)
 
 
 
-[\#](#section-8)
+
 
 Return sampled metallic or a default value
 
@@ -286,7 +286,7 @@ float getMetallic(vec4 sampledValue)
 
 
 
-[\#](#section-9)
+
 
 Return sampled anisotropy level or a default value
 
@@ -312,7 +312,7 @@ float getAnisotropyLevel(vec4 sampledValue)
 
 
 
-[\#](#section-10)
+
 
 Return sampled anisotropy angle or a default value
 
@@ -377,7 +377,7 @@ float getAnisotropyAngle(vec4 sampledValue)
 
 
 
-[\#](#section-11)
+
 
 Return sampled opacity or a default value
 
@@ -403,7 +403,7 @@ float getOpacity(vec4 sampledValue)
 
 
 
-[\#](#section-12)
+
 
 Return sampled height or a default value
 
@@ -429,7 +429,7 @@ float getHeight(vec4 sampledValue)
 
 
 
-[\#](#section-13)
+
 
 Return sampled displacement or a default value
 
@@ -455,7 +455,7 @@ float getDisplacement(vec4 sampledValue)
 
 
 
-[\#](#section-14)
+
 
 Return ambient occlusion
 
@@ -502,7 +502,7 @@ float getAO(SparseCoord coord, bool is_premult, bool is_full_strength)
 
 
 
-[\#](#section-15)
+
 
 Return specular level
 
@@ -528,7 +528,7 @@ float getSpecularLevel(vec4 sampledValue)
 
 
 
-[\#](#section-16)
+
 
 Fetch the shadowing factor (screen\-space)
 
@@ -559,7 +559,7 @@ float getShadowFactor()
 
 
 
-[\#](#section-17)
+
 
 Return sampled base color or a default value
 
@@ -585,7 +585,7 @@ vec3 getBaseColor(vec4 sampledValue)
 
 
 
-[\#](#section-18)
+
 
 Return sampled diffuse color or a default value
 
@@ -611,7 +611,7 @@ vec3 getDiffuse(vec4 sampledValue)
 
 
 
-[\#](#section-19)
+
 
 Return sampled specular color or a default value
  Specular/Glossiness PBR workflow only
@@ -640,7 +640,7 @@ vec3 getSpecularColor(vec4 sampledValue)
 
 
 
-[\#](#section-20)
+
 
 Generate anisotropic roughness from roughness and anisotropy level
 
@@ -661,7 +661,7 @@ vec2 generateAnisotropicRoughness(float roughness, float anisoLevel)
 
 
 
-[\#](#section-21)
+
 
 Generate anisotropic roughness from roughness and anisotropy level,
  for the ASM model.
@@ -684,7 +684,7 @@ vec2 generateAnisotropicRoughnessASM(float roughness, float anisoLevel)
 
 
 
-[\#](#section-22)
+
 
 Generate diffuse color from base color and metallic factor
 
@@ -705,7 +705,7 @@ vec3 generateDiffuseColor(vec3 baseColor, float metallic)
 
 
 
-[\#](#section-23)
+
 
 Generate specular color from dielectric specular level, base color and metallic factor
 
@@ -726,7 +726,7 @@ vec3 generateSpecularColor(float specularLevel, vec3 baseColor, float metallic)
 
 
 
-[\#](#section-24)
+
 
 Generate specular color from base color and metallic factor, using default
  specular level (0\.04\) for dielectrics
@@ -748,7 +748,7 @@ vec3 generateSpecularColor(vec3 baseColor, float metallic)
 
 
 
-[\#](#section-25)
+
 
 Return sampled transmissive value or a default value
 
@@ -784,7 +784,7 @@ float getTranslucency(vec4 sampledValue)
 
 
 
-[\#](#section-26)
+
 
 Return sampled scattering value per component or a default value
  Handle grayscale (same radius for R, G \& B) or color texture
@@ -809,7 +809,7 @@ vec3 getScatteringPerComponent(SamplerSparse smp, SparseCoord coord)
 
 
 
-[\#](#section-27)
+
 
 Return sampled scatter color or a default value
 
@@ -835,7 +835,7 @@ vec3 getScatteringColor(vec4 sampledValue)
 
 
 
-[\#](#section-28)
+
 
 Return sampled specular tint value or a default value
 
@@ -871,7 +871,7 @@ vec3 getSpecularTint(vec4 sampledValue)
 
 
 
-[\#](#section-29)
+
 
 Return sampled sheen opacity (sheen weight) value or a default value
 
@@ -897,7 +897,7 @@ float getSheenOpacity(vec4 sampledValue)
 
 
 
-[\#](#section-30)
+
 
 Return sampled sheen color value or a default value
 
@@ -923,7 +923,7 @@ vec3 getSheenColor(vec4 sampledValue)
 
 
 
-[\#](#section-31)
+
 
 Return sampled sheen roughness value or a default value
 
@@ -949,7 +949,7 @@ float getSheenRoughness(vec4 sampledValue)
 
 
 
-[\#](#section-32)
+
 
 Return sampled coat opacity (coat weight) value or a default value
 
@@ -975,7 +975,7 @@ float getCoatOpacity(vec4 sampledValue)
 
 
 
-[\#](#section-33)
+
 
 Return sampled coat color value or a default value
 
@@ -1001,7 +1001,7 @@ vec3 getCoatColor(vec4 sampledValue)
 
 
 
-[\#](#section-34)
+
 
 Return sampled coat roughness value or a default value
 
@@ -1027,7 +1027,7 @@ float getCoatRoughness(vec4 sampledValue)
 
 
 
-[\#](#section-35)
+
 
 Return sampled coat specular level value or a default value
 

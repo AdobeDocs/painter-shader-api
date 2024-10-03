@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-random.glsl
 ================
@@ -67,7 +67,7 @@ import lib-defines.glsl
 
 
 
-[\#](#section-2)
+
 
 A 2D blue noise texture containing scalar values
 
@@ -86,7 +86,7 @@ A 2D blue noise texture containing scalar values
 
 
 
-[\#](#section-3)
+
 
 Blue noise texture resolution
 
@@ -104,7 +104,7 @@ const ivec2 texture_blue_noise_size = ivec2(256);
 
 
 
-[\#](#section-4)
+
 
 Current frame random seed
 
@@ -123,7 +123,7 @@ Current frame random seed
 
 
 
-[\#](#section-5)
+
 
 Get an uniform random value based on pixel coordinates.
 
@@ -144,7 +144,7 @@ float getBlueNoiseThreshold()
 
 
 
-[\#](#section-6)
+
 
 Get an uniform random value based on pixel coordinates and frame id.
 
@@ -165,7 +165,7 @@ float getBlueNoiseThresholdTemporal()
 
 
 
-[\#](#section-7)
+
 
 Return the i*th* number from fibonacci sequence.
 
@@ -186,7 +186,7 @@ float fibonacci1D(int i)
 
 
 
-[\#](#section-8)
+
 
 Return the i*th* couple from the fibonacci sequence.
  nbSample is required to get an uniform distribution.
@@ -211,7 +211,7 @@ vec2 fibonacci2D(int i, int nbSamples)
 
 
 
-[\#](#section-9)
+
 
 Return the i*th* couple from the fibonacci sequence.
  nbSample is required to get an uniform distribution.

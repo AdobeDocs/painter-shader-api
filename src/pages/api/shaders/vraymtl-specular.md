@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Substance Painter VRayMtl shader
 ================================
@@ -52,7 +52,7 @@ Substance Painter VRayMtl shader
 
 
 
-[\#](#section-2)
+
 
 Channels needed for diffuse/specular workflow are bound here.
 
@@ -91,7 +91,7 @@ Channels needed for diffuse/specular workflow are bound here.
 
 
 
-[\#](#section-3)
+
 
 Parameters from Substance
 
@@ -133,7 +133,7 @@ Parameters from Substance
 
 
 
-[\#](#section-4)
+
 
 VRayMtl specific options
 
@@ -1128,7 +1128,7 @@ VRayMtl specific options
 
 
 
-[\#](#section-5)
+
 
 Shader entry point.
 

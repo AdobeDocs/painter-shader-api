@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-emissive.glsl
 ==================
@@ -63,7 +63,7 @@ import lib-sparse.glsl
 
 
 
-[\#](#section-2)
+
 
 The emissive channel texture.
 
@@ -82,7 +82,7 @@ The emissive channel texture.
 
 
 
-[\#](#section-3)
+
 
 A value used to tweak the emissive intensity.
 
@@ -109,7 +109,7 @@ A value used to tweak the emissive intensity.
 
 
 
-[\#](#section-4)
+
 
 Compute the emissive radiance to the viewer's eye
 

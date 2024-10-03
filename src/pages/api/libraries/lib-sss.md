@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-sss.glsl
 =============
@@ -65,7 +65,7 @@ import lib-sampler.glsl
 
 
 
-[\#](#section-2)
+
 
 The translucency texture, used as SSS weight
 
@@ -84,7 +84,7 @@ The translucency texture, used as SSS weight
 
 
 
-[\#](#section-3)
+
 
 The scalar or per component (R,G \& B) SSS coefficient texture
 
@@ -103,7 +103,7 @@ The scalar or per component (R,G \& B) SSS coefficient texture
 
 
 
-[\#](#section-4)
+
 
 The scatter color texture, used as SSS albedo
 
@@ -135,7 +135,7 @@ The scatter color texture, used as SSS albedo
 
 
 
-[\#](#section-5)
+
 
 Select whether the light penetrates straight through the material (translucent)
  or is diffused before starting to scatter (skin).
@@ -168,7 +168,7 @@ Select whether the light penetrates straight through the material (translucent)
 
 
 
-[\#](#section-6)
+
 
 Select which channel is used for scatter color.
 
@@ -199,7 +199,7 @@ Select which channel is used for scatter color.
 
 
 
-[\#](#section-7)
+
 
 Enable subsurface weighting using translucency channel
 
@@ -225,7 +225,7 @@ Enable subsurface weighting using translucency channel
 
 
 
-[\#](#section-8)
+
 
 Global scale to the subsurface scattering effect
 
@@ -253,7 +253,7 @@ Global scale to the subsurface scattering effect
 
 
 
-[\#](#section-9)
+
 
 Wavelength dependency of the SSS of the material
 
@@ -279,7 +279,7 @@ Wavelength dependency of the SSS of the material
 
 
 
-[\#](#section-10)
+
 
 Red shift scattering
 
@@ -307,7 +307,7 @@ Red shift scattering
 
 
 
-[\#](#section-11)
+
 
 Rayleigh scattering
 
@@ -335,7 +335,7 @@ Rayleigh scattering
 
 
 
-[\#](#section-12)
+
 
 Return the material SSS coefficients from scattering value (per component)
 
@@ -365,7 +365,7 @@ vec4 getSSSCoefficients(vec3 scattering) {
 
 
 
-[\#](#section-13)
+
 
 Return the material SSS coefficients
  Computed from SSS uniforms and Scattering channel sampling
@@ -389,7 +389,7 @@ vec4 getSSSCoefficients(SparseCoord coord) {
 
 
 
-[\#](#section-14)
+
 
 Return the material SSS color from scatter color and weight (translucency)
 
@@ -409,7 +409,7 @@ vec4 getSSSColor(vec3 color, float weight) {
 
 
 
-[\#](#section-15)
+
 
 Return the material SSS color and weight (translucency)
  Sample into the ScatteringColor and Translucency channels
@@ -435,7 +435,7 @@ vec4 getSSSColor(SparseCoord coord) {
 
 
 
-[\#](#section-16)
+
 
 Return if SSS ScatteringColor channel is used for scatter color
 

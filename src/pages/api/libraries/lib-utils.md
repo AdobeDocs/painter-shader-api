@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Utility functions
 =================
@@ -72,7 +72,7 @@ vec3 tonemapSCurve(vec3 value, float sigma, float n)
 
 
 
-[\#](#section-2)
+
 
 sRGB conversions
 ----------------
@@ -102,7 +102,7 @@ float sRGB2linear(float x)
 
 
 
-[\#](#section-3)
+
 
 sRGB to linear color conversion. RGB version.
 
@@ -126,7 +126,7 @@ vec3 sRGB2linear(vec3 rgb)
 
 
 
-[\#](#section-4)
+
 
 sRGB to linear color conversion. RGB \+ Alpha version.
 
@@ -147,7 +147,7 @@ vec4 sRGB2linear(vec4 rgba)
 
 
 
-[\#](#section-5)
+
 
 Linear to sRGB color conversion. Scalar version.
 
@@ -170,7 +170,7 @@ float linear2sRGB(float x)
 
 
 
-[\#](#section-6)
+
 
 Linear to sRGB color conversion. RGB version.
 
@@ -194,7 +194,7 @@ vec3 linear2sRGB(vec3 rgb)
 
 
 
-[\#](#section-7)
+
 
 Linear to sRGB color conversion. RGB \+ Alpha version.
 
@@ -215,7 +215,7 @@ vec4 linear2sRGB(vec4 rgba)
 
 
 
-[\#](#section-8)
+
 
 Linear to sRGB color conversion optional. Scalar version.
 
@@ -238,7 +238,7 @@ Linear to sRGB color conversion optional. Scalar version.
 
 
 
-[\#](#section-9)
+
 
 Linear to sRGB color conversion optional. RGB version.
 
@@ -259,7 +259,7 @@ vec3 linear2sRGBOpt(vec3 rgb)
 
 
 
-[\#](#section-10)
+
 
 Linear to sRGB color conversion optional. RGB \+ Alpha version.
 
@@ -280,7 +280,7 @@ vec4 linear2sRGBOpt(vec4 rgba)
 
 
 
-[\#](#section-11)
+
 
 Color conversion. Scalar version.
 
@@ -304,7 +304,7 @@ uniform int output_conversion_method;
 
 
 
-[\#](#section-12)
+
 
 Color conversion. RGB version.
 
@@ -327,7 +327,7 @@ vec3 convertOutput(vec3 rgb)
 
 
 
-[\#](#section-13)
+
 
 Color conversion. RGB \+ Alpha version.
 
@@ -350,7 +350,7 @@ vec4 convertOutput(vec4 rgba)
 
 
 
-[\#](#section-14)
+
 
 Dithering
 ---------
@@ -387,7 +387,7 @@ import lib-bayer.glsl
 
 
 
-[\#](#section-15)
+
 
 Remove AO and shadows on glossy metallic surfaces (close to mirrors)
 

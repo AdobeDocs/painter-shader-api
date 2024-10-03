@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Custom qualifiers
 =================
@@ -81,7 +81,7 @@ Basic usage:
 
 
 
-[\#](#section-2)
+
 
 Shader entry point
 

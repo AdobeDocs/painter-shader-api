@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Substance 3D Painter Material Layering PBR shader
 =================================================
@@ -242,7 +242,7 @@ import lib-pbr.glsl
 
 
 
-[\#](#section-2)
+
 
 
 
@@ -611,7 +611,7 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-[\#](#section-3)
+
 
 
 
@@ -631,7 +631,7 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-[\#](#section-4)
+
 
 
 
@@ -653,7 +653,7 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-[\#](#section-5)
+
 
 
 
@@ -673,7 +673,7 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-[\#](#section-6)
+
 
 
 
@@ -717,7 +717,7 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-[\#](#section-7)
+
 
 
 
@@ -737,7 +737,7 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-[\#](#section-8)
+
 
 
 
@@ -839,7 +839,7 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-[\#](#section-9)
+
 
 
 
@@ -859,7 +859,7 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-[\#](#section-10)
+
 
 
 

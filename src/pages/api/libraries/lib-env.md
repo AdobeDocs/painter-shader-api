@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-env.glsl
 =============
@@ -65,7 +65,7 @@ import lib-defines.glsl
 
 
 
-[\#](#section-2)
+
 
 Engine provided parameters
 
@@ -94,7 +94,7 @@ Engine provided parameters
 
 
 
-[\#](#section-3)
+
 
 Helper that allows one to sample environment. Rotation is taken into
  account. The environment map is a panoramic env map behind the scene,
@@ -124,7 +124,7 @@ vec3 envSample(vec3 dir, float lod)
 
 
 
-[\#](#section-4)
+
 
 Transform a direction from world to environment space
 
@@ -145,7 +145,7 @@ vec3 worldToEnvSpace(vec3 dirW)
 
 
 
-[\#](#section-5)
+
 
 Return the irradiance for a given direction. The computation is based on
  environment's spherical harmonics projection.

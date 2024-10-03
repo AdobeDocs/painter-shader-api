@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-sheen.glsl
 ===============
@@ -63,7 +63,7 @@ import lib-defines.glsl
 
 
 
-[\#](#section-2)
+
 
 All engine parameters useful for sheen.
 
@@ -94,7 +94,7 @@ All engine parameters useful for sheen.
 
 
 
-[\#](#section-3)
+
 
 Import from library
 
@@ -112,7 +112,7 @@ import lib-pbr.glsl
 
 
 
-[\#](#section-4)
+
 
 Compute the sheen BRDF contribution for importance sampling.
 
@@ -149,7 +149,7 @@ vec3 sheen_contrib(float ndh, float ndl, float ndv, vec3 Ks, float roughness)
 
 
 
-[\#](#section-5)
+
 
 Compute the microfacets sheen specular reflection to the viewer's eye.
 

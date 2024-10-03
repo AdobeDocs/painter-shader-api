@@ -20,7 +20,7 @@ keywords:
 
 
 
-[\#](#section-0)
+
 
 Shader reference
 ================
@@ -62,7 +62,7 @@ void shade(V2F inputs) {
 
 
 
-[\#](#section-1)
+
 
 Now, if you save this snippet into a `.glsl` file and load it into Substance 3D Painter by dropping
  it into your shelf's shader tab, you can now use it and see a beautiful uniform pink color on
@@ -176,7 +176,7 @@ You can declare additional non required information to give some hint to the
 
 
 
-[\#](#section-2)
+
 
 Supported keys are:
 

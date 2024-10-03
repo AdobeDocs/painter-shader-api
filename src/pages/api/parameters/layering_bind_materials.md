@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Material layering: bind materials as shader parameters
 ======================================================
@@ -79,7 +79,7 @@ Example:
 
 
 
-[\#](#section-2)
+
 
 To bind a channel from a material to a sampler, define an auto param with the id of the material
  followed by the channel tag (see the available channels in [all\-engine\-params.glsl](/src/pages/api/parameters/all-engine-params/)):

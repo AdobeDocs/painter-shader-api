@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Substance 3D Painter Metal/Rough and opacity PBR shader
 =======================================================
@@ -70,7 +70,7 @@ import lib-pbr.glsl
 
 
 
-[\#](#section-2)
+
 
 Show back faces as there may be holes in front faces.
 
@@ -88,7 +88,7 @@ Show back faces as there may be holes in front faces.
 
 
 
-[\#](#section-3)
+
 
 Channels needed for metal/rough workflow are bound here.
 
@@ -113,7 +113,7 @@ Channels needed for metal/rough workflow are bound here.
 
 
 
-[\#](#section-4)
+
 
 Shader entry point.
 

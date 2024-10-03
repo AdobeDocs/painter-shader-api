@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 surface\-shader.glsl
 ====================
@@ -60,7 +60,7 @@ void shade(V2F inputs);
 
 
 
-[\#](#section-2)
+
 
 V2F input type definition:
 --------------------------
@@ -88,7 +88,7 @@ struct V2F {
 
 
 
-[\#](#section-3)
+
 
 Note: To obtain a SparseCoord for uv1\-uv7, you have to explicitly call `getSparseCoord(vec2)` defined in [lib\-sparse.glsl](/src/pages/api/libraries/lib-sparse/)
 
@@ -126,7 +126,7 @@ The following functions can be called from within the *shade* function to descri
 
 
 
-[\#](#section-4)
+
 
 As an example, the most basic rendering equation for computing the fragment color is: `emissiveColor + albedo * diffuseShading + specularShading`
 

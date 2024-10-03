@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Custom parameters sample shader
 ===============================
@@ -83,7 +83,7 @@ One can hide or show the parameter in the UI, depending on other parameters valu
 
 
 
-[\#](#section-2)
+
 
 Color parameters
 ----------------
@@ -105,7 +105,7 @@ Color parameters
 
 
 
-[\#](#section-3)
+
 
 Spinboxes parameters
 --------------------
@@ -139,7 +139,7 @@ Spinboxes parameters
 
 
 
-[\#](#section-4)
+
 
 Slider parameters
 -----------------
@@ -175,7 +175,7 @@ Slider parameters
 
 
 
-[\#](#section-5)
+
 
 Bool parameters
 ---------------
@@ -195,7 +195,7 @@ Bool parameters
 
 
 
-[\#](#section-6)
+
 
 Sampler parameters
 ------------------
@@ -224,7 +224,7 @@ The texture is defined by its name in the shelf and must be in the `Textures` or
 
 
 
-[\#](#section-7)
+
 
 Combobox parameters
 -------------------
@@ -253,7 +253,7 @@ Combobox parameters
 
 
 
-[\#](#section-8)
+
 
 Shader entry point
 

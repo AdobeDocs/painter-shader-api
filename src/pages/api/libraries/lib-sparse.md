@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-sparse.glsl
 ================
@@ -92,7 +92,7 @@ If enabled, process additional texture lookup checks to climb up mipmap pyramid 
 
 
 
-[\#](#section-2)
+
 
 Sampler and sparse texture information structure
 
@@ -119,7 +119,7 @@ struct SamplerSparse {
 
 
 
-[\#](#section-3)
+
 
 Sparse sampling coordinates
 
@@ -149,7 +149,7 @@ struct SparseCoord {
 
 
 
-[\#](#section-4)
+
 
 Build texture coordinates structure used by `textureSparse()` sampling function
  (must be called from fragment shader)
@@ -184,7 +184,7 @@ SparseCoord getSparseCoord(vec2 tex_coord) {
 
 
 
-[\#](#section-5)
+
 
 Build texture coordinates structure used by `textureSparse()` sampling function
  Base level sampling version (can be used if outside fragment shader)
@@ -217,7 +217,7 @@ SparseCoord getSparseCoordLod0(vec2 tex_coord) {
 
 
 
-[\#](#section-6)
+
 
 Compute the level\-of\-detail that would be used to sample from a sparse texture
 
@@ -253,7 +253,7 @@ float textureSparseQueryLod(SamplerSparse smp, SparseCoord coord) {
 
 
 
-[\#](#section-7)
+
 
 Compute the derivatives that would be used to sample from a sparse texture
 
@@ -289,7 +289,7 @@ void textureSparseQueryGrad(out vec2 dfdx, out vec2 dfdy, SamplerSparse smp, Spa
 
 
 
-[\#](#section-8)
+
 
 Performs a texture lookup on a sparse texture, go up the mipmap levels if necessary
 
@@ -314,7 +314,7 @@ vec4 textureSparse(SamplerSparse smp, SparseCoord coord) {
 
 
 
-[\#](#section-9)
+
 
 Given a texture, performs an optimized multiple texture lookups with small offsets
 

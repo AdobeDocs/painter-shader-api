@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 Substance 3D Painter Clay shader
 ================================
@@ -75,7 +75,7 @@ import lib-vectors.glsl
 
 
 
-[\#](#section-2)
+
 
 Entry point of the shader.
 
@@ -94,7 +94,7 @@ void shade(V2F inputs)
 
 
 
-[\#](#section-3)
+
 
 We generate local world space vectors
 
@@ -112,7 +112,7 @@ We generate local world space vectors
 
 
 
-[\#](#section-4)
+
 
 Simulate camera aligned lighting
 
@@ -130,7 +130,7 @@ Simulate camera aligned lighting
 
 
 
-[\#](#section-5)
+
 
 We generate main color from screen\-space curvature
 
@@ -159,7 +159,7 @@ We generate main color from screen\-space curvature
 
 
 
-[\#](#section-6)
+
 
 Ambient and diffuse contribution
 
@@ -177,7 +177,7 @@ Ambient and diffuse contribution
 
 
 
-[\#](#section-7)
+
 
 Specular contribution
 

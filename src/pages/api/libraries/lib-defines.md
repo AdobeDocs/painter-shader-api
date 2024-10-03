@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-defines.glsl
 =================
@@ -66,7 +66,7 @@ lib\-defines.glsl
 
 
 
-[\#](#section-2)
+
 
 Some useful constants
 
@@ -88,7 +88,7 @@ const float M_PI = 3.14159265;
 
 
 
-[\#](#section-3)
+
 
 Blending modes constants
 

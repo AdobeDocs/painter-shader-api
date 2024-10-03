@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-alpha\-test.glsl
 =====================
@@ -61,7 +61,7 @@ import lib-sampler.glsl
 
 
 
-[\#](#section-2)
+
 
 Opacity map, provided by the engine.
 
@@ -89,7 +89,7 @@ Opacity map, provided by the engine.
 
 
 
-[\#](#section-3)
+
 
 Alpha test threshold.
 
@@ -117,7 +117,7 @@ Alpha test threshold.
 
 
 
-[\#](#section-4)
+
 
 Alpha test dithering.
 
@@ -142,7 +142,7 @@ Alpha test dithering.
 
 
 
-[\#](#section-5)
+
 
 Emulate alpha test : discard current fragment if
  its opacity is below a user defined threshold.

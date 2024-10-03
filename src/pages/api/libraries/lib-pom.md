@@ -20,7 +20,6 @@ keywords:
 
 
 
-[\#](#section-0)
 
 
 
@@ -33,7 +32,8 @@ keywords:
 
 
 
-[\#](#section-1)
+
+
 
 lib\-pom.glsl
 =============
@@ -64,7 +64,7 @@ import lib-sampler.glsl
 
 
 
-[\#](#section-2)
+
 
 Parallax occlusion mapping related uniforms
 
@@ -127,7 +127,7 @@ Parallax occlusion mapping related uniforms
 
 
 
-[\#](#section-3)
+
 
 Compute the offset of texture coordinates based on parallax
 
@@ -192,7 +192,7 @@ vec2 getParallaxOffset(SparseCoord coord, vec3 viewTS)
 
 
 
-[\#](#section-4)
+
 
 Update input texture coordinates with parallax offset
 
