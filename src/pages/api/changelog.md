@@ -71,7 +71,7 @@ Changelog
 
 * Add support for Bent Normals diffuse and specular shading
 * New [lib\-bent\-normal.glsl](/src/pages/api/libraries/lib-bent-normal/) library to regroup helpers functions
-* Updated [/src/pages/api/pbrComputeSpecular()](/src/pages/api/pbrComputeSpecular()/) arguments list to add bent normal specular amount
+* Updated [pbrComputeSpecular()] arguments list to add bent normal specular amount
 * Added supports for Bent Normals to [asm\-metal\-rough.glsl](/src/pages/api/shaders/asm-metal-rough/) and [pbr\-metal\-rough.glsl](/src/pages/api/shaders/pbr-metal-rough/) shaders
 * Removed support for DISABLE_FRAMEBUFFER_SRGB_CONVERSION define.
 
