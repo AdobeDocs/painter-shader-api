@@ -106,6 +106,8 @@ The following functions can be called from within the *shade* function to descri
 ```glsl
 // fragment opacity. default value: 1.0
  void alphaOutput(float);
+ // Second RGBA output (dual blending), only used with *add_multiply* blending mode. default value: vec4(1.0)
+ void color1Output(vec4);
  // diffuse lighting contribution. default value: vec3(0.0)
  void diffuseShadingOutput(vec3);
  // specular lighting contribution. default value: vec3(0.0)

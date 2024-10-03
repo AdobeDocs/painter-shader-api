@@ -43,6 +43,20 @@ Changelog
 
 
 
+9.1.0
+-----
+
+
+* Add new blending mode *add_multiply*: requires dual blending and then introduces a new output.
+* Rendering states (blending modes, culling, etc.) can be conditionaly enabled in function of parameter values (specialized uniforms only).
+* New [lib-alpha-test.glsl](/src/pages/api/libraries/lib-alpha-test/) library that contains alpha test related reworked parameters and *alphaKill* function. Previous *lib-alpha.glsl* library is kept for compatibility reasons.
+* UI group, description and label of most library parameters have been updated.
+* New *Absorption color* channel support.
+* *Translucency* channel default value is now 1.0.
+* Added new parameter in Subsurface scattering ( [lib-sss.glsl](/src/pages/api/libraries/lib-sss/)) to toggle usage of translucency channel as scattering mask.
+* Updated asm-metal-rough.glsl shader to support alpha test, alpha blend, translucency and absorption.
+
+
 8.2.0
 -----
 

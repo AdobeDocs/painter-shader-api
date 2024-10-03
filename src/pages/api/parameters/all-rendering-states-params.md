@@ -47,6 +47,34 @@ Rendering states examples
 
 
 
+Enable syntax
+-------------
+
+
+Rendering states can be conditionally enabled using value of any specialized uniform.
+ Simply write an expression resulting in a boolean in the `enable` parameter.
+ Acces other parameters values with `input.parameterName` syntax.
+ Consider the following example where additive blending mode is enabled only when `param1` is less than 5.
+ For more examples and exhaustive syntax, please see the
+ [Substance Visible If documentation](https://www.adobe.com/go/painter-visible-display-hide-inputs-outputs).
+
+
+
+
+
+```glsl
+uniform_specialization int u_slider_param1;
+ //: state blend add { "enable" : "input.u_slider_param1 < 5" }
+```
+
+
+
+
+
+
+
+[ ](#section-2)
+
 Backface culling
 ----------------
 
@@ -67,7 +95,7 @@ Cull back faces:
 
 
 
-[ ](#section-2)
+[ ](#section-3)
 
 Draw front and back faces:
 
@@ -85,7 +113,7 @@ Draw front and back faces:
 
 
 
-[ ](#section-3)
+[ ](#section-4)
 
 Blending
 --------
@@ -107,7 +135,7 @@ No blending, fully opaque objects:
 
 
 
-[ ](#section-4)
+[ ](#section-5)
 
 Standard blending mode for back to front draw order:
 
@@ -125,7 +153,7 @@ Standard blending mode for back to front draw order:
 
 
 
-[ ](#section-5)
+[ ](#section-6)
 
 Standard blending mode for back to front draw order.
  Assume color is pre-multiplied by alpha:
@@ -144,7 +172,7 @@ Standard blending mode for back to front draw order.
 
 
 
-[ ](#section-6)
+[ ](#section-7)
 
 Additive blending mode:
 
@@ -162,7 +190,7 @@ Additive blending mode:
 
 
 
-[ ](#section-7)
+[ ](#section-8)
 
 Multiplicative blending mode:
 
@@ -180,7 +208,26 @@ Multiplicative blending mode:
 
 
 
-[ ](#section-8)
+[ ](#section-9)
+
+Additive and multiplicative blending mode.
+ Uses dual blending. The destination color is multiplied by the second output set by *color1Output*.
+
+
+
+
+
+```glsl
+//: state blend add_multiply
+```
+
+
+
+
+
+
+
+[ ](#section-10)
 
 Shader sampling locality
 ------------------------

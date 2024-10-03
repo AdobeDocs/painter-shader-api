@@ -149,7 +149,13 @@ void shade(V2F inputs)
   // Feed parameters for a physically based BRDF integration
   emissiveColorOutput(pbrComputeEmissive(emissive_tex, inputs.sparse_coord));
   sssCoefficientsOutput(getSSSCoefficients(inputs.sparse_coord));
-  sssColorOutput(getSSSColor(inputs.sparse_coord));
+ 
+  vec4 baseSSSColor = getSSSColor(inputs.sparse_coord);
+  if (usesSSSScatteringColorChannel()) {
+  // Must be dimmed by metallic factor as for diffuse color
+  baseSSSColor.rgb = generateDiffuseColor(baseSSSColor.rgb, metallic);
+  }
+  sssColorOutput(baseSSSColor);
  
   // Discard current fragment on the basis of the opacity channel
   // and a user defined threshold

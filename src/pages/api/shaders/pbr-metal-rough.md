@@ -150,7 +150,13 @@ void shade(V2F inputs)
   diffuseShadingOutput(occlusion * shadowFactor * envIrradiance(getDiffuseBentNormal(vectors)));
   specularShadingOutput(specOcclusion * pbrComputeSpecular(vectors, specColor, roughness, occlusion, getBentNormalSpecularAmount()));
   sssCoefficientsOutput(getSSSCoefficients(inputs.sparse_coord));
-  sssColorOutput(getSSSColor(inputs.sparse_coord));
+ 
+  vec4 baseSSSColor = getSSSColor(inputs.sparse_coord);
+  if (usesSSSScatteringColorChannel()) {
+  // Must be dimmed by metallic factor as for diffuse color
+  baseSSSColor.rgb = generateDiffuseColor(baseSSSColor.rgb, metallic);
+  }
+  sssColorOutput(baseSSSColor);
  }
  
  

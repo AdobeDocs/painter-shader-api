@@ -46,6 +46,7 @@ lib-sss.glsl
 **Public Functions:**
 `getSSSCoefficients`
 `getSSSColor`
+`usesSSSScatteringColorChannel`
 
 
 Import from library
@@ -425,6 +426,26 @@ vec4 getSSSColor(SparseCoord coord) {
   sssScatteringUsesTranslucency ? getTranslucency(sss_translucency_tex, coord) : 1.0);
   }
   return vec4(0.0);
+ }
+```
+
+
+
+
+
+
+
+[ ](#section-16)
+
+Return if SSS ScatteringColor channel is used for scatter color
+
+
+
+
+
+```glsl
+bool usesSSSScatteringColorChannel() {
+  return sssEnabled && sssScatteringColorSource==1;
  }
  
  

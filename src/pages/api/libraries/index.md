@@ -11,6 +11,7 @@ keywords:
 Libraries
 ========
 
+- [lib-alpha-test](/api/libraries/lib-alpha-test.md)
 - [lib-alpha](/api/libraries/lib-alpha.md)
 - [lib-bayer](/api/libraries/lib-bayer.md)
 - [lib-bent-normal](/api/libraries/lib-bent-normal.md)

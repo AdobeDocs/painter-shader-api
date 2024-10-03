@@ -143,7 +143,13 @@ import lib-sss.glsl
   vec3 diffuseShading = occlusion * envIrradiance(vectors.normal);
   vec3 specularShading = specOcclusion * pbrComputeSpecular(vectors, specColor, roughness);
   sssCoefficientsOutput(getSSSCoefficients(inputs.sparse_coord));
-  sssColorOutput(getSSSColor(inputs.sparse_coord));
+ 
+  vec4 baseSSSColor = getSSSColor(inputs.sparse_coord);
+  if (usesSSSScatteringColorChannel()) {
+  // Must be dimmed by metallic factor as for diffuse color
+  baseSSSColor.rgb = generateDiffuseColor(baseSSSColor.rgb, metallic);
+  }
+  sssColorOutput(baseSSSColor);
  
   // Coat layer, specular only
   vec3 wsCoatNormal = coating_surface_behavior == 0?

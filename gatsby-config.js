@@ -45,10 +45,18 @@ module.exports = {
 					title : "Home",
 					path: "/api/",
 				},
+				{
+					title : "Changelog",
+					path: "/api/changelog/",
+				},
 {
 	title : "Libraries",
 	path : "/api/libraries/",
 pages: [	{
+		title : "lib-alpha-test",
+		path : "/api/libraries/lib-alpha-test/"
+	},
+	{
 		title : "lib-alpha",
 		path : "/api/libraries/lib-alpha/"
 	},

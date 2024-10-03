@@ -132,7 +132,7 @@ In order to avoid writing a lot of boilerplate code in all of your shaders,
  you can't edit it nor create your own at the moment.**
 
 
-* [lib-alpha.glsl](/src/pages/api/libraries/lib-alpha/) : contains opacity related helpers
+* [lib-alpha-test.glsl](/src/pages/api/libraries/lib-alpha-test/) : contains alpha test related helpers
 * [lib-bayer.glsl](/src/pages/api/libraries/lib-bayer/) : contains bayer matrix helpers
 * [lib-bent-normal.glsl](/src/pages/api/libraries/lib-bent-normal/) : contains bent normal helpers
 * [lib-coat.glsl](/src/pages/api/libraries/lib-coat/) : contains coating layer helpers

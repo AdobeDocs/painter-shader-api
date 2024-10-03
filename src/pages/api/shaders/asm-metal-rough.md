@@ -439,6 +439,10 @@ void shade(V2F inputs)
   sssCoefficientsOutput(getSSSCoefficients(inputs.sparse_coord));
  
   vec4 baseSSSColor = getSSSColor(inputs.sparse_coord);
+  if (usesSSSScatteringColorChannel()) {
+  // Must be dimmed by metallic factor as for diffuse color
+  baseSSSColor.rgb = generateDiffuseColor(baseSSSColor.rgb, metallic);
+  }
   if (sssEnabled && absorptionEnabled) {
   // Combine absorption color with scattering color if both enabled
   baseSSSColor.rgb *= getAbsorptionColor(absorptioncolor_tex, inputs.sparse_coord);

@@ -6,7 +6,7 @@ contributors:
 featured: true
 ---
 
-<Hero slots="image, heading, text" background="rgb(1, 46, 24)" hideBreadcrumbNav={false} />
+<Hero slots="image, heading, text" background="rgb(1, 46, 24)" hideBreadcrumbNav={true} />
 
 ![Hero image](./hero.png)
 

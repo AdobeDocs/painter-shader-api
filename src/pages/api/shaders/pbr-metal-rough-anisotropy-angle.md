@@ -168,7 +168,13 @@ void shade(V2F inputs)
   alphaOutput(getOpacity(opacity_tex, inputs.sparse_coord));
   emissiveColorOutput(pbrComputeEmissive(emissive_tex, inputs.sparse_coord));
   sssCoefficientsOutput(getSSSCoefficients(inputs.sparse_coord));
-  sssColorOutput(getSSSColor(inputs.sparse_coord));
+ 
+  vec4 baseSSSColor = getSSSColor(inputs.sparse_coord);
+  if (usesSSSScatteringColorChannel()) {
+  // Must be dimmed by metallic factor as for diffuse color
+  baseSSSColor.rgb = generateDiffuseColor(baseSSSColor.rgb, metallic);
+  }
+  sssColorOutput(baseSSSColor);
  
   // Discard current fragment on the basis of the opacity channel
   // and a user defined threshold

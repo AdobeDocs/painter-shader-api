@@ -111,7 +111,13 @@ Channels needed for spec/gloss workflow are bound here.
   diffuseShadingOutput(occlusion * shadowFactor * envIrradiance(getDiffuseBentNormal(vectors)));
   specularShadingOutput(specOcclusion * pbrComputeSpecular(vectors, specColor, 1.0 - glossiness, occlusion, getBentNormalSpecularAmount()));
   sssCoefficientsOutput(getSSSCoefficients(inputs.sparse_coord));
-  sssColorOutput(getSSSColor(inputs.sparse_coord));
+ 
+  vec4 baseSSSColor = getSSSColor(inputs.sparse_coord);
+  if (usesSSSScatteringColorChannel()) {
+  // Must be dimmed by specColor as for diffuse color
+  baseSSSColor.rgb *= vec3(1.0) - specColor;
+  }
+  sssColorOutput(baseSSSColor);
  }
  
  
